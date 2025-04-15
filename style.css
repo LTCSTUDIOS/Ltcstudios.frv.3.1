@@ -5,6 +5,25 @@
   padding: 0;
 }
 
+main {
+  min-height: 60vh;        /* occupe 60% de la fenêtre verticale */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centre verticalement le contenu */
+  padding: 20px;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
 body {
   font-family: 'Arial', sans-serif;
   background: black;
