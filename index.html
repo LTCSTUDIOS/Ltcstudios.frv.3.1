@@ -3,137 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LTC STUDIO</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-
-    .stars {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat;
-      animation: moveStars 200s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes moveStars {
-      from { background-position: 0 0; }
-      to { background-position: -10000px 5000px; }
-    }
-
-    header {
-      width: 100%;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      background: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 10;
-    }
-
-    header .logo {
-      height: 40px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: yellow;
-    }
-
-    .section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .hero img {
-      width: 240px;
-      max-width: 80vw;
-      margin-bottom: 30px;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      background: yellow;
-      color: black;
-      padding: 12px 24px;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
-    .btn:hover {
-      background: #fff200;
-    }
-  </style>
+  <title>Accueil - LTC STUDIO</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div class="stars"></div>
 
   <header>
-    <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Logo" class="logo" />
+    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Logo" class="logo" /></a>
     <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#studio">Le Studio</a>
-      <a href="#artistes">Artistes</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="section hero" id="accueil">
-    <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="Logo LTC Studio" />
+  <section class="section">
     <h1>Bienvenue chez LTC STUDIO</h1>
-    <p>Label, studio et tremplin pour artistes indépendants</p>
-    <a href="#studio"><button class="btn">Découvrir</button></a>
+    <p>Label, studio et tremplin pour artistes indépendants.</p>
   </section>
 
-  <section class="section" id="studio">
-    <h2>Le Studio</h2>
-    <p>Découvrez notre matériel professionnel, notre espace de création et nos offres d’enregistrement, mixage et mastering.</p>
-  </section>
-
-  <section class="section" id="artistes">
-    <h2>Nos Artistes</h2>
-    <p>Retrouvez SeaKlone, Seel, et les membres de La True Connexion. Projets, clips, et actus à venir.</p>
-  </section>
-
-  <section class="section" id="services">
-    <h2>Nos Services</h2>
-    <p>Mix & Mastering, réalisation de projets, pressage physique, accompagnement, merchandising, et plus encore.</p>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Une question, une demande ? Contacte-nous via notre formulaire ou nos réseaux.</p>
-  </section>
-
+  <footer>
+    <p>LTC STUDIO © 2025</p>
+  </footer>
 </body>
 </html>
