@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LTC Studio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTC STUDIO</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .stars {
+      width: 100%;
+      height: 100%;
+      background: black url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat;
+      animation: moveStars 200s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    .center-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .center-logo img {
+      width: 200px;
+      max-width: 80vw;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Studio Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="artistes.html">Artistes</a></li>
-        <li><a href="merch.html">Merch</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>Bienvenue sur LTC Studio V3</h1>
-    <p>La plateforme de la True Connexion pour l'art indépendant.</p>
-  </main>
-  <footer>
-    <p>&copy; 2023 LTC Studio. Tous droits réservés.</p>
-  </footer>
-  <script src="app.js"></script>
+  <div class="stars"></div>
+  <div class="center-logo">
+    <img src="logo-ltc.png" alt="Logo LTC Studio" />
+  </div>
 </body>
 </html>
