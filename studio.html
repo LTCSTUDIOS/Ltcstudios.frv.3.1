@@ -2,16 +2,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Le Studio - LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .studio-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    .studio-gallery img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+    }
+    .studio-gallery img:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
   <div class="stars"></div>
-
   <header>
-    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Logo" class="logo"></a>
+    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Logo" class="logo"/></a>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="studio.html">Le Studio</a>
@@ -28,6 +47,12 @@
       Un espace pensé pour la performance, le confort et l’indépendance artistique.<br>
       Installé avec soin dans un cadre professionnel, le studio LTC réunit tout ce qu’il faut pour créer, enregistrer, mixer et finaliser vos projets comme un(e) pro.
     </p>
+
+    <div class="studio-gallery">
+      <img src="assets/studio1.jpeg" alt="Vue Studio 1" />
+      <img src="assets/studio2.jpeg" alt="Vue Studio 2" />
+    </div>
+
     <h2>Matériel à disposition :</h2>
     <ul style="text-align: left; max-width: 700px; margin: 40px auto; font-size: 1em; line-height: 1.7;">
       <li>Micro Edge Duo + Shure SM7B</li>
@@ -40,11 +65,6 @@
       <li>SmartWorkout Bar, isolation phonique, confort de travail optimal</li>
     </ul>
 
-    <p style="max-width: 700px; margin: auto;">
-      Ici, chaque session est une immersion.<br>
-      Tu veux réserver un créneau ou obtenir un devis personnalisé ?
-    </p>
-    <br>
     <a href="contact.html"><button class="btn">Réserver une session</button></a>
   </section>
 
