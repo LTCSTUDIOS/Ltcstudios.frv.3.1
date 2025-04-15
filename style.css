@@ -1,43 +1,45 @@
-/* Global styles */
-body {
+/* Styles généraux */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #000;
-  background: #000 url("assets/stars.gif") repeat;
+  background: black url('assets/stars.gif') repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: #FFD700;
+  margin: 0;
+  height: 100vh;
 }
 
-/* Header section with logo */
+/* Header */
 header {
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.85);
 }
 
-/* Logo styling */
-.logo img {
-  max-width: 150px;
+header img {
+  max-width: 200px;  /* Ajuste la taille du logo ici */
   height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
-/* Navigation styling */
+/* Navigation */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 10px 0;
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin: 20px 0;
 }
 
 nav ul li a {
   color: #FFD700;
   text-decoration: none;
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 1.1rem;
 }
 
 nav ul li a.active,
@@ -47,17 +49,14 @@ nav ul li a:hover {
 
 /* Main content */
 main {
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 main h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
 }
 
 main p {
@@ -66,27 +65,10 @@ main p {
   margin: 0 auto;
 }
 
-/* Footer section */
+/* Footer */
 footer {
-  margin-top: 40px;
+  text-align: center;
   padding: 20px 0;
   background: #111;
   color: #aaa;
-}
-
-/* Button styling */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #FFD700;
-  color: #000;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #e5c100;
 }
