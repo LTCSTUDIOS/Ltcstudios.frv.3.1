@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artistes - LTC STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .artist-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 60px auto;
+    }
+    .artist-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 16px;
+      width: 280px;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .artist-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .artist-card h3 {
+      margin: 10px 0 5px;
+    }
+    .artist-card p {
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .artist-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: yellow;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Logo" class="logo"></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="apropos.html">À propos</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h1>Nos Artistes</h1>
+    <p>Découvrez les talents du label et du collectif La True Connexion</p>
+
+    <div class="artist-grid">
+      <div class="artist-card">
+        <img src="assets/seaklone.jpg" alt="SeaKlone">
+        <h3>SeaKlone</h3>
+        <p>Rappeur, beatmaker & fondateur du projet TEC. Style hybride entre boom bap, trap et poésie brute.</p>
+        <a href="#">Voir ses projets</a>
+      </div>
+
+      <div class="artist-card">
+        <img src="assets/seel.jpg" alt="Seel">
+        <h3>Seel</h3>
+        <p>MC du 04, flow tranchant et introspectif. Nouveau projet disponible : “Noir c’est noir”.</p>
+        <a href="#">Voir ses projets</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
+  </footer>
+</body>
+</html>
