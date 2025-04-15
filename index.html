@@ -2,61 +2,66 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accueil - LTC STUDIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choisir ma session - LTC STUDIO</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      text-align: center;
+    .session-grid {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      color: white;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 60px auto;
     }
-    .hero::after {
-      content: "";
-      background: url('assets/LTC_STUDIO_LOGO_TSHIRT.png') no-repeat center center;
-      background-size: contain;
-      opacity: 0.15;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+    .session-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      transition: transform 0.3s;
     }
-    .hero-content {
-      position: relative;
-      z-index: 1;
+    .session-card:hover {
+      transform: scale(1.03);
     }
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
+    .session-card h3 {
+      margin-top: 0;
+      color: #FFD700;
     }
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
+    .session-card p {
+      font-size: 0.9em;
+      color: #ccc;
+      line-height: 1.5;
     }
-    .btn {
-      background-color: #FFD700;
-      color: black;
-      padding: 12px 24px;
-      text-decoration: none;
+    .session-card .price {
+      font-size: 1.4em;
       font-weight: bold;
-      border-radius: 30px;
+      margin: 15px 0;
+      color: yellow;
+    }
+    .session-card a {
+      display: block;
+      padding: 10px 20px;
+      background: yellow;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: bold;
       transition: background 0.3s;
     }
-    .btn:hover {
-      background-color: white;
+    .session-card a:hover {
+      background: #fff200;
     }
   </style>
 </head>
 <body>
   <div class="stars"></div>
   <header>
+    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" class="logo" alt="LTC Logo"></a>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="studio.html">Le Studio</a>
@@ -64,13 +69,84 @@
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="apropos.html">À propos</a>
+      <a href="session.html">Session</a>
     </nav>
   </header>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>LTC STUDIO</h1>
-      <p>Libère ta créativité. Incarne l'avenir.</p>
-      <a href="drop001.html" class="btn">Découvrir le Drop 001</a>
+  <section class="section">
+    <h1>Choisir ma session</h1>
+    <p>Sélectionne la formule qui te convient parmi nos offres modulables :</p>
+    <div class="session-grid">
+      <!-- Session à l'heure -->
+      <div class="session-card">
+        <h3>Session à l'heure</h3>
+        <p>30€/heure dégressif</p>
+        <p>2h : 55€<br>3h : 100€<br>6h : 180€</p>
+        <div class="price">À partir de 55€</div>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Pack EP 3 titres -->
+      <div class="session-card">
+        <h3>Pack EP 3 titres</h3>
+        <p>Enregistrement, mix et mastering sur un type beat</p>
+        <div class="price">150€</div>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Production sur mesure -->
+      <div class="session-card">
+        <h3>Prod sur mesure</h3>
+        <p>Production personnalisée pour ton projet</p>
+        <div class="price">300€</div>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Ajout Clip -->
+      <div class="session-card">
+        <h3>Ajout Clip</h3>
+        <p>Clip réalisé par Seel (ex : demo clip)</p>
+        <div class="price">600€</div>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Distribution -->
+      <div class="session-card">
+        <h3>Distribution</h3>
+        <p>50€ par sortie + 10% des royalties</p>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Pack Album -->
+      <div class="session-card">
+        <h3>Pack Album</h3>
+        <p>10 titres enregistrés, mixés, masterisés</p>
+        <div class="price">450€</div>
+        <p>Sur prod sur mesure: 888€ (+30% royalties)</p>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Clip Album -->
+      <div class="session-card">
+        <h3>Clip Album</h3>
+        <p>Clip en plus réalisé par Seel</p>
+        <div class="price">1300€</div>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Track A à Z -->
+      <div class="session-card">
+        <h3>Track A à Z</h3>
+        <p>Production complète d'une track</p>
+        <div class="price">100€</div>
+        <a href="#">Sélectionner</a>
+      </div>
+      <!-- Devis sur mesure -->
+      <div class="session-card">
+        <h3>Devis sur mesure</h3>
+        <p>Formule personnalisée pour ton projet</p>
+        <a href="#">Demander un devis</a>
+      </div>
+      <!-- Contrat Artiste -->
+      <div class="session-card">
+        <h3>Contrat Artiste</h3>
+        <p>Production & management complet<br>
+           <small>30% des royalties perçues par l'artiste</small>
+        </p>
+        <a href="#">Sélectionner</a>
+      </div>
     </div>
   </section>
   <footer>
