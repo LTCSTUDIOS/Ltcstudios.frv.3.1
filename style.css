@@ -1,0 +1,139 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importation des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* Définition du fond étoilé */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #101010;
+    color: #fff;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    background-image: url('assets/stellar_background.gif'); /* Fond étoilé */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+/* Mise en forme du header avec le logo */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header .logo-container img {
+    width: 60px;
+    height: auto;
+}
+
+header .studio-name {
+    font-size: 3rem;
+    color: #F5B300; /* Jaune pour le texte */
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #F5B300;
+    border-radius: 5px;
+}
+
+/* Section principale */
+main {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Styles pour la section d'introduction */
+.intro h2 {
+    font-size: 3rem;
+    color: #F5B300;
+}
+
+.intro .btn-primary {
+    background-color: #F5B300;
+    padding: 15px 25px;
+    color: #101010;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.intro .btn-primary:hover {
+    background-color: #e0a500;
+}
+
+/* Section Drop */
+.drop-section {
+    background-color: #181818;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.drop-section h2 {
+    font-size: 2.5rem;
+    color: #F5B300;
+}
+
+.drop-section .btn-secondary {
+    background-color: #F5B300;
+    padding: 15px 25px;
+    color: #101010;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.drop-section .btn-secondary:hover {
+    background-color: #e0a500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #101010;
+    padding: 20px;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media queries pour la version mobile */
+@media only screen and (max-width: 768px) {
+    .intro h2 {
+        font-size: 2
