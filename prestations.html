@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prestations - LTC STUDIO</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .prestations-container {
+      max-width: 900px;
+      margin: 60px auto;
+      font-size: 1em;
+      color: #ccc;
+    }
+    .presta {
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .presta h3 {
+      color: #FFD700;
+      margin-bottom: 5px;
+    }
+    .presta p {
+      margin-bottom: 8px;
+    }
+    form {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      margin-top: 5px;
+      border-radius: 6px;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      background: yellow;
+      color: black;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #fff200;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <header>
+    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="Logo LTC" class="logo"/></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="contact.html">Contact</a>
+      <a href="merch.html">Merch</a>
+      <a href="drop001.html">Drop 001</a>
+    </nav>
+  </header>
+
+  <section class="section prestations-container">
+    <h1>Nos Prestations</h1>
+
+    <div class="presta">
+      <h3>Session studio à l’heure</h3>
+      <p>30€/h • 2h : 55€ • 3h : 100€ • 6h : 180€</p>
+    </div>
+
+    <div class="presta">
+      <h3>Pack EP (3 titres)</h3>
+      <p>Mix + Mastering sur type beat : 150€</p>
+      <p>Sur prod Wolfibeat (sur mesure) : 300€</p>
+      <p>Avec clip réalisé par Seel : 600€</p>
+    </div>
+
+    <div class="presta">
+      <h3>Pack Album (10 titres)</h3>
+      <p>Sur type beat : 450€</p>
+      <p>Sur prod sur mesure : 888€ (30% royalties)</p>
+      <p>Avec clip par Seel : 1300€</p>
+    </div>
+
+    <div class="presta">
+      <h3>Track unique (A à Z)</h3>
+      <p>1 track enregistrée, mixée, masterisée : 100€</p>
+    </div>
+
+    <div class="presta">
+      <h3>Distribution Digitale</h3>
+      <p>50€/sortie + 10% des royalties perçues</p>
+    </div>
+
+    <div class="presta">
+      <h3>Contrat Artiste & Management</h3>
+      <p>Production complète avec 30% des royalties pour LTC STUDIO</p>
+    </div>
+
+    <h2 style="text-align:center;margin-top:60px;color:#FFD700;">Réserver ma session</h2>
+    <form action="#" method="POST">
+      <label for="nom">Nom / Prénom</label>
+      <input type="text" name="nom" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" required>
+
+      <label for="prestation">Choix de prestation</label>
+      <select name="prestation" required>
+        <option value="">-- Choisir une formule --</option>
+        <option value="1h">1h studio</option>
+        <option value="2h">2h studio</option>
+        <option value="ep">Pack EP 3 titres</option>
+        <option value="album">Pack Album</option>
+        <option value="track">Track A à Z</option>
+        <option value="distribution">Distribution</option>
+        <option value="contrat">Contrat / Management</option>
+        <option value="autre">Autre (à préciser)</option>
+      </select>
+
+      <label for="date">Date souhaitée</label>
+      <input type="date" name="date" required>
+
+      <label for="message">Message / détails</label>
+      <textarea name="message" rows="4" placeholder="Précise ton besoin, horaires, options…"></textarea>
+
+      <button type="submit">Réserver avec acompte 20%</button>
+    </form>
+    <p style="text-align:center;margin-top:20px;font-size:0.9em;color:#aaa;">
+      Une fois le formulaire envoyé, nous te contacterons pour confirmer et payer l’acompte.
+    </p>
+  </section>
+
+  <footer>
+    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
+  </footer>
+</body>
+</html>
