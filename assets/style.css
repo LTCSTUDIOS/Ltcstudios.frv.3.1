@@ -1,97 +1,138 @@
-/* Global */
+/* Réinitialisation des marges, paddings et boîte de calcul */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fond général étoilé */
 body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
-  background: url('stellar_background.gif') no-repeat center center fixed;
+  background: url('assets/stellar_background.gif') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
+  padding-top: 70px; /* Pour éviter que le contenu soit caché par le header */
 }
 
-h1, h2, h3 {
-  font-weight: bold;
+/* Mise en forme du texte */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 a {
-  color: #f39c12;
   text-decoration: none;
+  color: #F5B300;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #f1c40f;
+  color: #fff;
 }
 
-/* Navbar */
-nav {
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  right: 0;
   z-index: 100;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
+header .logo-container img {
+  width: 80px;
+  height: auto;
 }
 
-nav ul li {
+header .studio-name {
+  font-size: 2.5rem;
+  color: #F5B300;
+  letter-spacing: 2px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li {
   list-style: none;
-  margin: 0 20px;
 }
 
-nav ul li a {
+header nav ul li a {
   font-size: 1.2rem;
-  text-transform: uppercase;
   color: #fff;
-  transition: color 0.3s;
+  padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #f39c12;
-}
-
-/* Hero Section */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  color: #f39c12;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: 20px;
-}
-
-.hero .btn {
-  background-color: #f39c12;
-  padding: 10px 20px;
-  color: #fff;
-  border: none;
-  font-size: 1.1rem;
-  cursor: pointer;
+header nav ul li a:hover {
+  background-color: #F5B300;
   border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-.hero .btn:hover {
-  background-color: #e67e22;
+/* Section principale */
+.main-section {
+  text-align: center;
+  padding: 100px 20px; /* Added top padding for space below the header */
+}
+
+.main-section h2 {
+  font-size: 3rem;
+  color: #F5B300;
+}
+
+.main-section p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.main-section .btn-primary {
+  background-color: #F5B300;
+  color: #101010;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.main-section .btn-primary:hover {
+  background-color: #e0a500;
+}
+
+/* Section Drop */
+.drop-section {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.drop-section h2 {
+  font-size: 2.5rem;
+  color: #F5B300;
+}
+
+.drop-section .btn-secondary {
+  background-color: #F5B300;
+  padding: 15px 25px;
+  color: #101010;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.drop-section .btn-secondary:hover {
+  background-color: #e0a500;
 }
 
 /* Footer */
@@ -99,13 +140,17 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
   font-size: 1rem;
 }
 
-/* Media Queries */
+/* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
@@ -117,5 +162,17 @@ footer p {
 
   nav ul li {
     margin: 0 10px;
+  }
+
+  .main-section .btn-primary {
+    padding: 10px 20px;
+  }
+
+  .drop-section .btn-secondary {
+    padding: 10px 20px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }
