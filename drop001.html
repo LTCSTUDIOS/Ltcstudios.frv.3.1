@@ -3,8 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drop 001 - T-shirt officiel</title>
+  <title>Drop 001 – LTC STUDIO</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .drop001 {
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(0, 0, 0, 0.95);
+      color: #FFD700;
+    }
+
+    .drop001 h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    .drop001 p {
+      color: white;
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .gallery img {
+      width: 280px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px yellow;
+    }
+
+    .select-wrapper {
+      margin-top: 20px;
+    }
+
+    select {
+      padding: 10px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1em;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .btn-yellow {
+      background-color: #FFD700;
+      color: black;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-yellow:hover {
+      background-color: #ffcc00;
+    }
+
+    .stock-count {
+      font-size: 1em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,21 +84,35 @@
       <a href="ebooks.html">eBooks</a>
       <a href="concours.html">1h Gratuite</a>
       <a href="contact.html">Contact</a>
-      <a href="drop001.html">Drop 001</a>
+      <a href="merch.html" class="active">Drop 001</a>
     </nav>
   </header>
 
-  <section class="card">
-    <h1>Drop 001 - T-shirt Officiel</h1>
-    <img src="assets/drop001.jpg" alt="T-shirt Drop 001" style="max-width:300px; margin: 20px auto;" />
-    <p>Le tout premier drop officiel LTC STUDIO.  
-    T-shirt noir premium, logo jaune dans le dos + fanion poitrine.  
-    Bonus exclusif : <strong>1h de studio offerte</strong> à tout porteur du tee.</p>
+  <section class="drop001">
+    <h1>DROP 001 — T-SHIRT ÉDITION LIMITÉE</h1>
 
-    <p style="margin-top:10px;"><strong>Prix : 44€</strong></p>
-    <p>Disponible dès le <strong>1er mai</strong> – en précommande maintenant.</p>
+    <p>Le tout premier drop officiel : 50 t-shirts numérotés à la main, coupe oversize, coton bio, logo LTC dans le dos.</p>
+    <div class="gallery">
+      <img src="assets/studio1.jpg" alt="T-shirt avant">
+      <img src="assets/studio2.jpg" alt="T-shirt dos">
+    </div>
 
-    <a href="#" class="btn">Précommander (lien actif bientôt)</a>
+    <p><strong>Prix : 44 €</strong> — 1h de session offerte à tout porteur du tee.</p>
+    <p>Livraison à partir du <strong>10 mai 2025</strong></p>
+
+    <div class="select-wrapper">
+      <label for="taille">Choisis ta taille :</label><br>
+      <select name="taille" id="taille">
+        <option value="S">S</option>
+        <option value="M" selected>M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+    </div>
+
+    <a href="#" class="btn-yellow">Précommander maintenant</a>
+    <p class="stock-count">Stock restant : <strong>37 / 50</strong></p>
+    <p style="font-size: 0.9em; color: #888;">(Le lien de précommande sera actif dès validation du fournisseur)</p>
   </section>
 
   <footer>
