@@ -1,39 +1,143 @@
-
-.artiste-card {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
-  margin: 30px auto;
-  padding: 20px;
-  max-width: 400px;
-  text-align: center;
-  color: yellow;
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.artiste-img {
-  width: 160px;
-  height: 160px;
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: black url("assets/stellar_background.gif") repeat center center fixed;
+  color: #FFD700;
+  line-height: 1.6;
+}
+
+/* Stars effect if JS/CSS-based version exists */
+.stars-background {
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* Navigation */
+header nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 14px 20px;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(255, 255, 0, 0.1);
+}
+
+nav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Titres */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Cartes Artistes */
+.artist-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(255, 255, 0, 0.3);
+}
+
+.artist-img {
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid yellow;
+  border: 3px solid #FFD700;
   margin-bottom: 15px;
 }
 
-.artiste-card h2 {
-  font-size: 1.5em;
+.artist-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FFD700;
   margin-bottom: 10px;
 }
 
-.artiste-card p {
-  font-size: 1em;
-  margin-bottom: 15px;
+.artist-desc {
   color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  padding: 0 10px;
 }
 
-.artiste-card .btn {
-  background-color: yellow;
+/* Bouton principal */
+.btn-yellow {
+  background-color: #FFD700;
   color: black;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-yellow:hover {
+  background-color: #e6c200;
+}
+
+/* Footer */
+footer {
+  color: #aaa;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 12px 10px;
+  }
+
+  .artist-card {
+    margin: 30px 15px;
+  }
+
+  .artist-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .btn-yellow {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }
