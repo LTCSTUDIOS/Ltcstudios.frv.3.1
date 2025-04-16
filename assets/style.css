@@ -1,200 +1,194 @@
-/* ========== RÉINITIALISATION ========= */
+/* ========== RÉINITIALISATION ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========== PARAMÈTRES GLOBAUX ========= */
-body {
+/* ========== PARAMÈTRES GLOBAUX ========== */
+html, body {
+  height: 100%;
   font-family: 'Roboto', sans-serif;
-  background-color: #121212;
   color: #fff;
-  overflow-x: hidden;
-  /* Fond étoilé impactant : 
-     Remplace 'assets/stellar_background.gif' par ton image de fond étoilé (GIF ou JPG) */
+  overflow-x: hidden; /* Pas de défilement horizontal */
+}
+
+/* Fond étoilé couvrant toute la page */
+body {
   background: url('assets/stellar_background.gif') no-repeat center center fixed;
   background-size: cover;
 }
 
-/* ========== HEADER & NAVBAR ========= */
-header {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 2vh 4vw;
+/* ========== NAVBAR ========== */
+nav {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 100;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  padding: 10px 0;
+}
+
+nav .container-nav {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 1vh;
 }
 
 .logo-container img {
-  width: 15vw;
-  max-width: 150px;
+  width: 60px;
   height: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgba(245, 179, 0, 0.8);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 10px;
 }
 
-.logo-container img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 40px rgba(245, 179, 0, 1);
-}
-
-.studio-name {
-  font-size: 3vw;
+.logo-title {
+  font-size: 1.8rem;
+  font-weight: bold;
   color: #F5B300;
   text-transform: uppercase;
-  margin-top: 1vh;
-  text-align: center;
-}
-
-nav {
-  width: 100%;
-  margin-top: 2vh;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Permet d'éviter le débordement */
-  gap: 2vw;
+  gap: 20px;
 }
 
 nav ul li a {
-  font-size: 1.2vw;
-  color: #fff;
-  text-decoration: none;
+  color: #F5B300;
   text-transform: uppercase;
-  padding: 1vh 2vw;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  background-color: #F5B300;
-  border-radius: 5px;
-}
-
-/* ========== SECTION HERO ========= */
-.hero {
-  margin-top: 18vh; /* Espace pour le header fixe */
-  padding: 5vh 4vw;
-  text-align: center;
   color: #fff;
 }
 
+/* Pour libérer l'espace sous le menu fixe */
+.wrapper {
+  padding-top: 70px; /* hauteur du nav */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== SECTION HERO ========== */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  flex: 1; /* pour occuper l'espace restant */
+}
+
 .hero h1 {
-  font-size: 4vw;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: #F5B300;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  margin-bottom: 2vh;
 }
 
 .hero p {
-  font-size: 1.8vw;
-  margin-bottom: 4vh;
-  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
 
 .btn-primary {
   background-color: #F5B300;
-  color: #121212;
-  padding: 1.5vh 3vw;
-  font-size: 1.6vw;
-  font-weight: bold;
-  border: none;
+  color: #000;
+  padding: 12px 24px;
   border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s;
   text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #e0a500;
-  transform: scale(1.05);
+  background-color: #d49a00;
 }
 
-/* ========== SECTION DROP ========= */
+/* ========== SECTION DROP ========== */
 .drop-section {
-  background-color: rgba(0, 0, 0, 0.8);
-  margin: 5vh auto;
-  padding: 4vh 4vw;
-  max-width: 800px;
-  border-radius: 10px;
   text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 10px;
 }
 
 .drop-section h2 {
-  font-size: 3vw;
+  font-size: 2rem;
   color: #F5B300;
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
 }
 
 .drop-section p {
-  font-size: 1.8vw;
-  margin-bottom: 3vh;
-  color: #ccc;
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 20px;
 }
 
 .btn-secondary {
   background-color: #F5B300;
-  color: #121212;
-  padding: 1.5vh 3vw;
-  font-size: 1.6vw;
-  font-weight: bold;
-  border: none;
+  color: #000;
+  padding: 10px 24px;
   border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s;
   text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .btn-secondary:hover {
-  background-color: #e0a500;
-  transform: scale(1.05);
+  background-color: #d49a00;
 }
 
-/* ========== FOOTER ========= */
+/* ========== FOOTER ========== */
 footer {
-  background-color: #121212;
-  padding: 2vh 0;
   text-align: center;
-  color: #ccc;
-  font-size: 1.2vw;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  color: #f0f0f0;
+  font-size: 0.9rem;
 }
 
-/* ========== RESPONSIVE ========= */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-  header .studio-name {
-    font-size: 6vw;
+  .logo-title {
+    font-size: 1.4rem;
   }
+
   nav ul li a {
-    font-size: 4vw;
-    padding: 2vh 3vw;
+    font-size: 0.9rem;
   }
+
   .hero h1 {
-    font-size: 8vw;
+    font-size: 2rem;
   }
+
   .hero p {
-    font-size: 4vw;
+    font-size: 1rem;
   }
-  .btn-primary, .btn-secondary {
-    font-size: 4vw;
-    padding: 3vh 6vw;
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
-  footer p {
-    font-size: 4vw;
+
+  .drop-section h2 {
+    font-size: 1.6rem;
+  }
+  .drop-section p {
+    font-size: 0.9rem;
+  }
+  .btn-secondary {
+    font-size: 0.9rem;
   }
 }
