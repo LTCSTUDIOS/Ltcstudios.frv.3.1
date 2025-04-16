@@ -5,86 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nos Artistes - LTC STUDIO</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .artist-card {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(255, 255, 0, 0.3);
+    }
+
+    .artist-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #FFD700;
+      margin-bottom: 15px;
+    }
+
+    .artist-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .artist-desc {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-yellow {
+      background-color: #FFD700;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .btn-yellow:hover {
+      background-color: #e6c200;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="ebooks.html">eBooks</a>
-      <a href="concours.html">1h Gratuite</a>
-      <a href="contact.html">Contact</a>
-      <a href="drop001.html">Drop 001</a>
-    </nav>
-  </header>
+  <div class="stars-background">
+    <header>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="studio.html">Le Studio</a>
+        <a href="artistes.html">Artistes</a>
+        <a href="prestations.html">Prestations</a>
+        <a href="ebooks.html">eBooks</a>
+        <a href="1h.html">1h Gratuite</a>
+        <a href="contact.html">Contact</a>
+        <a href="merch.html">Drop 001</a>
+      </nav>
+    </header>
 
-  <section>
-    <h1>Nos Artistes</h1>
-    <p>Le collectif LTC STUDIO regroupe des artistes uniques, engagés et visionnaires.</p>
-  </section>
+    <main>
+      <h1 class="title">Nos Artistes</h1>
+      <p class="subtitle">Découvrez les talents du label et du collectif La True Connexion</p>
 
-  <section class="artist-list">
-    <div class="artist-card">
-      <img src="assets/seaklone.jpg" alt="SeaKlone" class="artist-photo" />
-      <h2>SeaKlone</h2>
-      <p>Visionnaire, producteur, MC : le fondateur du projet T.E.C.</p>
-      <a href="seaklone.html" class="btn">En savoir plus</a>
-    </div>
+      <section class="artist-card">
+        <img src="assets/seaklone.jpg" alt="SeaKlone" class="artist-img" />
+        <div class="artist-name">SeaKlone aka Wolfibeat</div>
+        <div class="artist-desc">
+          Fondateur du projet T.E.C, artiste complet mêlant rap, production, et vision globale.
+        </div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <br /><br />
+        <a href="seaklone.html" class="btn-yellow">En savoir plus</a>
+      </section>
 
-    <div class="artist-card">
-      <img src="assets/seel.jpg" alt="Seel" class="artist-photo" />
-      <h2>Seel</h2>
-      <p>MC authentique, kickeur de l’ombre et voix forte du 04.</p>
-      <a href="seel.html" class="btn">En savoir plus</a>
-    </div>
+      <section class="artist-card">
+        <img src="assets/seel.jpg" alt="Seel" class="artist-img" />
+        <div class="artist-name">Seel</div>
+        <div class="artist-desc">
+          MC authentique, engagé, auteur du projet "Noir c’est noir", nouvelle voix du 04.
+        </div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0nBi5CB53mrgf3pFAWkdhz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <br /><br />
+        <a href="seel.html" class="btn-yellow">En savoir plus</a>
+      </section>
 
-    <div class="artist-card">
-      <img src="assets/ozal.jpg" alt="Ozal" class="artist-photo" />
-      <h2>Ozal</h2>
-      <p>Voix féminine percutante, énergie neuve, arrivée avec rage et précision.</p>
-      <a href="ozal.html" class="btn">En savoir plus</a>
-    </div>
+      <!-- Ajout autres artistes ici (Nawak, Ozal, etc.) -->
+    </main>
 
-    <div class="artist-card">
-      <img src="assets/nawak.jpg" alt="NawaK" class="artist-photo" />
-      <h2>NawaK</h2>
-      <p>Punchlines, sincérité, loyauté. Un pilier du collectif LTC.</p>
-      <a href="nawak.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="artist-card">
-      <img src="assets/li2t.jpg" alt="LI2T" class="artist-photo" />
-      <h2>LI2T</h2>
-      <p>Technicien du verbe, flow aiguisé, rimes structurées et vision forte.</p>
-      <a href="li2t.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="artist-card">
-      <img src="assets/naan.jpg" alt="Naan" class="artist-photo" />
-      <h2>Naan</h2>
-      <p>Vibes sensibles, conscience spirituelle, rap poétique et sincère.</p>
-      <a href="naan.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="artist-card">
-      <img src="assets/skurt.jpg" alt="Skurt" class="artist-photo" />
-      <h2>Skurt</h2>
-      <p>Feu brut, flow nerveux, kickeur sauvage en pleine ascension.</p>
-      <a href="skurt.html" class="btn">En savoir plus</a>
-    </div>
-
-    <div class="artist-card">
-      <img src="assets/skylen.jpg" alt="Skylen" class="artist-photo" />
-      <h2>Skylen</h2>
-      <p>Cosmique, mystique, unique. Sa voix est une porte vers l’ailleurs.</p>
-      <a href="skylen.html" class="btn">En savoir plus</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
-  </footer>
+    <footer style="text-align:center; padding:20px; color:#888;">
+      LTC STUDIO © 2025 — Tous droits réservés
+    </footer>
+  </div>
 </body>
 </html>
