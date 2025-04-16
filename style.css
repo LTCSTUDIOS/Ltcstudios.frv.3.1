@@ -1,105 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
-  background: url('assets/stellar_background.gif') repeat;
-  background-color: black;
+  background: black url('assets/stellar_background.gif') repeat;
+  background-size: cover;
   color: white;
   text-align: center;
 }
 
+header {
+  padding: 20px 0;
+}
+
 .logo {
-  max-width: 180px;
-  margin: 20px auto 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
   display: block;
-  border-radius: 20px;
-  box-shadow: 0 0 40px #FFD700;
+  margin: 0 auto 10px;
+  box-shadow: 0 0 40px 10px #FFD700;
+  border: 2px solid #FFD700;
+}
+
+h1, h2 {
+  margin: 10px 0;
 }
 
 h1 {
   font-size: 2.5em;
-  margin: 0;
-  line-height: 1.2;
-  color: white;
-  text-shadow: 0 0 8px #FFD700;
-}
-
-h2 {
-  font-size: 2em;
   color: #FFD700;
-  margin: 30px 0 10px;
+  text-shadow: 0 0 10px #FFD700;
 }
 
-.nav {
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 15px;
-}
-
-.nav a {
-  color: #FFD700;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav a:hover {
-  color: white;
-}
-
-.section-box {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 85%;
-  border: 1px solid #FFD700;
-  border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 90%;
-  border-radius: 15px;
+  gap: 15px;
   margin: 20px 0;
 }
 
-button, .button {
+nav a {
+  text-decoration: none;
+  color: #FFD700;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.section-title {
+  color: #FFD700;
+  font-size: 1.8em;
+  margin: 30px 0 10px;
+}
+
+.description-box {
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #FFD700;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+img.studio-photo {
+  max-width: 100%;
+  border-radius: 20px;
+  margin: 20px 0;
+  border: 1px solid #FFD700;
+}
+
+.button {
   background-color: #FFD700;
   color: black;
-  font-weight: bold;
   border: none;
-  padding: 12px 24px;
+  padding: 15px 30px;
+  margin: 20px auto;
   font-size: 1em;
-  border-radius: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #FFD700;
   cursor: pointer;
-  box-shadow: 0 0 15px #FFD700;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
-button:hover, .button:hover {
-  background-color: #fff;
-  color: black;
+.button:hover {
+  background-color: white;
+  transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 2em;
   }
 
-  h2 {
-    font-size: 1.5em;
+  .description-box {
+    margin: 15px;
+    padding: 15px;
   }
 
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .section-box {
-    font-size: 1em;
+  .button {
+    padding: 12px 20px;
+    font-size: 0.9em;
   }
 }
