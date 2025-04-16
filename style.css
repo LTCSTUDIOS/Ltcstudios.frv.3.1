@@ -1,160 +1,124 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   font-family: 'Orbitron', sans-serif;
   background-color: #000;
   color: #fff;
   overflow-x: hidden;
 }
 
-.navbar {
-  background-color: #000;
-  padding: 1rem 0;
-  border-bottom: 2px solid #fdee00;
+h1, h2, h3, h4 {
+  color: #FFD700;
   text-align: center;
+  margin: 1rem 0;
 }
 
-.navbar ul {
-  list-style: none;
+p {
+  text-align: center;
+  line-height: 1.6;
+  margin: 0.5rem auto;
+  max-width: 90%;
+}
+
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  background-color: #000;
+  padding: 1rem 0;
+  border-bottom: 2px solid #FFD700;
 }
 
-.navbar a {
+nav a {
+  color: #FFD700;
   text-decoration: none;
-  color: #fdee00;
-  font-weight: 700;
+  font-weight: bold;
+  margin: 0 1rem;
+  font-size: 1rem;
 }
 
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  color: #fdee00;
+header img {
+  display: block;
+  margin: 1rem auto;
+  width: 150px;
 }
 
-.hero-text {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #fff;
+section {
+  padding: 1rem 5%;
 }
 
-.cta-button {
-  background-color: #fdee00;
-  color: #000;
-  padding: 1rem 2rem;
-  border: none;
+img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
   border-radius: 12px;
+  border: 1px solid #FFD700;
+}
+
+button, .btn-reserver, .cta {
+  background-color: #FFD700;
+  color: #000;
   font-weight: bold;
   font-size: 1rem;
-  margin-top: 2rem;
-  box-shadow: 0 0 15px #fdee00;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #FFD700;
+  margin: 2rem auto;
+  display: block;
+  width: fit-content;
   cursor: pointer;
 }
 
-.cta-button:hover {
-  background-color: #ffe600;
-}
-
-.intro-section {
-  padding: 3rem 1rem;
-  text-align: center;
-  border-top: 1px solid #fdee00;
-}
-
-.intro-logo {
-  width: 150px;
-  margin: 2rem 0;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  color: #fdee00;
-}
-
-.section-text {
-  font-size: 1rem;
-  margin: 1rem 0;
-}
-
-.cta-link {
-  color: #fdee00;
-  text-decoration: underline;
-  font-size: 1rem;
-}
-
-.drop-container {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.drop-container h1 {
-  font-size: 2rem;
-  color: #fdee00;
-  margin-bottom: 2rem;
-}
-
-.drop-card {
-  border: 2px solid #fdee00;
-  padding: 2rem;
-  border-radius: 20px;
-  max-width: 500px;
-  margin: auto;
-  box-shadow: 0 0 20px #fdee00;
-}
-
-.drop-logo {
-  width: 100px;
-  margin: 1rem 0;
-}
-
-.drop-card h2 {
-  font-size: 1.4rem;
-  color: #fdee00;
-  margin-bottom: 1rem;
-}
-
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fdee00;
-  margin: 1rem 0;
-}
-
-.countdown {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-top: 1.5rem;
-  color: #fdee00;
-}
-
-select, input[type="email"] {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #fdee00;
-  background-color: #000;
-  color: #fff;
-  margin-top: 0.5rem;
-  border-radius: 10px;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.footer {
+footer {
   text-align: center;
   padding: 2rem 1rem;
-  font-size: 0.8rem;
-  color: #aaa;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Fond étoilé animé */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, #222 0%, #000 100%);
+  background-image: repeating-linear-gradient(45deg, #111 0px, #111 1px, #000 1px, #000 2px);
+  opacity: 0.04;
+  z-index: -1;
+  animation: stars 100s linear infinite;
+}
+
+@keyframes stars {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-500px, 500px); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav a {
+    margin: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  header img {
+    width: 120px;
+  }
+
+  button, .btn-reserver {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
 }
