@@ -2,113 +2,95 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artistes - LTC STUDIO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    .artistes {
-      width: 90%;
-      max-width: 70rem;
-      margin: 6vh auto;
-      padding: 4vw;
-      background: #111;
-      border-radius: 2vw;
-      border: 0.1rem solid #FFD700;
-      box-shadow: 0 0 2rem #FFD70022;
-      text-align: center;
-    }
-
-    .artistes h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #FFD700;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background-color: #000;
-      border: 1px solid #FFD70033;
-      border-radius: 1rem;
-      padding: 1rem;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      color: #FFD700;
-    }
-
-    .btn {
-      margin-top: 0.5rem;
-      display: inline-block;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artistes - LTC Studio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="artistes">
+  <header>
+    <img src="assets/logo-ltc.png" alt="Logo LTC" class="logo" />
     <h1>Nos Artistes</h1>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/seaklone.jpg" alt="SeaKlone">
-        <h3>SeaKlone</h3>
-        <a href="seaklone.html" class="btn">En savoir plus</a>
-      </div>
-      <div class="card">
-        <img src="assets/seel.jpg" alt="Seel">
-        <h3>Seel</h3>
-        <a href="seel.html" class="btn">En savoir plus</a>
-      </div>
-      <div class="card">
-        <img src="assets/ozal.jpg" alt="Ozal">
-        <h3>Ozal</h3>
-        <a href="ozal.html" class="btn">En savoir plus</a>
-      </div>
-      <div class="card">
-        <img src="assets/nawak.jpg" alt="NawaK">
-        <h3>NawaK</h3>
-        <a href="nawak.html" class="btn">En savoir plus</a>
-      </div>
-      <div class="card">
-        <img src="assets/li2t.jpg" alt="LI2T">
-        <h3>LI2T</h3>
-        <a href="li2t.html" class="btn">En savoir plus</a>
-      </div>
-      <div class="card">
-        <img src="assets/naan.jpg" alt="Naan">
-        <h3>Naan</h3>
-        <a href="naan.html" class="btn">En savoir plus</a>
-      </div>
-      <div class="card">
-        <img src="assets/skurt.jpg" alt="Skurt">
-        <h3>Skurt</h3>
-        <a href="skurt.html" class="btn">En savoir plus</a>
-      </div>
-      <div class="card">
-        <img src="assets/skylen.jpg" alt="Skylen">
-        <h3>Skylen</h3>
-        <a href="skylen.html" class="btn">En savoir plus</a>
-      </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="studio.html">Le Studio</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="prestations.html">Prestations</a>
+    <a href="ebooks.html">eBooks</a>
+    <a href="1h.html">1h Gratuite</a>
+    <a href="contact.html">Contact</a>
+    <a href="drop001.html">Drop 001</a>
+  </nav>
+
+  <main>
+    <!-- SeaKlone -->
+    <div class="artiste-card">
+      <img src="assets/seaklone.jpg" alt="SeaKlone" />
+      <h3>SeaKlone (aka Wolfibeat)</h3>
+      <p>Artiste visionnaire, producteur et fondateur du projet T.E.C. Il incarne l’essence du mouvement LTC.</p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      <a href="seaklone.html" class="button">En savoir plus</a>
     </div>
-  </div>
+
+    <!-- Seel -->
+    <div class="artiste-card">
+      <img src="assets/seel.jpg" alt="Seel" />
+      <h3>Seel</h3>
+      <p>Rappeur incisif et passionné, membre fondateur de LTC STUDIO, Seel impose un flow brut et un regard lucide sur la réalité.</p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0nBi5CB53mrgf3pFAWkdhz?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      <a href="seel.html" class="button">En savoir plus</a>
+    </div>
+
+    <!-- Ozal -->
+    <div class="artiste-card">
+      <img src="assets/ozal.jpg" alt="Ozal" />
+      <h3>Ozal</h3>
+      <p>Nouvelle recrue pleine de feu, Ozal rappe depuis 3 mois avec une signature déjà marquée.</p>
+      <a href="ozal.html" class="button">En savoir plus</a>
+    </div>
+
+    <!-- NawaK -->
+    <div class="artiste-card">
+      <img src="assets/nawak.jpg" alt="NawaK" />
+      <h3>NawaK</h3>
+      <p>Un flow aiguisé et une écriture dense : NawaK frappe juste à chaque apparition.</p>
+      <a href="nawak.html" class="button">En savoir plus</a>
+    </div>
+
+    <!-- Li2t -->
+    <div class="artiste-card">
+      <img src="assets/li2t.jpg" alt="Li2t" />
+      <h3>Li2t</h3>
+      <p>Li2t développe un univers poétique et tranchant, entre introspection et démonstration technique.</p>
+      <a href="li2t.html" class="button">En savoir plus</a>
+    </div>
+
+    <!-- Naan -->
+    <div class="artiste-card">
+      <img src="assets/naan.jpg" alt="Naan" />
+      <h3>Naan</h3>
+      <p>Avec des textes profonds et des vibes originales, Naan étend l’univers musical de la True Connexion.</p>
+      <a href="naan.html" class="button">En savoir plus</a>
+    </div>
+
+    <!-- Skurt -->
+    <div class="artiste-card">
+      <img src="assets/skurt.jpg" alt="Skurt" />
+      <h3>Skurt</h3>
+      <p>Skurt est la surprise qui débarque toujours avec un style non conventionnel mais ultra percutant.</p>
+      <a href="skurt.html" class="button">En savoir plus</a>
+    </div>
+
+    <!-- Skylen -->
+    <div class="artiste-card">
+      <img src="assets/skylen.jpg" alt="Skylen" />
+      <h3>Skylen</h3>
+      <p>Entre cloud et trap rugueuse, Skylen construit des ambiances puissantes et planantes.</p>
+      <a href="skylen.html" class="button">En savoir plus</a>
+    </div>
+  </main>
 
 </body>
 </html>
