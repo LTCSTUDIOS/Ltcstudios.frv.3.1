@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +10,7 @@
       max-width: 500px;
       width: 100%;
       margin: 40px auto;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       padding: 20px;
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -31,6 +30,7 @@
       cursor: pointer;
       border-radius: 8px;
       margin-top: 10px;
+      transition: background 0.3s;
     }
     form button:hover {
       background: #fff200;
@@ -40,6 +40,23 @@
       font-size: 1em;
       color: #ccc;
       margin-top: 30px;
+    }
+    .social-contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .social-contact h2 {
+      font-size: 1.2em;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+    .social-contact a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .social-contact a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -56,10 +73,9 @@
       <a href="apropos.html">À propos</a>
     </nav>
   </header>
-
   <section class="section">
     <h1>Contactez-nous</h1>
-    <form action="https://formspree.io/f/mwkgeodn" method="POST">
+    <form action="https://formspree.io/f/TON_ID" method="POST">
       <input type="text" name="name" placeholder="Votre nom" required />
       <input type="email" name="email" placeholder="Votre email" required />
       <textarea name="message" placeholder="Votre message" required></textarea>
@@ -68,10 +84,13 @@
     <div class="infos-contact">
       Vous pouvez aussi nous écrire à :<br>
       <strong>contact@ltcstudio.fr</strong><br>
-      Ou sur Instagram : <strong>@ltc.studio</strong>
+      Ou nous suivre sur Instagram.
+    </div>
+    <div class="social-contact">
+      <h2>Suivez-nous sur Instagram</h2>
+      <a href="https://www.instagram.com/ltc.studio.fr?igsh=YjF1YjdoM3VwcG5k" target="_blank">@ltc.studio.fr</a>
     </div>
   </section>
-
   <footer>
     <p>LTC STUDIO © 2025 — Tous droits réservés</p>
   </footer>
