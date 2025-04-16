@@ -1,79 +1,80 @@
-/* GLOBAL RESET */
+
 body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: #000;
-  color: #FFD700;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: black;
+    color: white;
+    text-align: center;
 }
 
-/* NAVIGATION */
-nav {
-  background: #000;
-  border-bottom: 1px solid #FFD700;
-  text-align: center;
-  padding: 0.7rem;
-}
-nav a {
-  color: #FFD700;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
-  font-size: 0.85rem;
+.star-background {
+    background: url('assets/stellar_background.gif') repeat;
+    background-size: cover;
 }
 
-/* LOGO */
 .logo-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
+
 .logo {
-  width: 120px;
-  height: auto;
+    width: 20vw;
+    max-width: 150px;
+    height: auto;
 }
 
-/* SECTION DROP */
-.drop {
-  max-width: 700px;
-  margin: 50px auto;
-  text-align: center;
-  background-color: #111;
-  padding: 2rem;
-  border-radius: 16px;
-  border: 1px solid #FFD700;
-  box-shadow: 0 0 20px #FFD70022;
-}
-.drop h2 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
-.drop p {
-  font-size: 0.9rem;
-  color: #eee;
-  margin-bottom: 20px;
-  line-height: 1.4rem;
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 4vw;
+    max-width: 100%;
+    color: yellow;
 }
 
-/* BOUTON */
-.btn {
-  background-color: #FFD700;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 0.95rem;
-  border: none;
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: #ffea00;
+.menu a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* FOOTER */
+.highlight-box {
+    border: 1px solid yellow;
+    border-radius: 15px;
+    margin: 5vh 5vw;
+    padding: 2vh 3vw;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 4.5vw;
+}
+
+.studio-pic {
+    width: 90vw;
+    max-width: 600px;
+    margin: 3vh auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.button-container {
+    margin: 4vh auto;
+}
+
+.cta-button {
+    background-color: yellow;
+    color: black;
+    padding: 1.2em 2.2em;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 0 20px yellow;
+    text-decoration: none;
+}
+
 footer {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.75rem;
-  color: #777;
+    font-size: 3.5vw;
+    padding: 1rem;
+    color: #aaa;
 }
