@@ -1,14 +1,15 @@
-/* Reset CSS */
+/* Réinitialisation des marges, paddings et boîte de calcul */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Import de la police Google */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap');
+/* Importation des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-/* Body & Global styles */
+/* Définition du fond étoilé */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #101010;
@@ -22,9 +23,9 @@ body {
     background-position: center center;
 }
 
-/* Header Styling */
+/* Mise en forme du header avec le logo */
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -33,23 +34,17 @@ header {
     z-index: 100;
 }
 
-header .logo-container {
-    display: flex;
-    align-items: center;
-}
-
 header .logo-container img {
-    width: 60px; /* Ajuste la taille du logo */
+    width: 60px;
     height: auto;
 }
 
 header .studio-name {
-    font-size: 2.5rem;
-    margin-left: 10px;
-    color: #F5B300; /* Custom gold color */
+    font-size: 3rem;
+    color: #F5B300; /* Jaune pour le texte */
 }
 
-/* Navigation styling */
+/* Navigation */
 header nav ul {
     display: flex;
     gap: 20px;
@@ -73,25 +68,16 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Main Content */
+/* Section principale */
 main {
     padding: 50px 20px;
-}
-
-.intro {
     text-align: center;
-    margin-bottom: 50px;
 }
 
+/* Styles pour la section d'introduction */
 .intro h2 {
     font-size: 3rem;
-    margin-bottom: 20px;
     color: #F5B300;
-}
-
-.intro p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
 }
 
 .intro .btn-primary {
@@ -108,7 +94,7 @@ main {
     background-color: #e0a500;
 }
 
-/* Drop Section */
+/* Section Drop */
 .drop-section {
     background-color: #181818;
     padding: 50px 20px;
@@ -118,13 +104,7 @@ main {
 
 .drop-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     color: #F5B300;
-}
-
-.drop-section p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
 }
 
 .drop-section .btn-secondary {
@@ -141,7 +121,7 @@ main {
     background-color: #e0a500;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
     text-align: center;
     background-color: #101010;
@@ -153,19 +133,8 @@ footer p {
     font-size: 1rem;
 }
 
-/* Media Queries for Responsiveness */
+/* Media queries pour la version mobile */
 @media only screen and (max-width: 768px) {
-    header .logo-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
     .intro h2 {
         font-size: 2rem;
     }
