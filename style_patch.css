@@ -1,0 +1,39 @@
+
+.artiste-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  color: yellow;
+}
+
+.artiste-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid yellow;
+  margin-bottom: 15px;
+}
+
+.artiste-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.artiste-card p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.artiste-card .btn {
+  background-color: yellow;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
