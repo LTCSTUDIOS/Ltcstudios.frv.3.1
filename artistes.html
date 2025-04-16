@@ -1,133 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos Artistes – LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artistes - LTC STUDIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
   <style>
-    body {
-      margin: 0;
-      background: black url("assets/stars-bg.jpg") repeat;
-      font-family: 'Orbitron', sans-serif;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    nav {
-      background-color: black;
-      border-bottom: 2px solid #FFD700;
-      padding: 15px 0;
+    .artistes {
+      width: 90%;
+      max-width: 70rem;
+      margin: 6vh auto;
+      padding: 4vw;
+      background: #111;
+      border-radius: 2vw;
+      border: 0.1rem solid #FFD700;
+      box-shadow: 0 0 2rem #FFD70022;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
-    nav a {
-      color: #FFD700;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .container {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-
-    h1 {
-      color: #FFD700;
+    .artistes h1 {
       font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 2rem;
+      color: #FFD700;
     }
 
-    .description {
-      color: white;
-      font-size: 1rem;
-      margin-bottom: 30px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
     }
 
     .card {
-      background: #000;
-      border: 2px solid #FFD700;
-      border-radius: 18px;
-      margin: 20px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 500px;
-      box-shadow: 0 0 20px #FFD700;
+      background-color: #000;
+      border: 1px solid #FFD70033;
+      border-radius: 1rem;
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
     }
 
     .card img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 4px solid #FFD700;
-      object-fit: cover;
-      margin-bottom: 15px;
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .card h2 {
+    .card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
       color: #FFD700;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-    }
-
-    .card p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-      color: white;
-    }
-
-    .spotify {
-      margin-bottom: 20px;
     }
 
     .btn {
-      background-color: #FFD700;
-      color: black;
-      padding: 12px 24px;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
+      margin-top: 0.5rem;
       display: inline-block;
-      font-size: 1rem;
-      transition: 0.2s ease;
-    }
-
-    .btn:hover {
-      background-color: #e5c000;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="studio.html">Le Studio</a>
-    <a href="artistes.html">Artistes</a>
-    <a href="prestations.html">Prestations</a>
-    <a href="ebooks.html">eBooks</a>
-    <a href="concours.html">1h Gratuite</a>
-    <a href="contact.html">Contact</a>
-    <a href="drop001.html">Drop 001</a>
-  </nav>
-
-  <div class="container">
+  <div class="artistes">
     <h1>Nos Artistes</h1>
-    <p class="description">Découvrez les talents du label et du collectif La True Connexion</p>
-
-    <div class="card">
-      <img src="assets/seaklone.jpg" alt="SeaKlone">
-      <h2>SeaKlone aka Wolfibeat</h2>
-      <p>Fondateur du projet T.E.C, artiste complet mêlant rap, production, et vision globale.</p>
-      <div class="spotify">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/seaklone.jpg" alt="SeaKlone">
+        <h3>SeaKlone</h3>
+        <a href="seaklone.html" class="btn">En savoir plus</a>
       </div>
-      <a href="seaklone.html" class="btn">En savoir plus</a>
+      <div class="card">
+        <img src="assets/seel.jpg" alt="Seel">
+        <h3>Seel</h3>
+        <a href="seel.html" class="btn">En savoir plus</a>
+      </div>
+      <div class="card">
+        <img src="assets/ozal.jpg" alt="Ozal">
+        <h3>Ozal</h3>
+        <a href="ozal.html" class="btn">En savoir plus</a>
+      </div>
+      <div class="card">
+        <img src="assets/nawak.jpg" alt="NawaK">
+        <h3>NawaK</h3>
+        <a href="nawak.html" class="btn">En savoir plus</a>
+      </div>
+      <div class="card">
+        <img src="assets/li2t.jpg" alt="LI2T">
+        <h3>LI2T</h3>
+        <a href="li2t.html" class="btn">En savoir plus</a>
+      </div>
+      <div class="card">
+        <img src="assets/naan.jpg" alt="Naan">
+        <h3>Naan</h3>
+        <a href="naan.html" class="btn">En savoir plus</a>
+      </div>
+      <div class="card">
+        <img src="assets/skurt.jpg" alt="Skurt">
+        <h3>Skurt</h3>
+        <a href="skurt.html" class="btn">En savoir plus</a>
+      </div>
+      <div class="card">
+        <img src="assets/skylen.jpg" alt="Skylen">
+        <h3>Skylen</h3>
+        <a href="skylen.html" class="btn">En savoir plus</a>
+      </div>
     </div>
   </div>
 
