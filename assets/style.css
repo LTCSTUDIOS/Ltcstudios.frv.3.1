@@ -24,7 +24,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Transparence */
   z-index: 999;
 }
 
@@ -34,10 +34,12 @@ nav ul {
   align-items: center;
   padding: 20px;
   list-style: none;
+  flex-wrap: wrap; /* Assure que le menu ne déborde pas sur mobile */
 }
 
 nav ul li {
   margin-right: 40px;
+  margin-bottom: 10px;
 }
 
 nav ul li:last-child {
