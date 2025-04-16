@@ -1,111 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Le Studio LTC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    header {
-      background-color: #000;
-      text-align: center;
-      padding: 1rem;
-    }
-    header img {
-      width: 150px;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: #000;
-      border-bottom: 2px solid #FFD700;
-      padding: 0.5rem 0;
-    }
-    nav a {
-      color: #FFD700;
-      text-decoration: none;
-      margin: 0.5rem 1rem;
-      font-weight: bold;
-    }
-    h1 {
-      text-align: center;
-      color: #FFD700;
-      margin-top: 2rem;
-    }
-    .studio-description {
-      max-width: 90%;
-      margin: 1rem auto;
-      padding: 1rem;
-      border: 1px solid #FFD700;
-      border-radius: 15px;
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      font-size: 1rem;
-      color: #fff;
-    }
-    .studio-images {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      margin: 2rem 0;
-    }
-    .studio-images img {
-      width: 90%;
-      border-radius: 15px;
-      border: 1px solid #FFD700;
-    }
-    .btn-reserver {
-      display: block;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      background-color: #FFD700;
-      color: #000;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 0 20px #FFD700;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(ellipse at center, #222 0%, #000 100%);
-      background-image: repeating-linear-gradient(45deg, #111 0px, #111 1px, #000 1px, #000 2px);
-      opacity: 0.05;
-      z-index: -1;
-      animation: stars 100s linear infinite;
-    }
-    @keyframes stars {
-      from { transform: translate(0, 0); }
-      to { transform: translate(-500px, 500px); }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Studio - LTC</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-<body>
+<body class="stars">
 
-  <header>
-    <img src="assets/logo-ltc.jpg" alt="Logo LTC">
-  </header>
+  <div class="logo-container">
+    <img src="assets/logo-ltc.jpg" alt="Logo LTC Studio" class="logo">
+    <h1>LTC<br>STUDIO</h1>
+  </div>
 
-  <nav>
+  <nav class="navbar">
     <a href="index.html">Accueil</a>
     <a href="studio.html">Le Studio</a>
     <a href="artistes.html">Artistes</a>
@@ -116,21 +24,28 @@
     <a href="drop001.html">Drop 001</a>
   </nav>
 
-  <h1>Le Studio LTC</h1>
+  <main class="page-section">
+    <h2>Le Studio LTC</h2>
 
-  <div class="studio-description">
-    Un lieu hybride mêlant passion, technique et création. Pensé pour accompagner les artistes dans chaque étape : de l’idée brute jusqu’au morceau prêt à être diffusé.
-  </div>
+    <div class="highlight-box">
+      <p>
+        Un lieu hybride mêlant passion, technique et création. Pensé pour accompagner les artistes dans chaque étape :
+        de l’idée brute jusqu’au morceau prêt à être diffusé.
+      </p>
+    </div>
 
-  <div class="studio-images">
-    <img src="assets/studio1.jpg" alt="Studio photo 1">
-    <img src="assets/studio2.jpg" alt="Studio photo 2">
-  </div>
+    <div class="studio-images">
+      <img src="assets/studio1.jpg" alt="Studio photo" class="studio-photo" />
+      <img src="assets/studio2.jpg" alt="Studio photo" class="studio-photo" />
+    </div>
 
-  <a href="contact.html" class="btn-reserver">Réserver ma session</a>
+    <div class="center">
+      <a href="contact.html#resa" class="btn-primary">Réserver ma session</a>
+    </div>
+  </main>
 
   <footer>
-    LTC STUDIO © 2025 — True Earth Connexion
+    <p>LTC STUDIO © 2025 — True Earth Connexion</p>
   </footer>
 
 </body>
