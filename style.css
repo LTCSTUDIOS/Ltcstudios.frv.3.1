@@ -1,20 +1,29 @@
+:root {
+  --ltc-yellow: #FFD700; /* Jaune or élégant */
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: black url("background-stars.gif") repeat;
-  color: yellow;
+  background: black url("assets/stars-bg.jpg") repeat;
+  color: var(--ltc-yellow);
   font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-header {
+header, nav {
   background-color: black;
   padding: 10px 0;
   text-align: center;
-  border-bottom: 2px solid yellow;
+  border-bottom: 2px solid var(--ltc-yellow);
 }
 
 nav a {
-  color: yellow;
+  color: var(--ltc-yellow);
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
@@ -22,7 +31,7 @@ nav a {
 }
 
 h1, h2, h3 {
-  color: yellow;
+  color: var(--ltc-yellow);
   text-align: center;
   margin-top: 20px;
 }
@@ -31,12 +40,14 @@ p {
   text-align: center;
   line-height: 1.6;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: auto;
 }
 
 footer {
@@ -49,7 +60,7 @@ footer {
 /* ==== ARTISTES ==== */
 .artist-card {
   background: rgba(0, 0, 0, 0.6);
-  border: 1px solid yellow;
+  border: 1px solid var(--ltc-yellow);
   border-radius: 20px;
   padding: 20px;
   margin: 20px auto;
@@ -62,7 +73,7 @@ footer {
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid yellow;
+  border: 3px solid var(--ltc-yellow);
   margin-bottom: 10px;
 }
 
@@ -84,7 +95,7 @@ footer {
 }
 
 .artist-card .btn {
-  background-color: yellow;
+  background-color: var(--ltc-yellow);
   color: black;
   padding: 10px 15px;
   border-radius: 8px;
@@ -95,56 +106,77 @@ footer {
 }
 
 /* ==== DROP 001 ==== */
-.merch-box {
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px solid yellow;
+.drop-container, .merch-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--ltc-yellow);
   border-radius: 20px;
-  padding: 20px;
-  margin: 30px auto;
-  width: 90%;
-  max-width: 400px;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px var(--ltc-yellow);
   text-align: center;
-  color: white;
+  max-width: 500px;
+  margin: auto;
 }
 
-.merch-box img {
-  width: 150px;
-  margin-bottom: 15px;
+.drop-container img, .merch-box img {
+  width: 120px;
+  margin-bottom: 20px;
 }
 
-.merch-box .price {
-  font-size: 1.2rem;
-  margin-top: 10px;
+.price {
+  font-size: 1.4rem;
   font-weight: bold;
-  color: yellow;
+  color: var(--ltc-yellow);
 }
 
-.disabled-btn {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: yellow;
+.compte {
+  color: white;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+select, input[type="email"] {
+  background: black;
+  color: var(--ltc-yellow);
+  border: 1px solid var(--ltc-yellow);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  width: 90%;
+  max-width: 300px;
+  margin: 10px auto;
+  display: block;
+}
+
+button, .cta-button {
+  background: var(--ltc-yellow);
   color: black;
   font-weight: bold;
-  padding: 10px 20px;
+  border: none;
   border-radius: 10px;
-  text-decoration: none;
-  pointer-events: none;
-  opacity: 0.7;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #f2c800;
 }
 
 /* ==== PRESTATIONS ==== */
 .prestation-box {
   background: rgba(0, 0, 0, 0.5);
-  border: 1px solid yellow;
+  border: 1px solid var(--ltc-yellow);
   border-radius: 15px;
   padding: 20px;
   margin: 20px auto;
   max-width: 800px;
+  text-align: center;
 }
 
 .prestation-box h2 {
-  color: yellow;
-  text-align: center;
+  color: var(--ltc-yellow);
   font-size: 1.3rem;
 }
 
@@ -160,63 +192,56 @@ footer {
 }
 
 /* ==== FORMULAIRES ==== */
-form select,
-form input[type="text"],
-form input[type="email"],
-form input[type="date"],
-form textarea {
+form input, form textarea, form select {
+  background-color: black;
+  color: white;
+  border: 1px solid var(--ltc-yellow);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
   width: 90%;
   max-width: 400px;
-  margin: 10px auto;
   display: block;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid yellow;
-  background: black;
-  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-form button, .btn, .cta-button {
-  background-color: yellow;
+form button {
+  margin-top: 15px;
+  background-color: var(--ltc-yellow);
   color: black;
   font-weight: bold;
-  padding: 10px 20px;
   border: none;
+  padding: 12px 25px;
   border-radius: 8px;
-  margin-top: 10px;
   cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
 }
-@media screen and (max-width: 600px) {
-  .drop-box {
-    padding: 20px;
-    margin: 20px 10px;
-  }
 
-  .drop-box img {
-    width: 100px;
+/* ==== RESPONSIVE ==== */
+@media screen and (max-width: 600px) {
+  nav a {
+    display: inline-block;
+    margin: 6px;
+    font-size: 0.9rem;
   }
 
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
-  .drop-box h2 {
-    font-size: 1.2rem;
+  .drop-container img, .merch-box img {
+    width: 90px;
+  }
+
+  .artist-card {
+    max-width: 90%;
+  }
+
+  .prestation-box {
+    padding: 15px;
   }
 
   .price {
-    font-size: 1.1rem;
-  }
-
-  select, input[type="email"] {
-    width: 90%;
-    font-size: 0.95rem;
-  }
-
-  .cta {
-    font-size: 1rem;
-    padding: 10px 16px;
+    font-size: 1.2rem;
   }
 }
