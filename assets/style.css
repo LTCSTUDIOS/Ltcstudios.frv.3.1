@@ -1,4 +1,4 @@
-/* Réinitialisation des marges, paddings et boîte de calcul */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -136,16 +136,4 @@ footer p {
 /* Media queries pour la version mobile */
 @media only screen and (max-width: 768px) {
     .intro h2 {
-        font-size: 2rem;
-    }
-
-    .intro .btn-primary {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-
-    .drop-section .btn-secondary {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-}
+        font-size: 2
