@@ -1,33 +1,31 @@
-/* ===== RESET ===== */
-*{margin:0;padding:0;box-sizing:border-box}
 
-/* ===== GLOBAL ===== */
-html,body{height:100%;font-family:'Orbitron',sans-serif;background:#000 url('images/stars-bg.jpg') center/cover fixed;color:#fff;overflow-x:hidden}
-a{text-decoration:none;color:#FFD700}
-h1,h2,h3{font-weight:700;text-transform:uppercase;color:#FFD700;text-shadow:2px 2px 8px #000}
-
-/* ===== NAVBAR ===== */
-nav{position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,.85);backdrop-filter:blur(6px);display:flex;justify-content:center;padding:12px 5vw;z-index:100}
-nav ul{display:flex;flex-wrap:wrap;gap:24px;list-style:none}
-nav a{font-size:clamp(14px,1.2vw,18px);padding:6px 12px;border-radius:4px;transition:background .3s}
-nav a:hover{background:#FFD700;color:#000}
-
-/* ===== HERO ===== */
-.hero{min-height:90vh;padding-top:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.hero p{max-width:700px;font-size:clamp(18px,2vw,24px);margin:20px auto;color:#ddd}
-.btn{display:inline-block;margin-top:24px;padding:14px 38px;font-size:clamp(14px,1.4vw,18px);background:#FFD700;color:#000;border:none;border-radius:40px;font-weight:700;cursor:pointer;transition:transform .25s,background .25s}
-.btn:hover{background:#fff200;transform:scale(1.05)}
-
-/* ===== SECTIONS ===== */
-.section-box{background:rgba(0,0,0,.65);margin:60px auto;padding:40px 5vw;border-radius:16px;max-width:900px}
-.section-box p{font-size:clamp(16px,1.3vw,20px);color:#ccc;line-height:1.6}
-
-/* ===== FOOTER ===== */
-footer{padding:24px 0;background:rgba(0,0,0,.85);text-align:center;font-size:14px;color:#bbb}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:600px){
-  nav{justify-content:flex-start;overflow-x:auto}
-  nav ul{gap:12px}
-  .logo{width:120px}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@keyframes stars {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
 }
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+/* GLOBAL */
+html,body{height:100%;font-family:'Orbitron',sans-serif;color:#fff;
+  background:#000 url('assets/images/stars-bg.jpg') repeat;
+  background-size:contain;animation:stars 200s linear infinite;}
+a{text-decoration:none;color:#FFD700;font-weight:700}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;
+  backdrop-filter:blur(6px);background:rgba(0,0,0,.8);padding:12px 0;z-index:100}
+nav ul{display:flex;flex-wrap:wrap;gap:22px;list-style:none}
+nav a:hover{color:#fff}
+.logo{width:160px;margin-bottom:24px;filter:drop-shadow(0 0 20px #FFD700)}
+.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:80px}
+h1{font-size:clamp(32px,6vw,68px);text-transform:uppercase;color:#FFD700;text-shadow:3px 3px 12px #000}
+p{font-size:clamp(16px,1.6vw,24px);max-width:720px;margin:18px auto;color:#ddd}
+.btn{display:inline-block;padding:14px 40px;margin-top:24px;border-radius:40px;
+  background:#FFD700;color:#000;font-size:clamp(14px,1.4vw,20px);transition:.3s}
+.btn:hover{background:#fff200;transform:scale(1.06)}
+.section-box{background:rgba(0,0,0,.65);margin:60px auto;padding:40px 5vw;border-radius:18px;max-width:1000px;text-align:center;backdrop-filter:blur(4px);box-shadow:0 0 20px #FFD70044}
+.section-box h2{color:#FFD700;font-size:clamp(24px,3vw,40px);margin-bottom:20px;text-shadow:2px 2px 8px #000}
+footer{padding:26px 0;background:rgba(0,0,0,.85);text-align:center;font-size:14px;color:#bbb}
+/* COUNTDOWN */
+.countdown{display:flex;justify-content:center;gap:26px;margin:30px 0;font-size:clamp(20px,4vw,34px)}
+.countdown div{background:rgba(0,0,0,.6);padding:14px 28px;border-radius:14px;box-shadow:0 0 12px #FFD70066}
+@media(max-width:650px){nav ul{gap:14px}.logo{width:120px}}
