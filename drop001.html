@@ -1,42 +1,17 @@
-<section class="stars-background" style="padding: 120px 20px; text-align: center;">
+<section class="stars-background" style="padding: 100px 20px; text-align: center;">
   <h1 class="title">Merchandising</h1>
   <p class="subtitle">Découvrez nos produits exclusifs. Le Drop 001 est désormais disponible en précommande !</p>
 
-  <div style="margin: 40px auto; max-width: 600px; background-color: rgba(255,255,255,0.03); padding: 30px; border-radius: 16px; box-shadow: 0 0 12px yellow;">
-    <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="Drop 001 T-shirt" style="width: 160px; margin-bottom: 20px;">
+  <div class="card-presta" style="max-width: 400px; margin: 40px auto;">
+    <img src="assets/logo-ltc-yellow.png" alt="Logo LTC" style="width: 150px; margin-bottom: 20px;">
     <h2 style="color: #FFD700;">T-Shirt officiel Drop 001</h2>
-    <p style="color: white;">Édition limitée numérotée à la main.<br>1h de session offerte pour toute personne qui vient au studio avec ce t-shirt.</p>
-    <p style="color: #FFD700; font-weight: bold;">Prix : 44€</p>
-    
-    <div id="countdown" style="font-size: 1.2rem; color: #fff; margin: 20px 0;"></div>
-
-    <a id="preorder-button" href="#" class="btn-yellow" style="pointer-events: none; opacity: 0.5;">Précommande active le 18 avril</a>
+    <p style="color: white; font-size: 1rem; margin-top: 10px;">
+      Édition limitée numérotée à la main. <br>
+      1h de session offerte pour toute personne qui vient au studio avec ce t-shirt.
+    </p>
+    <h3 style="color: #FFD700; margin: 20px 0;">Prix : 44€</h3>
+    <a href="#" class="btn-blue" style="background-color: #FFD700; color: black; font-weight: bold;">
+      Précommande active le 18 avril
+    </a>
   </div>
 </section>
-
-<script>
-  const countdown = document.getElementById("countdown");
-  const preorderButton = document.getElementById("preorder-button");
-  const launchDate = new Date("2025-04-18T00:00:00").getTime();
-
-  const updateCountdown = setInterval(() => {
-    const now = new Date().getTime();
-    const diff = launchDate - now;
-
-    if (diff <= 0) {
-      countdown.innerHTML = "<span style='color: #0f0;'>Précommandes ouvertes !</span>";
-      preorderButton.innerHTML = "Précommander maintenant";
-      preorderButton.style.pointerEvents = "auto";
-      preorderButton.style.opacity = "1";
-      preorderButton.href = "#"; // Remplace ce lien par ton lien Stripe le 18 avril
-      clearInterval(updateCountdown);
-    } else {
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `Précommandes dans : ${days}j ${hours}h ${minutes}m ${seconds}s`;
-    }
-  }, 1000);
-</script>
