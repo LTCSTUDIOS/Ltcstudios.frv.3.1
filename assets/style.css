@@ -12,7 +12,7 @@ body {
   background: url('assets/stellar_background.gif') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
-  padding-top: 70px; /* Pour éviter que le contenu soit caché par le header */
+  padding-top: 10%; /* Ajustement en pourcentage pour un espacement plus flexible */
 }
 
 /* Mise en forme du texte */
@@ -34,7 +34,7 @@ a:hover {
 /* Header */
 header {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 15px;
+  padding: 5vh 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,19 +46,19 @@ header {
 }
 
 header .logo-container img {
-  width: 80px;
+  width: 15vw;  /* Logo responsive en fonction de la largeur de l'écran */
   height: auto;
 }
 
 header .studio-name {
-  font-size: 2.5rem;
+  font-size: 3vw; /* Taille de police dynamique */
   color: #F5B300;
   letter-spacing: 2px;
 }
 
 header nav ul {
   display: flex;
-  gap: 20px;
+  gap: 2%;
 }
 
 header nav ul li {
@@ -66,9 +66,9 @@ header nav ul li {
 }
 
 header nav ul li a {
-  font-size: 1.2rem;
+  font-size: 1.5vw;
   color: #fff;
-  padding: 10px;
+  padding: 2vh 2%;
   transition: background-color 0.3s ease;
 }
 
@@ -80,24 +80,24 @@ header nav ul li a:hover {
 /* Section principale */
 .main-section {
   text-align: center;
-  padding: 100px 20px; /* Added top padding for space below the header */
+  padding: 20% 10%; /* Utilisation des % pour espacement dynamique */
 }
 
 .main-section h2 {
-  font-size: 3rem;
+  font-size: 5vw; /* Taille de police responsive */
   color: #F5B300;
 }
 
 .main-section p {
-  font-size: 1.2rem;
-  margin: 20px 0;
+  font-size: 2vw;
+  margin: 3vh 0;
 }
 
 .main-section .btn-primary {
   background-color: #F5B300;
   color: #101010;
-  padding: 12px 20px;
-  font-size: 1.2rem;
+  padding: 2vh 5vw;
+  font-size: 2vw;
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -110,22 +110,22 @@ header nav ul li a:hover {
 /* Section Drop */
 .drop-section {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 50px 20px;
+  padding: 7vh 10%;
   text-align: center;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 10%;
 }
 
 .drop-section h2 {
-  font-size: 2.5rem;
+  font-size: 4vw;
   color: #F5B300;
 }
 
 .drop-section .btn-secondary {
   background-color: #F5B300;
-  padding: 15px 25px;
+  padding: 2vh 6vw;
   color: #101010;
-  font-size: 1.2rem;
+  font-size: 2vw;
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -138,7 +138,7 @@ header nav ul li a:hover {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 5vh 0;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   position: relative;
@@ -147,32 +147,34 @@ footer {
 }
 
 footer p {
-  font-size: 1rem;
+  font-size: 1.2vw; /* Taille relative */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 6vw;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 4vw;
   }
 
   nav ul li {
-    margin: 0 10px;
+    margin: 0 5%;
   }
 
   .main-section .btn-primary {
-    padding: 10px 20px;
+    padding: 3vh 10vw;
+    font-size: 3vw;
   }
 
   .drop-section .btn-secondary {
-    padding: 10px 20px;
+    padding: 3vh 10vw;
+    font-size: 3vw;
   }
 
   footer p {
-    font-size: 0.8rem;
+    font-size: 3vw;
   }
 }
