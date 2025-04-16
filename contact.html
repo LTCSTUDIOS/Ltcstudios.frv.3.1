@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 2rem;
+      background: #111;
+      border-radius: 16px;
+      border: 1px solid #FFD700;
+      box-shadow: 0 0 20px #FFD70022;
+      text-align: center;
+    }
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      color: #FFD700;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Orbitron', sans-serif;
+    }
+    form input[type="submit"] {
+      background-color: #FFD700;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background-color: #ffea00;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="ebooks.html">eBooks</a>
-      <a href="concours.html">1h Gratuite</a>
-      <a href="contact.html">Contact</a>
-      <a href="drop001.html">Drop 001</a>
-    </nav>
-  </header>
 
-  <section class="card">
-    <h1>Nous contacter</h1>
-    <p>Une question ? Un projet ? Envie de réserver une session ?  
-    Écris-nous et on te répond dans les 24h.</p>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="studio.html">Le Studio</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="prestations.html">Prestations</a>
+    <a href="ebooks.html">eBooks</a>
+    <a href="concours.html">1h Gratuite</a>
+    <a href="contact.html">Contact</a>
+    <a href="drop001.html">Drop 001</a>
+  </nav>
 
+  <div class="form-container">
+    <h2>Contacte LTC STUDIO</h2>
     <form action="mailto:contact@ltcstudio.fr" method="post" enctype="text/plain">
-      <input type="text" name="nom" placeholder="Nom" required><br><br>
-      <input type="email" name="email" placeholder="Email" required><br><br>
-      <textarea name="message" placeholder="Ton message..." rows="6" required></textarea><br><br>
-      <button type="submit">Envoyer</button>
+      <input type="text" name="Nom" placeholder="Ton nom" required>
+      <input type="email" name="Email" placeholder="Ton e-mail" required>
+      <textarea name="Message" rows="6" placeholder="Ton message" required></textarea>
+      <input type="submit" value="Envoyer">
     </form>
-  </section>
+  </div>
 
   <footer>
-    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
+    LTC STUDIO © 2025 — True Earth Connexion
   </footer>
+
 </body>
 </html>
