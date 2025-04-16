@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+/* Import de la police Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap');
+
 /* Body & Global styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -13,22 +16,15 @@ body {
     line-height: 1.6;
     padding: 0;
     margin: 0;
-}
-
-/* Typography */
-h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
-
-p, li {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    background-image: url('assets/stellar_background.gif'); /* Fond étoilé */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 /* Header Styling */
 header {
-    background-color: #181818;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -43,7 +39,7 @@ header .logo-container {
 }
 
 header .logo-container img {
-    width: 50px;
+    width: 60px; /* Ajuste la taille du logo */
     height: auto;
 }
 
@@ -53,6 +49,7 @@ header .studio-name {
     color: #F5B300; /* Custom gold color */
 }
 
+/* Navigation styling */
 header nav ul {
     display: flex;
     gap: 20px;
