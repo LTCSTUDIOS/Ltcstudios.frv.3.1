@@ -24,13 +24,19 @@ a {
   color: #fff;
 }
 
+/* Background - Stars */
+body {
+  background: url('path/to/your/galactic-background.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
 /* Navigation */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #000;
+  background: rgba(0, 0, 0, 0.9);
   z-index: 999;
 }
 
@@ -50,6 +56,16 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
+nav ul li a {
+  color: #f4a261;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
 /* Main Content */
 .main-container {
   display: flex;
@@ -57,8 +73,6 @@ nav ul li:last-child {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('path/to/galactic-background.jpg') center/cover no-repeat;
-  background-attachment: fixed;
 }
 
 .welcome-text {
@@ -113,4 +127,19 @@ footer {
   padding: 10px;
   background-color: #000;
   color: #f4a261;
+}
+
+/* Mobile Version */
+@media (max-width: 768px) {
+  .welcome-text h1 {
+    font-size: 3rem;
+  }
+
+  .drop-info {
+    max-width: 90%;
+  }
+
+  .button {
+    width: 100%;
+  }
 }
