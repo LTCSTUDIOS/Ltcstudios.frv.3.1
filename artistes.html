@@ -22,6 +22,7 @@
       text-align: center;
       backdrop-filter: blur(4px);
       border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 20px;
     }
     .artist-card img {
       width: 100%;
@@ -53,6 +54,15 @@
       background: yellow;
       color: black;
     }
+    .playlist-embed {
+      margin-top: 10px;
+    }
+    .playlist-embed iframe {
+      width: 300px;
+      height: 80px;
+      border: none;
+      border-radius: 8px;
+    }
     .playlist-section {
       max-width: 1000px;
       margin: 40px auto;
@@ -82,48 +92,59 @@
     <h1>Nos Artistes</h1>
     <p>Découvrez les talents du label et du collectif La True Connexion</p>
     <div class="artist-grid">
+      <!-- SeaKlone -->
       <div class="artist-card">
         <img src="assets/seaklone.jpg" alt="SeaKlone">
         <h3>SeaKlone</h3>
         <p>Rappeur, beatmaker (aka Wolfibeat) & fondateur du projet TEC.</p>
         <a href="#">Voir ses projets</a>
       </div>
+      <!-- Seel avec sa playlist Spotify intégrée -->
       <div class="artist-card">
         <img src="assets/seel.jpg" alt="Seel">
         <h3>Seel</h3>
         <p>MC du 04, flow tranchant et introspectif.</p>
+        <div class="playlist-embed">
+          <iframe src="https://open.spotify.com/embed/playlist/SEEL_PLAYLIST_ID?utm_source=generator" allow="encrypted-media"></iframe>
+        </div>
         <a href="#">Voir ses projets</a>
       </div>
+      <!-- Ozal -->
       <div class="artist-card">
         <img src="assets/ozal.jpg" alt="Ozal">
         <h3>Ozal</h3>
         <p>Depuis 3 mois, elle arrive fort avec une vraie patte. Son flow et ses textes redéfinissent le paysage rap.</p>
         <a href="#">Voir ses projets</a>
       </div>
+      <!-- NawaK -->
       <div class="artist-card">
         <img src="assets/nawak.jpg" alt="NawaK">
         <h3>NawaK</h3>
         <p>Plume brute et sincère. Présent sur “Le Bonheur”.</p>
         <a href="#">Voir ses projets</a>
       </div>
+      <!-- LI2T -->
       <div class="artist-card">
         <img src="assets/li2t.jpg" alt="LI2T">
         <h3>LI2T</h3>
         <p>Poésie kickée et vision lucide. Flow agile.</p>
         <a href="#">Voir ses projets</a>
       </div>
+      <!-- Naan -->
       <div class="artist-card">
         <img src="assets/naan.jpg" alt="Naan">
         <h3>Naan</h3>
         <p>Voix mystique, textes éthérés, présence magnétique.</p>
         <a href="#">Voir ses projets</a>
       </div>
+      <!-- Skurt -->
       <div class="artist-card">
         <img src="assets/skurt.jpg" alt="Skurt">
         <h3>Skurt</h3>
         <p>MC sauvage & libre, entre rimes sombres et éclats de feu.</p>
         <a href="#">Voir ses projets</a>
       </div>
+      <!-- Skylen -->
       <div class="artist-card">
         <img src="assets/skylen.jpg" alt="Skylen">
         <h3>Skylen</h3>
