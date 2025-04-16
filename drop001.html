@@ -1,122 +1,42 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Drop 001 – LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .drop001 {
-      text-align: center;
-      padding: 100px 20px;
-      background: rgba(0, 0, 0, 0.95);
-      color: #FFD700;
+<section class="stars-background" style="padding: 120px 20px; text-align: center;">
+  <h1 class="title">Merchandising</h1>
+  <p class="subtitle">Découvrez nos produits exclusifs. Le Drop 001 est désormais disponible en précommande !</p>
+
+  <div style="margin: 40px auto; max-width: 600px; background-color: rgba(255,255,255,0.03); padding: 30px; border-radius: 16px; box-shadow: 0 0 12px yellow;">
+    <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="Drop 001 T-shirt" style="width: 160px; margin-bottom: 20px;">
+    <h2 style="color: #FFD700;">T-Shirt officiel Drop 001</h2>
+    <p style="color: white;">Édition limitée numérotée à la main.<br>1h de session offerte pour toute personne qui vient au studio avec ce t-shirt.</p>
+    <p style="color: #FFD700; font-weight: bold;">Prix : 44€</p>
+    
+    <div id="countdown" style="font-size: 1.2rem; color: #fff; margin: 20px 0;"></div>
+
+    <a id="preorder-button" href="#" class="btn-yellow" style="pointer-events: none; opacity: 0.5;">Précommande active le 18 avril</a>
+  </div>
+</section>
+
+<script>
+  const countdown = document.getElementById("countdown");
+  const preorderButton = document.getElementById("preorder-button");
+  const launchDate = new Date("2025-04-18T00:00:00").getTime();
+
+  const updateCountdown = setInterval(() => {
+    const now = new Date().getTime();
+    const diff = launchDate - now;
+
+    if (diff <= 0) {
+      countdown.innerHTML = "<span style='color: #0f0;'>Précommandes ouvertes !</span>";
+      preorderButton.innerHTML = "Précommander maintenant";
+      preorderButton.style.pointerEvents = "auto";
+      preorderButton.style.opacity = "1";
+      preorderButton.href = "#"; // Remplace ce lien par ton lien Stripe le 18 avril
+      clearInterval(updateCountdown);
+    } else {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `Précommandes dans : ${days}j ${hours}h ${minutes}m ${seconds}s`;
     }
-
-    .drop001 h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
-    }
-
-    .drop001 p {
-      color: white;
-      font-size: 1.1em;
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 30px 0;
-    }
-
-    .gallery img {
-      width: 280px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px yellow;
-    }
-
-    .select-wrapper {
-      margin-top: 20px;
-    }
-
-    select {
-      padding: 10px;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1em;
-      border-radius: 10px;
-      border: none;
-      margin-bottom: 20px;
-    }
-
-    .btn-yellow {
-      background-color: #FFD700;
-      color: black;
-      font-weight: bold;
-      padding: 15px 30px;
-      border-radius: 12px;
-      font-size: 1.1em;
-      text-decoration: none;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .btn-yellow:hover {
-      background-color: #ffcc00;
-    }
-
-    .stock-count {
-      font-size: 1em;
-      color: #ccc;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="ebooks.html">eBooks</a>
-      <a href="concours.html">1h Gratuite</a>
-      <a href="contact.html">Contact</a>
-      <a href="merch.html" class="active">Drop 001</a>
-    </nav>
-  </header>
-
-  <section class="drop001">
-    <h1>DROP 001 — T-SHIRT ÉDITION LIMITÉE</h1>
-
-    <p>Le tout premier drop officiel : 50 t-shirts numérotés à la main, coupe oversize, coton bio, logo LTC dans le dos.</p>
-    <div class="gallery">
-      <img src="assets/studio1.jpg" alt="T-shirt avant">
-      <img src="assets/studio2.jpg" alt="T-shirt dos">
-    </div>
-
-    <p><strong>Prix : 44 €</strong> — 1h de session offerte à tout porteur du tee.</p>
-    <p>Livraison à partir du <strong>10 mai 2025</strong></p>
-
-    <div class="select-wrapper">
-      <label for="taille">Choisis ta taille :</label><br>
-      <select name="taille" id="taille">
-        <option value="S">S</option>
-        <option value="M" selected>M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-      </select>
-    </div>
-
-    <a href="#" class="btn-yellow">Précommander maintenant</a>
-    <p class="stock-count">Stock restant : <strong>37 / 50</strong></p>
-    <p style="font-size: 0.9em; color: #888;">(Le lien de précommande sera actif dès validation du fournisseur)</p>
-  </section>
-
-  <footer>
-    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
-  </footer>
-</body>
-</html>
+  }, 1000);
+</script>
