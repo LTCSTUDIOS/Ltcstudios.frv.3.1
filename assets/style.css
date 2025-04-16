@@ -1,4 +1,4 @@
-/* Global */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,103 +7,157 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #121212;
     color: #fff;
     overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: #f2c94c;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-}
-
-/* Background stars */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://example.com/stars.jpg') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-/* Header */
-header {
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-header .logo img {
+.navbar .logo img {
     width: 120px;
+    height: auto;
 }
 
-nav {
-    display: flex;
-}
-
-nav a {
+.navbar h1 {
+    color: #f5b300;
+    font-size: 2rem;
     margin-left: 20px;
-    font-size: 18px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
     color: #fff;
-    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #f2c94c;
+.nav-links a:hover {
+    color: #f5b300;
 }
 
-/* Main Section */
-main {
-    padding: 50px 20px;
+/* Hero Section */
+.hero {
+    background: url('assets/stellar_background.gif') no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
+    padding: 100px 20px;
 }
 
-main h1 {
-    font-size: 3.5em;
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: #f5b300;
     margin-bottom: 20px;
-    color: #f2c94c;
 }
 
-main p {
-    font-size: 1.2em;
+.hero-content p {
+    font-size: 1.2rem;
     color: #ccc;
     margin-bottom: 30px;
 }
 
-button {
+.btn-main {
+    background-color: #f5b300;
+    color: #121212;
+    font-size: 1.1rem;
     padding: 15px 30px;
-    background-color: #f2c94c;
-    color: #1a1a1a;
-    font-size: 1.2em;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #e1b537;
+.btn-main:hover {
+    background-color: #dcb100;
+}
+
+/* Drop Section */
+.drop-info {
+    background-color: #1c1c1c;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.drop-info h3 {
+    font-size: 2.5rem;
+    color: #f5b300;
+    margin-bottom: 20px;
+}
+
+.drop-info p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.btn-drop {
+    background-color: #f5b300;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #121212;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-drop:hover {
+    background-color: #dcb100;
 }
 
 /* Footer */
-footer {
+.footer {
+    background-color: #121212;
     text-align: center;
-    padding: 30px;
-    background-color: #111;
+    padding: 20px 0;
     color: #ccc;
+    margin-top: 60px;
 }
 
-footer a {
-    color: #f2c94c;
+.footer p {
+    font-size: 1rem;
+}
+
+.footer a {
+    color: #f5b300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-main {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .btn-drop {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .drop-info h3 {
+        font-size: 2rem;
+    }
 }
