@@ -2,68 +2,109 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SeaKlone - LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeaKlone aka Wolfibeat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    .artist-profile {
-      max-width: 800px;
-      margin: 60px auto;
-      text-align: center;
-      color: #ccc;
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
     }
-    .artist-profile img {
-      width: 200px;
-      height: 200px;
+    .menu {
+      background-color: black;
+      padding: 10px;
+      text-align: center;
+      font-size: 1rem;
+      border-bottom: 2px solid #FFD700;
+    }
+    .menu a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .artist-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 20px;
+      border: 2px solid #FFD700;
+      box-shadow: 0 0 20px #FFD70044;
+      text-align: center;
+    }
+    .artist-container img {
+      width: 180px;
+      height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      border: 2px solid #FFD700;
-      margin-bottom: 20px;
+      border: 4px solid #FFD700;
+      margin-top: -60px;
+      background-color: black;
     }
-    .artist-profile h1 {
+    .artist-container h1 {
+      font-size: 1.6em;
+      margin-top: 20px;
       color: #FFD700;
-      margin-bottom: 10px;
     }
-    .artist-profile p {
-      font-size: 1.1em;
-      margin-bottom: 30px;
+    .artist-container p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #eee;
+      margin: 20px 0;
     }
-    .btn-back {
+    .spotify {
+      margin: 20px auto;
+      width: 100%;
+      max-width: 400px;
+    }
+    .btn-retour {
       display: inline-block;
       margin-top: 30px;
-      background: yellow;
+      padding: 12px 24px;
+      background-color: #FFD700;
       color: black;
-      padding: 10px 20px;
-      border-radius: 8px;
+      border: none;
+      border-radius: 12px;
       font-weight: bold;
+      font-size: 1rem;
       text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-retour:hover {
+      background-color: #ffcc00;
     }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
 
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="artistes.html">Artistes</a>
-    </nav>
-  </header>
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="studio.html">Le Studio</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="prestations.html">Prestations</a>
+    <a href="ebooks.html">eBooks</a>
+    <a href="concours.html">1h Gratuite</a>
+    <a href="contact.html">Contact</a>
+    <a href="drop001.html">Drop 001</a>
+  </div>
 
-  <section class="artist-profile">
-    <img src="assets/seaklone.jpg" alt="SeaKlone" />
+  <div class="artist-container">
+    <img src="img/seaklone.jpg" alt="SeaKlone" />
     <h1>SeaKlone aka Wolfibeat</h1>
-    <p>Rappeur, beatmaker, ingé son, fondateur du projet T.E.C et moteur de la True Connexion.  
-    Son style oscille entre introspection profonde, puissance brute et énergie de transmission.  
-    Producteur complet, il gère ses prods, ses mix et son master avec une vision d’ensemble rare.</p>
+    <p>
+      Rappeur, beatmaker, ingé son, fondateur du projet T.E.C et moteur de la True Connexion. Son style oscille entre introspection profonde, puissance brute et énergie de transmission.
+      Producteur complet, il gère ses prods, ses mix et son master avec une vision d’ensemble rare.
+    </p>
+    <div class="spotify">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <a class="btn-retour" href="artistes.html">Retour aux artistes</a>
+  </div>
 
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-    <a href="artistes.html" class="btn-back">← Retour aux artistes</a>
-  </section>
-
-  <footer>
-    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
-  </footer>
 </body>
 </html>
