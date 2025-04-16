@@ -1,31 +1,111 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-@keyframes stars {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
+/* ================================
+   LTC STUDIOS – 2025  •  v4.0
+   full‑responsive / dark • AA
+================================ */
+:root{
+  --yellow:#ffeb3b;
+  --yellow-dim:#c4a700;
+  --white:#f5f5f5;
+  --bg:#000;
+  --bg-card:rgba(0,0,0,.75);
+  --font:"Rajdhani",sans-serif;
 }
+
 /* RESET */
-*{margin:0;padding:0;box-sizing:border-box}
-/* GLOBAL */
-html,body{height:100%;font-family:'Orbitron',sans-serif;color:#fff;
-  background:#000 url('assets/images/stars-bg.jpg') repeat;
-  background-size:contain;animation:stars 200s linear infinite;}
-a{text-decoration:none;color:#FFD700;font-weight:700}
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;
-  backdrop-filter:blur(6px);background:rgba(0,0,0,.8);padding:12px 0;z-index:100}
-nav ul{display:flex;flex-wrap:wrap;gap:22px;list-style:none}
-nav a:hover{color:#fff}
-.logo{width:160px;margin-bottom:24px;filter:drop-shadow(0 0 20px #FFD700)}
-.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:80px}
-h1{font-size:clamp(32px,6vw,68px);text-transform:uppercase;color:#FFD700;text-shadow:3px 3px 12px #000}
-p{font-size:clamp(16px,1.6vw,24px);max-width:720px;margin:18px auto;color:#ddd}
-.btn{display:inline-block;padding:14px 40px;margin-top:24px;border-radius:40px;
-  background:#FFD700;color:#000;font-size:clamp(14px,1.4vw,20px);transition:.3s}
-.btn:hover{background:#fff200;transform:scale(1.06)}
-.section-box{background:rgba(0,0,0,.65);margin:60px auto;padding:40px 5vw;border-radius:18px;max-width:1000px;text-align:center;backdrop-filter:blur(4px);box-shadow:0 0 20px #FFD70044}
-.section-box h2{color:#FFD700;font-size:clamp(24px,3vw,40px);margin-bottom:20px;text-shadow:2px 2px 8px #000}
-footer{padding:26px 0;background:rgba(0,0,0,.85);text-align:center;font-size:14px;color:#bbb}
-/* COUNTDOWN */
-.countdown{display:flex;justify-content:center;gap:26px;margin:30px 0;font-size:clamp(20px,4vw,34px)}
-.countdown div{background:rgba(0,0,0,.6);padding:14px 28px;border-radius:14px;box-shadow:0 0 12px #FFD70066}
-@media(max-width:650px){nav ul{gap:14px}.logo{width:120px}}
+*,::before,::after{margin:0;padding:0;box-sizing:border-box}
+img{max-width:100%;display:block}
+a{color:var(--yellow);text-decoration:none;transition:.2s}
+a:hover,a:focus{filter:brightness(1.2);}
+body{font-family:var(--font);background:var(--bg);color:var(--white);min-height:100vh}
+
+/* FOND ÉTOILÉ animé */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:url("../assets/stars-bg.jpg") center/cover repeat;
+  animation:stars 130s linear infinite;opacity:.55;
+}
+@keyframes stars{0%{background-position:0 0}100%{background-position:-3000px 3000px}}
+
+/* HALO LOGO */
+#logo-halo{
+  position:absolute;inset:0;margin:auto;width:240px;height:240px;z-index:-1;
+  background:radial-gradient(circle,#ffeb3b 0%,rgba(255,235,59,0)70%);
+  filter:blur(40px);pointer-events:none;
+}
+
+/* NAVIGATION  (burger ≤800 px) */
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(0,0,0,.9);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+  padding:.7rem 1rem;font-weight:600;
+}
+nav .brand{margin-right:auto}
+nav ul{display:flex;gap:1.8rem;list-style:none}
+nav a{font-size:clamp(.9rem,2.5vw,1.1rem)}
+/* BURGER */
+#navToggle{display:none}
+label.burger{
+  display:none;width:30px;cursor:pointer;user-select:none;
+}
+label.burger span, label.burger span::before, label.burger span::after{
+  display:block;height:3px;width:100%;background:var(--yellow);border-radius:3px;position:relative;transition:.3s
+}
+label.burger span::before,label.burger span::after{content:"";position:absolute;left:0}
+label.burger span::before{top:-8px}
+label.burger span::after{top:8px}
+@media(max-width:800px){
+  label.burger{display:block}
+  nav ul{
+    position:fixed;inset:0 0 auto auto;width:260px;height:100vh;
+    background:rgba(0,0,0,.95);flex-direction:column;align-items:center;
+    padding-top:5rem;transform:translateX(100%);transition:.35s ease;
+  }
+  #navToggle:checked+label+ul{transform:translateX(0)}
+  /* croix */
+  #navToggle:checked+label span{background:transparent}
+  #navToggle:checked+label span::before{top:0;transform:rotate(45deg)}
+  #navToggle:checked+label span::after{top:0;transform:rotate(-45deg)}
+}
+
+/* HERO */
+.hero{
+  min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:2rem 1rem;gap:1.2rem
+}
+.hero h1{
+  font-size:clamp(2.5rem,8vw,4.5rem);line-height:1.05;
+  color:var(--yellow);text-shadow:0 0 8px var(--yellow-dim)
+}
+.hero p{max-width:680px;font-size:clamp(1rem,3.8vw,1.35rem);color:#d9d9d9}
+
+/* BOUTON */
+.btn{
+  padding:1.05rem 2.8rem;border-radius:9999px;
+  background:var(--yellow);color:#000;font-weight:700;font-size:clamp(1rem,4.2vw,1.2rem);
+  box-shadow:0 0 12px var(--yellow);transition:.25s ease
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 18px var(--yellow)}
+
+/* CARD */
+.card{
+  max-width:880px;margin:4rem auto;padding:2.5rem 2rem;background:var(--bg-card);
+  border:2px solid var(--yellow);border-radius:18px;text-align:center
+}
+.card h2{color:var(--yellow);font-size:clamp(2rem,6vw,3rem);margin-bottom:.6rem}
+.card p{font-size:clamp(.95rem,3.5vw,1.2rem);line-height:1.55;color:#e1e1e1}
+
+/* GRILLE ARTISTES */
+.grid-artists{display:grid;gap:2.4rem;margin:4rem 1rem}
+@media(min-width:700px){.grid-artists{grid-template-columns:repeat(2,1fr)}}
+.artist{
+  background:rgba(255,255,255,.05);padding:1.7rem;border-radius:15px;text-align:center
+}
+.artist img{width:160px;height:160px;border-radius:50%;margin:0 auto 1rem}
+.artist h3{color:var(--yellow);margin-bottom:.7rem}
+iframe.spotify{width:100%;min-height:152px;border:none;border-radius:10px;box-shadow:0 0 6px #000}
+
+/* FOOTER */
+footer{padding:2rem 1rem;text-align:center;font-size:.85rem;color:#888}
+
+/* ACCESSIBILITÉ FOCUS */
+a:focus-visible{outline:2px dashed var(--yellow);outline-offset:3px}
