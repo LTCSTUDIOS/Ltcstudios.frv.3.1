@@ -1,23 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drop 001 - LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Drop 001 – LTC STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: yellow;
+    }
+    .drop-box {
+      border: 2px solid yellow;
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      background-color: #000;
+    }
+    .drop-box img {
+      max-width: 150px;
+      margin: 20px auto;
+      display: block;
+    }
+    .price {
+      font-size: 1.4rem;
+      margin: 10px 0;
+      color: yellow;
+    }
+    .countdown {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin: 10px 0;
+    }
+    select, input[type="email"] {
+      padding: 10px;
+      margin: 10px auto;
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+    }
+    .cta {
+      background: yellow;
+      color: black;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <h1>Merchandising</h1>
   <p>Découvrez nos produits exclusifs. Le Drop 001 est désormais disponible en précommande !</p>
-
-  <div class="merch-box">
-    <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="Logo LTC Studio" />
-    <h2>T-Shirt officiel Drop 001</h2>
-    <p>Édition limitée numérotée à la main.</p>
-    <p>1h de session offerte pour toute personne qui vient au studio avec ce t-shirt.</p>
+  <div class="drop-box">
+    <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="Logo LTC">
+    <h2 style="color: yellow;">T-Shirt officiel Drop 001</h2>
+    <p>Édition limitée numérotée à la main.<br>1h de session offerte pour toute personne qui vient au studio avec ce t-shirt.</p>
     <div class="price">Prix : 44€</div>
-    <a class="disabled-btn">Précommande active le 18 avril</a>
+    <div class="countdown" id="countdown"></div>
+
+    <label for="size">Choisis ta taille :</label>
+    <select id="size">
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select>
+
+    <label for="email">Laisse ton mail pour être prévenu :</label>
+    <input type="email" id="email" placeholder="tonmail@example.com">
+    <button class="cta">Précommande active le 18 avril</button>
   </div>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const dropDate = new Date("2025-04-18T00:00:00").getTime();
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = dropDate - now;
+      if (distance < 0) {
+        countdown.innerHTML = "Précommande ouverte !";
+        clearInterval(x);
+      } else {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        countdown.innerHTML = `Ouverture dans ${days}j ${hours}h`;
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
