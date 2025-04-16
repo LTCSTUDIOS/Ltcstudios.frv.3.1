@@ -1,22 +1,105 @@
-/* === STYLE GLOBAL LTC v2.0 === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: url('assets/stellar_background.gif') repeat;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
 
-body { margin: 0; padding: 0; background-color: #000; color: #fff; font-family: 'Orbitron', sans-serif; overflow-x: hidden; }
+.logo {
+  max-width: 180px;
+  margin: 20px auto 10px;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #FFD700;
+}
 
-/* === NAVIGATION === */ .menu { display: flex; flex-wrap: wrap; justify-content: center; background-color: #000; padding: 1rem 0; border-bottom: 2px solid #FFD700; position: sticky; top: 0; z-index: 100; } .menu a { color: #FFD700; text-decoration: none; margin: 0 1rem; font-weight: bold; font-size: 1rem; transition: all 0.2s; } .menu a:hover { text-shadow: 0 0 10px #FFD700; }
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 8px #FFD700;
+}
 
-/* === LOGO === */ .logo-header { text-align: center; margin: 1rem auto; } .logo-header img { width: 150px; max-width: 25%; border-radius: 8px; filter: drop-shadow(0 0 12px #FFD700AA); }
+h2 {
+  font-size: 2em;
+  color: #FFD700;
+  margin: 30px 0 10px;
+}
 
-/* === TITRES === */ h1, h2, h3 { text-align: center; color: #FFD700; margin-top: 2rem; }
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+}
 
-p { text-align: center; line-height: 1.6; margin: 1rem auto; max-width: 85%; }
+.nav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-/* === IMAGES === */ img { width: 100%; max-width: 600px; display: block; margin: 1.5rem auto; border-radius: 12px; border: 1px solid #FFD700; }
+.nav a:hover {
+  color: white;
+}
 
-/* === BOUTONS === */ .button, .cta-button, .btn-reserver { display: inline-block; background-color: #FFD700; color: #000; font-weight: bold; font-size: 1rem; padding: 1rem 2rem; text-align: center; text-decoration: none; border-radius: 12px; box-shadow: 0 0 20px #FFD700; margin: 2rem auto; transition: background 0.3s, box-shadow 0.3s; } .button:hover, .cta-button:hover, .btn-reserver:hover { background-color: #e6c200; box-shadow: 0 0 25px #FFD700AA; }
+.section-box {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 85%;
+  border: 1px solid #FFD700;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.1em;
+  line-height: 1.6;
+}
 
-/* === FOND ÉTOILÉ === */ body::before { content: ""; position: fixed; width: 200%; height: 200%; top: 0; left: 0; background: radial-gradient(ellipse at center, #222 0%, #000 100%); background-image: repeating-linear-gradient(45deg, #111 0px, #111 1px, #000 1px, #000 2px); opacity: 0.03; z-index: -1; animation: stars 120s linear infinite; } @keyframes stars { from { transform: translate(0, 0); } to { transform: translate(-500px, 500px); } }
+img {
+  max-width: 90%;
+  border-radius: 15px;
+  margin: 20px 0;
+}
 
-/* === FOOTER === */ footer { text-align: center; padding: 2rem 1rem; font-size: 0.9rem; color: #666; }
+button, .button {
+  background-color: #FFD700;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #FFD700;
+  transition: background-color 0.3s;
+}
 
-/* === RESPONSIVE === */ @media screen and (max-width: 768px) { .menu a { margin: 0.5rem; font-size: 0.95rem; } .button, .cta-button { font-size: 0.95rem; padding: 0.8rem 1.5rem; } .logo-header img { width: 120px; } }
+button:hover, .button:hover {
+  background-color: #fff;
+  color: black;
+}
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-box {
+    font-size: 1em;
+  }
+}
