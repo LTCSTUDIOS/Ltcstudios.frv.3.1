@@ -1,102 +1,35 @@
 <!DOCTYPE html><html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SeaKlone aka Wolfibeat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    .menu {
-      background-color: black;
-      padding: 10px;
-      text-align: center;
-      font-size: 1rem;
-      border-bottom: 2px solid #FFD700;
-    }
-    .menu a {
-      color: #FFD700;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-    .artist-container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #111;
-      border-radius: 20px;
-      border: 2px solid #FFD700;
-      box-shadow: 0 0 20px #FFD70044;
-      text-align: center;
-    }
-    .artist-container .photo {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #FFD700;
-      margin-bottom: 20px;
-    }
-    .artist-container h1 {
-      font-size: 1.5em;
-      margin: 10px 0;
-      color: #FFD700;
-    }
-    .artist-container p {
-      line-height: 1.6;
-      font-size: 1rem;
-      color: #eee;
-      margin: 20px 0;
-    }
-    .spotify {
-      margin: 20px auto;
-      width: 100%;
-      max-width: 400px;
-    }
-    .btn-retour {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 24px;
-      background-color: #FFD700;
-      color: black;
-      border: none;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .btn-retour:hover {
-      background-color: #ffcc00;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SeaKlone - Artiste LTC STUDIO</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>  <div class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="studio.html">Le Studio</a>
-    <a href="artistes.html">Artistes</a>
-    <a href="prestations.html">Prestations</a>
-    <a href="ebooks.html">eBooks</a>
-    <a href="concours.html">1h Gratuite</a>
-    <a href="contact.html">Contact</a>
-    <a href="drop001.html">Drop 001</a>
-  </div>  <div class="artist-container">
-    <img class="photo" src="img/seaklone.jpg" alt="SeaKlone" />
-    <h1>SeaKlone aka Wolfibeat</h1>
-    <p>
-      Rappeur, beatmaker, ingé son, fondateur du projet T.E.C et moteur de la True Connexion. Son style oscille entre introspection profonde, puissance brute et énergie de transmission.
-      Producteur complet, il gère ses prods, ses mix et son master avec une vision d’ensemble rare.
-    </p>
-    <div class="spotify">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-    <a class="btn-retour" href="artistes.html">Retour aux artistes</a>
-  </div></body>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">eBooks</a>
+      <a href="gratuite.html">1h Gratuite</a>
+      <a href="contact.html">Contact</a>
+      <a href="drop001.html">Drop 001</a>
+    </nav>
+  </header>  <main class="artiste-page">
+    <section class="artiste-card">
+      <img src="img/seaklone.jpg" alt="SeaKlone" class="artiste-thumbnail">
+      <h1>SeaKlone aka Wolfibeat</h1>
+      <p>
+        Rappeur, beatmaker, ingé son, fondateur du projet T.E.C et moteur de la True Connexion. Son style oscille entre introspection profonde,
+        puissance brute et énergie de transmission. Producteur complet, il gère ses prods, ses mix et son master avec une vision d’ensemble rare.
+      </p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4jYulSWt7OVMG7doAv0H9y?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <a href="artistes.html" class="btn-retour">Retour aux artistes</a>
+    </section>
+  </main>  <footer>
+    <p>LTC STUDIO © 2025</p>
+  </footer>
+</body>
 </html>
