@@ -1,20 +1,21 @@
-/* Global */
+/* Réinitialisation des marges, paddings et boîte de calcul */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fond général étoilé */
 body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: url('assets/stellar_background.gif') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
-  font-size: 1.2rem;
-  padding-top: 70px; /* Empêche que le header cache le contenu */
+  padding-top: 70px; /* Pour éviter que le contenu soit caché par le header */
 }
 
+/* Mise en forme du texte */
 h1, h2, h3, h4 {
   font-weight: 700;
   letter-spacing: 1px;
@@ -30,10 +31,10 @@ a:hover {
   color: #fff;
 }
 
-/* Navbar */
-nav {
+/* Header */
+header {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 10%;
+  padding: 30px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,56 +45,55 @@ nav {
   z-index: 100;
 }
 
-nav .logo-container img {
-  width: 10vw;  /* Responsive logo */
+header .logo-container img {
+  width: 10vw;
   height: auto;
 }
 
-nav .studio-name {
+header .studio-name {
   font-size: 3vw;
   color: #F5B300;
   letter-spacing: 2px;
 }
 
-nav ul {
+header nav ul {
   display: flex;
-  gap: 3%;
+  gap: 2%;
 }
 
-nav ul li {
+header nav ul li {
   list-style: none;
 }
 
-nav ul li a {
+header nav ul li a {
   font-size: 1.5vw;
   color: #fff;
   padding: 10px;
   transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
   background-color: #F5B300;
   border-radius: 5px;
 }
 
-/* Hero Section */
-.hero {
+/* Section principale */
+.main-section {
   text-align: center;
-  padding: 10% 20%; /* Padding dynamique */
+  padding: 100px 20px;
 }
 
-.hero h1 {
+.main-section h2 {
   font-size: 5vw;
   color: #F5B300;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
-.hero p {
+.main-section p {
   font-size: 2vw;
   margin: 20px 0;
 }
 
-.hero .btn-primary {
+.main-section .btn-primary {
   background-color: #F5B300;
   color: #101010;
   padding: 2vh 5vw;
@@ -103,17 +103,17 @@ nav ul li a:hover {
   transition: background-color 0.3s ease;
 }
 
-.hero .btn-primary:hover {
-  background-color: #e67e22;
+.main-section .btn-primary:hover {
+  background-color: #e0a500;
 }
 
-/* Drop Section */
+/* Section Drop */
 .drop-section {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 8% 10%;
+  padding: 50px 20px;
   text-align: center;
   border-radius: 10px;
-  margin-top: 15%;
+  margin-top: 50px;
 }
 
 .drop-section h2 {
@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 .drop-section .btn-secondary:hover {
-  background-color: #e67e22;
+  background-color: #e0a500;
 }
 
 /* Footer */
@@ -147,19 +147,11 @@ footer {
 }
 
 footer p {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  body {
-    font-size: 4vw;
-  }
-
-  nav ul li {
-    margin: 0 5%;
-  }
-
   .hero h1 {
     font-size: 8vw;
   }
@@ -168,13 +160,13 @@ footer p {
     font-size: 5vw;
   }
 
-  .hero .btn-primary {
-    padding: 3vh 8vw;
+  .main-section .btn-primary {
+    padding: 3vh 10vw;
     font-size: 4vw;
   }
 
   .drop-section .btn-secondary {
-    padding: 3vh 8vw;
+    padding: 3vh 10vw;
     font-size: 4vw;
   }
 
