@@ -1,124 +1,65 @@
-/* GENERAL */
+
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: url('stellar_background.gif') repeat;
+  background: url('stellar_background.gif') repeat center center fixed;
   background-size: cover;
   color: white;
+  text-align: center;
 }
 
 header {
-  text-align: center;
-  padding-top: 30px;
+  padding: 2rem 1rem;
 }
 
 .logo {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: auto;
   border-radius: 50%;
-  box-shadow: 0 0 60px #ffd700;
+  box-shadow: 0 0 30px #ffcc00;
 }
 
 h1 {
-  font-size: 2.5em;
-  margin: 10px 0;
+  margin: 1rem 0 0.5rem;
+  font-size: 2.5rem;
+  color: #ffcc00;
 }
 
-h1 .ltc {
-  color: white;
-}
-
-h1 .studio {
-  color: #ffd700;
-  text-shadow: 0 0 8px #ffd700;
-}
-
-nav {
+nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 10px;
-  gap: 12px;
+  gap: 1rem;
 }
 
 nav a {
-  color: #ffd700;
+  color: #ffcc00;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2em;
-  padding: 5px 10px;
-  border-bottom: 2px solid transparent;
-  transition: 0.3s ease;
 }
 
-nav a:hover {
-  border-bottom: 2px solid #ffd700;
-}
-
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-.description-box {
-  border: 1px solid #ffd700;
-  border-radius: 20px;
-  padding: 25px;
-  margin: 30px auto;
-  max-width: 800px;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.description-box p {
-  font-size: 1.2em;
-  line-height: 1.8;
-}
-
-.drop-section {
-  border: 1px solid #ffd700;
+.intro {
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #ffcc00;
   border-radius: 15px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 700px;
-  background: rgba(0, 0, 0, 0.6);
+  max-width: 90%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.drop-section h2 {
-  color: #ffd700;
-  margin-bottom: 15px;
+.intro h2 {
+  color: #ffcc00;
 }
 
-.button {
+.btn {
   display: inline-block;
-  background-color: #ffd700;
+  margin-top: 1rem;
+  padding: 0.7rem 2rem;
+  background-color: #ffcc00;
   color: black;
-  padding: 10px 20px;
   font-weight: bold;
-  border-radius: 8px;
-  margin-top: 15px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.button:hover {
-  background-color: #ffc400;
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .description-box,
-  .drop-section {
-    margin: 15px;
-  }
-
-  .logo {
-    width: 120px;
-    height: 120px;
-  }
 }
