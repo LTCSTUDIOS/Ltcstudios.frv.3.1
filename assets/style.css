@@ -1,80 +1,110 @@
-
 body {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: black;
-    color: white;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: black;
+  color: white;
 }
 
-.star-background {
-    background: url('assets/stellar_background.gif') repeat;
-    background-size: cover;
+.background {
+  background-image: url('assets/stellar_background.gif');
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
 }
 
-.logo-container {
-    margin-top: 5vh;
-    margin-bottom: 2vh;
+.header {
+  text-align: center;
+  padding: 1em 0;
 }
 
 .logo {
-    width: 20vw;
-    max-width: 150px;
-    height: auto;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.brand-name {
+  font-size: 1.8em;
+  color: white;
+  margin: 0.5em 0;
+  letter-spacing: 2px;
+  line-height: 1.2em;
 }
 
 .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-    font-size: 4vw;
-    max-width: 100%;
-    color: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2em;
+  padding: 0.5em 0;
 }
 
 .menu a {
-    color: yellow;
-    text-decoration: none;
-    font-weight: bold;
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: 0.3s ease;
 }
 
-.highlight-box {
-    border: 1px solid yellow;
-    border-radius: 15px;
-    margin: 5vh 5vw;
-    padding: 2vh 3vw;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 4.5vw;
+.menu a:hover {
+  text-shadow: 0 0 5px #FFF000;
 }
 
-.studio-pic {
-    width: 90vw;
-    max-width: 600px;
-    margin: 3vh auto;
-    border-radius: 12px;
-    display: block;
+.section {
+  max-width: 800px;
+  margin: auto;
+  padding: 2em;
+  text-align: center;
 }
 
-.button-container {
-    margin: 4vh auto;
+.section-title {
+  color: #FFD700;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
-.cta-button {
-    background-color: yellow;
-    color: black;
-    padding: 1.2em 2.2em;
-    font-size: 1.3rem;
-    font-weight: bold;
-    border-radius: 15px;
-    box-shadow: 0 0 20px yellow;
-    text-decoration: none;
+.highlight {
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-footer {
-    font-size: 3.5vw;
-    padding: 1rem;
-    color: #aaa;
+.studio-img {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 20px;
+  margin: 1em 0;
+  box-shadow: 0 0 10px black;
+}
+
+.button {
+  background-color: #FFD700;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 1.5em;
+  box-shadow: 0 0 10px #FFD700;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: #fff000;
+  box-shadow: 0 0 20px #fff000;
+}
+
+.footer {
+  text-align: center;
+  padding: 2em 0;
+  font-size: 0.9em;
+  color: #ccc;
 }
