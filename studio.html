@@ -1,75 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Le Studio - LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
   <style>
-    .studio-gallery {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin: 40px auto;
-      max-width: 900px;
+    .studio {
+      width: 90%;
+      max-width: 60rem;
+      margin: 6vh auto;
+      padding: 4vw;
+      background: #111;
+      border-radius: 2vw;
+      border: 0.1rem solid #FFD700;
+      box-shadow: 0 0 2rem #FFD70022;
+      text-align: center;
     }
-    .studio-gallery img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+
+    .studio h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #FFD700;
+    }
+
+    .studio p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 2rem;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .studio-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5vw;
+    }
+
+    .studio-images img {
+      width: 90%;
+      max-width: 420px;
+      border-radius: 1rem;
+      border: 0.1rem solid #FFD70033;
+      box-shadow: 0 0 1rem #FFD70011;
       transition: transform 0.3s ease;
     }
-    .studio-gallery img:hover {
+
+    .studio-images img:hover {
       transform: scale(1.03);
     }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
-  <header>
-    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Logo" class="logo"/></a>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a href="artistes.html">Artistes</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="apropos.html">À propos</a>
-    </nav>
-  </header>
 
-  <section class="section">
-    <h1>Le Studio</h1>
-    <p style="max-width: 800px; margin: auto; font-size: 1.1em;">
-      Un espace pensé pour la performance, le confort et l’indépendance artistique.<br>
-      Installé avec soin dans un cadre professionnel, le studio LTC réunit tout ce qu’il faut pour créer, enregistrer, mixer et finaliser vos projets comme un(e) pro.
+  <div class="studio">
+    <h1>Le Studio LTC</h1>
+    <p>
+      Un lieu hybride mêlant passion, technique et création. Pensé pour accompagner les artistes dans chaque étape : de l'idée brute jusqu'au morceau prêt à être diffusé.
     </p>
-
-    <div class="studio-gallery">
-      <img src="assets/studio1.jpg" alt="Vue Studio 1" />
-      <img src="assets/studio2.jpg" alt="Vue Studio 2" />
+    <div class="studio-images">
+      <img src="assets/studio1.jpg" alt="Vue studio 1" />
+      <img src="assets/studio2.jpg" alt="Vue studio 2" />
     </div>
+  </div>
 
-    <h2>Matériel à disposition :</h2>
-    <ul style="text-align: left; max-width: 700px; margin: 40px auto; font-size: 1em; line-height: 1.7;">
-      <li>Micro Edge Duo + Shure SM7B</li>
-      <li>Préampli Mindprint (à lampes)</li>
-      <li>Carte son Antelope Audio Discrete 8</li>
-      <li>Compresseur Fat Man 2</li>
-      <li>Moniteurs Presonus + Subwoofer Eris 10"</li>
-      <li>Écrans de contrôle (2x 32" incurvés + 2x 24" plats)</li>
-      <li>Casques Beyerdynamic DT 770/990 Pro, AKG K72</li>
-      <li>SmartWorkout Bar, isolation phonique, confort de travail optimal</li>
-    </ul>
-
-    <a href="contact.html"><button class="btn">Réserver une session</button></a>
-  </section>
-
-  <footer>
-    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
-  </footer>
 </body>
 </html>
