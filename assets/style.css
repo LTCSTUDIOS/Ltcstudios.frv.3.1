@@ -1,148 +1,88 @@
-/* === GLOBAL === */
 body {
+  background: black url('assets/stellar_background.gif') repeat;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: black url("assets/stellar_background.gif") repeat;
-  background-size: cover;
-  color: white;
 }
 
-/* === HEADER === */
-.header {
+header {
   text-align: center;
-  margin-top: 20px;
-}
-/* Glow animé + effet hover pour le logo */
-@keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
-  }
+  padding: 20px 0 10px;
 }
 
-.logo {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: 20px auto 10px auto;
-  border-radius: 12px;
-  animation: glowPulse 2.5s ease-in-out infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+header img {
+  width: 120px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #FFD700;
 }
 
-.logo:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 50px rgba(255, 215, 0, 1);
-}
-.logo {
-  width: 100px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #FFD700;
-}
-
-/* === TITRE LTC STUDIO === */
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  margin: 10px 0 0;
-  letter-spacing: 2px;
-}
-
-h1 span {
-  display: block;
+h1, h2, h3 {
+  text-align: center;
   color: #FFD700;
-  font-size: 2.2rem;
+  margin-top: 30px;
+  font-size: 28px;
 }
 
-/* === MENU === */
 nav {
-  margin: 20px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 18px;
+  margin: 20px 0;
 }
 
 nav a {
   color: #FFD700;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 nav a:hover {
   text-shadow: 0 0 5px #FFD700;
 }
 
-/* === TITRE SECTIONS === */
-.section-title {
-  font-size: 2rem;
-  text-align: center;
-  color: #FFD700;
-  margin-top: 2rem;
-}
-
-/* === DESCRIPTION AVEC CADRE === */
-.section-text {
+section {
+  max-width: 90%;
+  margin: 0 auto 50px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
   border: 1px solid #FFD700;
-  border-radius: 15px;
-  padding: 1.2rem;
-  margin: 1.5rem auto;
-  text-align: center;
-  font-size: 1.2rem;
-  max-width: 850px;
-  background-color: rgba(0, 0, 0, 0.75);
-  line-height: 1.7rem;
-}
-
-/* === IMAGES STUDIO === */
-.studio-photos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.studio-photos img {
-  width: 90%;
-  max-width: 700px;
   border-radius: 20px;
-  border: 1px solid #FFD700;
-  box-shadow: 0 0 10px #FFD700;
-}
-
-/* === BOUTON RÉSERVER === */
-.cta-button {
   text-align: center;
-  margin-bottom: 2rem;
+  color: white;
 }
 
-.btn-reserver {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #FFD700;
+section img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+button, .cta {
+  background: #FFD700;
   color: black;
   font-weight: bold;
-  border-radius: 1rem;
-  box-shadow: 0 0 20px #FFD700;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 15px #FFD700;
+  margin-top: 20px;
+  cursor: pointer;
   text-decoration: none;
-  font-size: 1rem;
-  transition: transform 0.2s ease;
+  display: inline-block;
 }
 
-.btn-reserver:hover {
-  transform: scale(1.05);
+button:hover, .cta:hover {
+  background: #ffdd33;
+  box-shadow: 0 0 20px #FFD700;
 }
 
-/* === FOOTER === */
 footer {
   text-align: center;
-  padding: 1rem;
-  color: #888;
-  font-size: 0.9rem;
+  padding: 30px;
+  color: white;
+  font-size: 14px;
 }
