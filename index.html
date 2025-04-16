@@ -2,39 +2,133 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LTC STUDIO - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTC STUDIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: black url('assets/stellar_background.gif') repeat center center;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-header {
+      width: 80px;
+    }
+
+    .ltc-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .navbar a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .main-content {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .highlight-section {
+      border: 1px solid #FFD700;
+      border-radius: 12px;
+      padding: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      margin: 2rem auto;
+      max-width: 500px;
+      box-shadow: 0 0 20px #FFD70033;
+    }
+
+    .highlight-title {
+      font-size: 1.5rem;
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-text {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #FFD700;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #FFD70088;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-  <div class="stars-background">
-    <header>
-      <img src="assets/logo-ltc.jpg" alt="Logo LTC Studio" class="logo-header">
-      <nav class="navbar">
-        <a href="index.html">Accueil</a>
-        <a href="studio.html">Le Studio</a>
-        <a href="artistes.html">Artistes</a>
-        <a href="services.html">Prestations</a>
-        <a href="#">eBooks</a>
-        <a href="#">1h Gratuite</a>
-        <a href="contact.html">Contact</a>
-        <a href="drop001.html">Drop 001</a>
-      </nav>
-    </header>
+  <header>
+    <div class="logo-container">
+      <img src="assets/logo-ltc.png" alt="Logo LTC" class="logo-header" />
+      <h1 class="ltc-title">LTC<br>STUDIO</h1>
+    </div>
+    <nav class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">eBooks</a>
+      <a href="1hgratuite.html">1h Gratuite</a>
+      <a href="contact.html">Contact</a>
+      <a href="drop001.html">Drop 001</a>
+    </nav>
+  </header>
 
-    <main class="main-content">
-      <h1>LTC STUDIO</h1>
-      <p>
-        Label, studio et mouvement indépendant. <br>
-        Production, développement et connexion d’artistes <br>
-        pour un impact musical et humain inégalé.
+  <main class="main-content">
+    <section class="highlight-section">
+      <h2 class="highlight-title">DROP 001 – T-Shirt<br>Édition Limitée</h2>
+      <p class="highlight-text">
+        Disponible le 1er mai – 50 exemplaires numérotés à la main, en coton bio premium.<br>
+        Toute personne qui se présente au studio avec ce t-shirt gagne 1H de session offerte.
       </p>
-      <a href="drop001.html" class="cta-button">Découvrir le Drop 001</a>
-    </main>
+      <a href="drop001.html" class="btn-primary">Précommander</a>
+    </section>
+  </main>
 
-    <footer>
-      LTC STUDIO © 2025 — True Earth Connexion
-    </footer>
-  </div>
+  <footer>
+    <p>LTC STUDIO © 2025 — True Earth Connexion</p>
+  </footer>
 </body>
 </html>
