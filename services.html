@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,11 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services - LTC STUDIO</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .services-content {
+      max-width: 800px;
+      margin: 60px auto;
+      font-size: 1.1em;
+      line-height: 1.7;
+      text-align: left;
+    }
+    .services-content h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #FFD700;
+    }
+    .services-content ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services-content li {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .services-content li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: yellow;
+    }
+  </style>
 </head>
 <body>
   <div class="stars"></div>
   <header>
-    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" class="logo" alt="LTC Logo"/></a>
+    <a href="index.html">
+      <img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="LTC Logo" class="logo"/>
+    </a>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="studio.html">Le Studio</a>
@@ -18,21 +48,24 @@
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="apropos.html">À propos</a>
+      <a href="session.html">Session</a>
+      <a href="merch.html">Merch</a>
+      <a href="drop001.html">Drop 001</a>
     </nav>
   </header>
-
   <section class="section">
-    <h1>Nos Services</h1>
-    <ul style="text-align:left; max-width:800px; margin:auto; font-size:1.1em; line-height:1.7;">
-      <li>Sessions studio : enregistrement, mix, mastering</li>
-      <li>Création de beats personnalisés</li>
-      <li>Accompagnement artistique et stratégie</li>
-      <li>Distribution digitale & mise en ligne</li>
-      <li>Design de covers & branding visuel</li>
-      <li>Formation via eBooks et coaching individuel</li>
-    </ul>
+    <div class="services-content">
+      <h1>Nos Services</h1>
+      <ul>
+        <li>Sessions studio : enregistrement, mix, mastering</li>
+        <li>Création de beats personnalisés</li>
+        <li>Accompagnement artistique et stratégie</li>
+        <li>Distribution digitale & mise en ligne</li>
+        <li>Design de covers & branding visuel</li>
+        <li>Formation via eBooks et coaching individuel</li>
+      </ul>
+    </div>
   </section>
-
   <footer>
     <p>LTC STUDIO © 2025 — Tous droits réservés</p>
   </footer>
