@@ -13,7 +13,30 @@ body {
   text-align: center;
   margin-top: 20px;
 }
+/* Glow animé + effet hover pour le logo */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+}
 
+.logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 20px auto 10px auto;
+  border-radius: 12px;
+  animation: glowPulse 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 50px rgba(255, 215, 0, 1);
+}
 .logo {
   width: 100px;
   border-radius: 50%;
