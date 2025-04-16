@@ -6,45 +6,38 @@
   <title>eBooks - LTC STUDIO</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .ebook-section {
+    .ebooks-section {
       max-width: 1000px;
       margin: 60px auto;
+      padding: 0 20px;
+      color: #fff;
       text-align: center;
-      color: #ccc;
     }
-    .ebook-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .ebook {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 12px;
-      width: 260px;
-      text-align: center;
+    .ebook-item {
       border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 30px;
+      margin: 30px 0;
+      background: rgba(255,255,255,0.02);
     }
-    .ebook h3 {
+    .ebook-item h2 {
       color: #FFD700;
     }
-    .ebook p {
-      font-size: 0.9em;
+    .ebook-item p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
     }
-    .ebook a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 18px;
-      border-radius: 8px;
+    .btn-yellow {
       background: yellow;
       color: black;
-      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
       text-decoration: none;
-      transition: background 0.3s;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
     }
-    .ebook a:hover {
+    .btn-yellow:hover {
       background: #fff200;
     }
   </style>
@@ -53,53 +46,50 @@
   <div class="stars"></div>
 
   <header>
-    <a href="index.html"><img src="assets/LTC_STUDIO_LOGO_TSHIRT.png" alt="Logo LTC" class="logo"/></a>
     <nav>
       <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
       <a href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
       <a href="ebooks.html">eBooks</a>
+      <a href="prestations.html">Prestations</a>
       <a href="contact.html">Contact</a>
-      <a href="merch.html">Merch</a>
       <a href="drop001.html">Drop 001</a>
     </nav>
   </header>
 
-  <section class="section ebook-section">
-    <h1>Nos eBooks pour Artistes Indépendants</h1>
-    <p>Une collection d’eBooks conçue pour t’accompagner dans chaque étape de ton parcours musical.</p>
+  <section class="ebooks-section">
+    <h1>Les eBooks LTC STUDIO</h1>
+    <p>Apprends, maîtrise et propulse ta carrière artistique.</p>
 
-    <div class="ebook-grid">
-      <div class="ebook">
-        <h3>Introduction gratuite</h3>
-        <p>Un guide clair pour comprendre les bases du projet et découvrir les outils à ta disposition.</p>
-        <a href="#">Télécharger</a>
-      </div>
+    <!-- Gratuit -->
+    <div class="ebook-item">
+      <h2>eBook Gratuit – L’Intro au projet T.E.C</h2>
+      <p>Une vision d’ensemble de ce que tu peux créer, produire et diffuser avec les bons outils.</p>
+      <a href="assets/ebook-gratuit.pdf" class="btn-yellow" download>Télécharger</a>
+    </div>
 
-      <div class="ebook">
-        <h3>Devenir Beatmaker</h3>
-        <p>Les secrets de la production musicale, du sound design à la finalisation de tes instrus.</p>
-        <a href="#">Acheter</a>
-      </div>
+    <!-- Teasers à venir -->
+    <div class="ebook-item">
+      <h2>Devenir Beatmaker</h2>
+      <p>Comprends la MAO, les bases de prod, les VST, le sound design, les arrangements.</p>
+      <span class="btn-yellow">Bientôt disponible</span>
+    </div>
 
-      <div class="ebook">
-        <h3>Devenir Rappeur</h3>
-        <p>Apprends à écrire, structurer et interpréter comme un pro.</p>
-        <a href="#">Acheter</a>
-      </div>
+    <div class="ebook-item">
+      <h2>Devenir Rappeur</h2>
+      <p>Écriture, flow, interprétation, respiration, performance scénique, vision d’artiste.</p>
+      <span class="btn-yellow">Bientôt disponible</span>
+    </div>
 
-      <div class="ebook">
-        <h3>Devenir Ingénieur du Son</h3>
-        <p>Comprendre le mixage, le mastering et la technique audio moderne.</p>
-        <a href="#">Acheter</a>
-      </div>
+    <div class="ebook-item">
+      <h2>Devenir Ingénieur du Son</h2>
+      <p>Mixage, mastering, compresseurs, effets, prise de voix, acoustique, workflow pro.</p>
+      <span class="btn-yellow">Bientôt disponible</span>
+    </div>
 
-      <div class="ebook">
-        <h3>Clés pour exploser en indé</h3>
-        <p>Tout sur la distribution, le marketing et les stratégies des artistes libres.</p>
-        <a href="#">Acheter</a>
-      </div>
+    <div class="ebook-item">
+      <h2>Exploser en indépendant</h2>
+      <p>Distribution, marketing digital, image, merchandising, stratégies d’autoproduction.</p>
+      <span class="btn-yellow">Bientôt disponible</span>
     </div>
   </section>
 
