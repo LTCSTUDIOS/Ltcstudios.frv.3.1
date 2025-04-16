@@ -1,95 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prestations - LTC STUDIO</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Prestations</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: black url('assets/stars-bg.jpg') repeat;
+      font-family: Orbitron, sans-serif;
+      color: white;
+    }
+
+    section {
+      padding: 100px 20px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      color: yellow;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+    }
+
+    .card-presta {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid yellow;
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 12px rgba(255, 255, 0, 0.3);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-presta h2 {
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .card-presta ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+    .card-presta ul li {
+      color: white;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+
+    label {
+      color: white;
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input[type="date"] {
+      padding: 6px;
+      border-radius: 5px;
+      margin: 10px 0 20px 0;
+      border: none;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-blue {
+      background-color: #00f;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      border: 1px solid yellow;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: yellow;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="ebooks.html">eBooks</a>
-      <a href="concours.html">1h Gratuite</a>
-      <a href="contact.html">Contact</a>
-      <a href="drop001.html">Drop 001</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Choisis ta session</h1>
-    <p>Studio, mix, prod, clip, pack complet : on t’accompagne du son à la sortie.</p>
-  </section>
+<section>
+  <h1 class="title">Nos Prestations</h1>
+  <p class="subtitle">Réservez votre session studio, pack EP ou album directement ici.</p>
 
-  <section class="ebooks">
-    <!-- Prestation à l'heure -->
-    <div class="ebook">
-      <h2>À l'heure</h2>
-      <p>Enregistrement, mix ou instru sur place.</p>
-      <ul style="text-align: left;">
-        <li>1h : 30€</li>
-        <li>2h : 55€</li>
-        <li>3h : 100€</li>
-        <li>6h : 180€</li>
-      </ul>
-      <p><strong>Réserve ta date :</strong></p>
-      <input type="date" name="date1" /><br><br>
-      <a href="#" class="btn">Réserver avec acompte</a>
-      <a href="#" class="btn">Payer 100% (-5%)</a>
+  <div class="card-presta">
+    <h2>À l’heure</h2>
+    <ul>
+      <li>1h : 30€</li>
+      <li>2h : 55€</li>
+      <li>3h : 100€</li>
+      <li>6h : 180€</li>
+    </ul>
+    <label for="date1">Réserve ta date :</label>
+    <input type="date" id="date1" name="date1">
+    <div class="btn-group">
+      <a href="#" class="btn-blue">Réserver avec acompte</a>
+      <a href="#" class="btn-outline">Payer 100% (-5%)</a>
     </div>
+  </div>
 
-    <!-- Pack EP -->
-    <div class="ebook">
-      <h2>Pack EP (3 titres)</h2>
-      <p>Enregistrement, mix, master sur 3 sons + prod type beat</p>
-      <ul style="text-align: left;">
-        <li>150€ avec prod type beat</li>
-        <li>300€ sur prod sur mesure (Wolfibeat)</li>
-        <li>+ Clip Seel (option) : 600€</li>
-      </ul>
-      <input type="date" name="date2" /><br><br>
-      <a href="#" class="btn">Réserver avec acompte</a>
-      <a href="#" class="btn">Payer 100% (-5%)</a>
+  <div class="card-presta">
+    <h2>Pack EP (3 titres)</h2>
+    <p>Enregistrement, mix, master + prod type beat</p>
+    <ul>
+      <li>150€ avec type beat</li>
+      <li>300€ avec prod sur mesure (Wolfibeat)</li>
+      <li>+ Clip Seel (option) : 600€</li>
+    </ul>
+    <label for="date2">Choisis ta date :</label>
+    <input type="date" id="date2" name="date2">
+    <div class="btn-group">
+      <a href="#" class="btn-blue">Réserver avec acompte</a>
+      <a href="#" class="btn-outline">Payer 100% (-5%)</a>
     </div>
+  </div>
 
-    <!-- Pack Album -->
-    <div class="ebook">
-      <h2>Pack Album (10 titres)</h2>
-      <p>Projet complet (enregistrement, mix, master, prod ou type beat)</p>
-      <ul style="text-align: left;">
-        <li>450€ avec type beat</li>
-        <li>888€ avec prod sur mesure (30% royalties)</li>
-        <li>1300€ avec clip inclus (Seel)</li>
-      </ul>
-      <input type="date" name="date3" /><br><br>
-      <a href="#" class="btn">Réserver avec acompte</a>
-      <a href="#" class="btn">Payer 100% (-5%)</a>
+  <div class="card-presta">
+    <h2>Pack Album (10 titres)</h2>
+    <p>Projet complet : enregistrement, mix, master, prod</p>
+    <ul>
+      <li>450€ avec type beat</li>
+      <li>888€ avec prod sur mesure (30% royalties)</li>
+      <li>1300€ avec clip Seel</li>
+    </ul>
+    <label for="date3">Choisis ta date :</label>
+    <input type="date" id="date3" name="date3">
+    <div class="btn-group">
+      <a href="#" class="btn-blue">Réserver avec acompte</a>
+      <a href="#" class="btn-outline">Payer 100% (-5%)</a>
     </div>
+  </div>
+</section>
 
-    <!-- 1 track tout compris -->
-    <div class="ebook">
-      <h2>1 Track de A à Z</h2>
-      <p>Enregistrement + mix + prod pour un morceau complet</p>
-      <p><strong>100€</strong></p>
-      <input type="date" name="date4" /><br><br>
-      <a href="#" class="btn">Réserver avec acompte</a>
-      <a href="#" class="btn">Payer 100% (-5%)</a>
-    </div>
-
-    <!-- Sur mesure -->
-    <div class="ebook">
-      <h2>Devis sur mesure</h2>
-      <p>Un projet unique ? On le construit ensemble.</p>
-      <a href="contact.html" class="btn">Faire une demande personnalisée</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
-  </footer>
 </body>
 </html>
