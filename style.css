@@ -188,3 +188,35 @@ form button, .btn, .cta-button {
   text-decoration: none;
   display: inline-block;
 }
+@media screen and (max-width: 600px) {
+  .drop-box {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .drop-box img {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .drop-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  select, input[type="email"] {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
