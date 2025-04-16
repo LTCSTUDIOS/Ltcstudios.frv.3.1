@@ -2,72 +2,44 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Le Studio - LTC STUDIO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    .studio {
-      width: 90%;
-      max-width: 60rem;
-      margin: 6vh auto;
-      padding: 4vw;
-      background: #111;
-      border-radius: 2vw;
-      border: 0.1rem solid #FFD700;
-      box-shadow: 0 0 2rem #FFD70022;
-      text-align: center;
-    }
-
-    .studio h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #FFD700;
-    }
-
-    .studio p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ddd;
-      margin-bottom: 2rem;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .studio-images {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5vw;
-    }
-
-    .studio-images img {
-      width: 90%;
-      max-width: 420px;
-      border-radius: 1rem;
-      border: 0.1rem solid #FFD70033;
-      box-shadow: 0 0 1rem #FFD70011;
-      transition: transform 0.3s ease;
-    }
-
-    .studio-images img:hover {
-      transform: scale(1.03);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Studio LTC</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <div class="studio">
-    <h1>Le Studio LTC</h1>
-    <p>
-      Un lieu hybride mêlant passion, technique et création. Pensé pour accompagner les artistes dans chaque étape : de l'idée brute jusqu'au morceau prêt à être diffusé.
-    </p>
-    <div class="studio-images">
-      <img src="assets/studio1.jpg" alt="Vue studio 1" />
-      <img src="assets/studio2.jpg" alt="Vue studio 2" />
+  <!-- Menu -->
+  <nav class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="studio.html">Le Studio</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="prestations.html">Prestations</a>
+    <a href="ebooks.html">eBooks</a>
+    <a href="concours.html">1h Gratuite</a>
+    <a href="contact.html">Contact</a>
+    <a href="drop001.html">Drop 001</a>
+  </nav>
+
+  <!-- Studio Bloc -->
+  <section class="studio-container">
+    <div class="content-box">
+      <h1>Le Studio LTC</h1>
+      <p>
+        Un lieu hybride mêlant passion, technique et création.
+        Pensé pour accompagner les artistes dans chaque étape :
+        de l’idée brute jusqu’au morceau prêt à être diffusé.
+      </p>
     </div>
-  </div>
+
+    <div class="studio-gallery">
+      <img src="assets/studio1.jpg" alt="Photo Studio 1"/>
+      <img src="assets/studio2.jpg" alt="Photo Studio 2"/>
+    </div>
+
+    <div class="cta-button">
+      <a href="contact.html" class="yellow-button">Réserver ma session</a>
+    </div>
+  </section>
 
 </body>
 </html>
