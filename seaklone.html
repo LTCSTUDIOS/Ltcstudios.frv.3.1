@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SeaKlone - Artiste LTC STUDIO</title>
-<link href="style.css" rel="stylesheet"/>
-<style>
-body {
-    background: url('assets/fond-etoile.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-</style></head>
-<body><img alt="Logo LTC STUDIOS" src="assets/logo-ltc.png" style="display:block;margin:20px auto;width:120px;"/>
-<header>
-<nav class="navbar">
-<a href="index.html">Accueil</a>
-<a href="studio.html">Le Studio</a>
-<a href="artistes.html">Artistes</a>
-<a href="prestations.html">Prestations</a>
-<a href="ebooks.html">eBooks</a>
-<a href="gratuite.html">1h Gratuite</a>
-<a href="contact.html">Contact</a>
-<a href="drop001.html">Drop 001</a>
-</nav>
-</header> <main class="artiste-page">
-<section class="artiste-card">
-<img alt="SeaKlone" class="artiste-thumbnail" src="img/seaklone.jpg"/>
-<h1>SeaKlone aka Wolfibeat</h1>
-<p>
-        Rappeur, beatmaker, ingé son, fondateur du projet T.E.C et moteur de la True Connexion. Son style oscille entre introspection profonde,
-        puissance brute et énergie de transmission. Producteur complet, il gère ses prods, ses mix et son master avec une vision d’ensemble rare.
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seaklone3 – LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body class="galaxy-background artistes">
+
+  <!-- HEADER + NAVIGATION -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <a href="index.html">ACCUEIL</a>
+      <a href="studio.html">LE STUDIO</a>
+      <a href="artistes.html" class="active">ARTISTES</a>
+      <a href="prestations.html">PRESTATIONS</a>
+      <a href="ebooks.html">E‑BOOKS</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="drop001.html" class="drop-nav">DROP 001</a>
+    </nav>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main style="padding-top:4rem;">
+    <section class="contact-section" style="max-width:600px; margin:2rem auto;">
+      <h1 style="color:var(--color-accent); text-align:center;">Seaklone3</h1>
+
+      <!-- Photo -->
+      <img 
+        src="assets/seaklon.jpg" 
+        alt="Portrait de Seaklone3" 
+        style="width:100%; border-radius:4px; box-shadow:0 0 8px rgba(0,0,0,0.5); margin:1rem 0;"
+      >
+
+      <!-- Mini‑bio -->
+      <p style="color:#fff; font-size:0.95rem; line-height:1.5; margin-bottom:1.5rem;">
+        Beatmaker et producteur passionné, Seaklone3 explore les textures sonores 
+        pour créer des ambiances immersives et futuristes.
       </p>
-<iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" frameborder="0" height="152" loading="lazy" src="https://open.spotify.com/embed/album/4jYulSWt7OVMG7doAv0H9y?utm_source=generator" style="border-radius:12px" width="100%"></iframe>
-<a class="btn-retour" href="artistes.html">Retour aux artistes</a>
-</section>
-</main> <footer>
-<p>LTC STUDIO © 2025</p>
-</footer>
+
+      <!-- Embed Spotify -->
+      <div style="position:relative; width:100%; padding-top:100%; margin-bottom:2rem; border-radius:4px; overflow:hidden;">
+        <iframe
+          src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP"
+          width="100%" height="100%"
+          style="position:absolute; top:0; left:0;"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>
