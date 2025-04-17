@@ -24,3 +24,54 @@
 /* =================================================================== Responsive =================================================================== */ @media (max-width: 800px) { .main-nav { padding-left: 50px; gap: 1rem; } } @media (max-width: 500px) { .studio-gallery figure, .contact-section { width: 100%; } .contact-section { padding: 1.5rem 1rem; } .hero .intro h1 { font-size: 2rem; } }
 
 4
+/* ==== Ajustements Mobile ==== */
+@media (max-width: 768px) {
+  /* Réduire légèrement le logo */
+  .logo-container {
+    left: 0.5rem;
+  }
+  .logo-nav {
+    max-height: 35px;
+  }
+
+  /* Permettre au menu de passer sur deux lignes */
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;    /* on retire le padding-left pour le logo */
+    gap: 1rem;
+  }
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+  .drop-nav {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Très petit écran : menu en colonne */
+@media (max-width: 480px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-nav a,
+  .drop-nav {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  /* Ajuster le hero pour éviter trop d’espace vide */
+  .hero {
+    padding: 4rem 1rem 2rem;
+  }
+  .hero .intro h1 {
+    font-size: 2rem;
+  }
+  .hero .intro p,
+  .info-drop {
+    font-size: 0.9rem;
+  }
+}
