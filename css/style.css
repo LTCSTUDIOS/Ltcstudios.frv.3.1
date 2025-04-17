@@ -294,3 +294,53 @@ main { margin-top: 6.5rem; padding:1rem; }
   .studio-gallery figure, .contact-section { width:100%; }
   .contact-section { padding:1.5rem; }
 }
+/* ==== Header en Flex + Logo dans la nav en CSS only ==== */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centre la nav horizontalement */
+  background: rgba(0,0,0,0.6);
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+}
+
+/* Positionne le logo-container par-dessus la nav */
+.site-header .logo-container {
+  position: absolute;
+  left: 1rem;           /* décale vers la gauche */
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Taille et style du logo */
+.site-header .logo-container img {
+  width: 50px;          /* taille fixe à ajuster */
+  height: auto;
+  border-radius: 50%;   /* rond */
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* Ajuste le nav pour compenser l’espace du logo */
+.site-header .main-nav {
+  margin: 0 auto;        /* centre la nav en horizontal */
+  padding-left: 70px;    /* espace interne pour ne pas superposer le logo */
+}
+
+/* Réduit l’espace interne du menu si besoin */
+.site-header .main-nav ul {
+  gap: 1rem;             /* espace entre items */
+}
+
+/* Décale le contenu des pages sous le header */
+body.galaxy-background,
+body.index,
+body.studio,
+body.artistes,
+body.ebooks,
+body.contact {
+  padding-top: 4rem;     /* hauteur de ton header + un peu */
+}
