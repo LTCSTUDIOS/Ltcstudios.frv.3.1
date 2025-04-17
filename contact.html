@@ -2,48 +2,74 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contact - LTC STUDIO</title>
+  <title>Contact – LTC STUDIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Orbitron -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Feuille de styles -->
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="galaxy-background">
-  <header>
+
+  <!-- HEADER + NAV identiques aux autres pages -->
+  <header class="site-header">
     <div class="logo-container">
       <a href="index.html">
-        <img src="assets/logo-ltc.png" alt="Logo LTC" class="logo-rounded">
+        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" class="logo-rounded">
       </a>
     </div>
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.html">ACCUEIL</a></li>
-        <li><a href="studio.html">LE STUDIO</a></li>
-        <li><a href="artistes.html">ARTISTES</a></li>
-        <li><a href="prestations.html">PRESTATIONS</a></li>
-        <li><a href="ebooks.html">E-BOOKS</a></li>
-        <li><a href="contact.html" class="active">CONTACT</a></li>
-        <li><a href="drop001.html" class="cta-btn">DROP 001</a></li>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html">Le Studio</a></li>
+        <li><a href="artistes.html">Artistes</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="ebooks.html">E‑books</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
+      <div class="drop-nav">
+        <a href="drop001.html">Drop 001</a>
+      </div>
     </nav>
   </header>
 
-  <main class="contact-section">
-    <h1>Contactez-nous</h1>
-    <form action="mailto:contact@ltcstudios.fr" method="POST" enctype="text/plain" class="contact-form">
-      <label for="name">Nom et Prénom</label>
-      <input type="text" id="name" name="Nom" required>
+  <!-- CONTENU CONTACT -->
+  <main style="margin-top:6rem;">
+    <section class="contact-section">
+      <h1>Contactez-nous</h1>
+      <form
+        action="mailto:contact@ltcstudios.fr"
+        method="POST"
+        enctype="text/plain"
+        class="contact-form"
+      >
+        <label for="name">Nom et Prénom</label>
+        <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="Email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" placeholder="votre@exemple.com" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="Message" rows="6" required></textarea>
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="Message"
+          rows="6"
+          placeholder="Votre message…"
+          required
+        ></textarea>
 
-      <button type="submit">Envoyer</button>
-    </form>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 LTC STUDIO. Tous droits réservés.</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
+
 </body>
 </html>
