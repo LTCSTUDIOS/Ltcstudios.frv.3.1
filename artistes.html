@@ -1,85 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Artistes – LTC STUDIOS</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos artistes - LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="galaxy-background artistes-page">
-
-  <!-- HEADER -->
+<body class="artistes galaxy-background">
   <header class="site-header">
-    <div class="header-inner">
-      <img src="assets/logo-ltc.png" alt="Logo LTC" class="logo-small" />
-      <nav class="menu">
-        <a href="index.html">Accueil</a>
-        <a href="studio.html">Le Studio</a>
-        <a href="artistes.html" class="active">Artistes</a>
-        <a href="prestations.html">Prestations</a>
-        <a href="ebooks.html">E‑books</a>
-        <a href="contact.html">Contact</a>
-        <a href="drop001.html" class="cta-drop">Drop 001</a>
-      </nav>
-    </div>
+    <nav class="main-nav">
+      <a href="index.html">ACCUEIL</a>
+      <a href="studio.html">LE STUDIO</a>
+      <a href="artistes.html" class="active">ARTISTES</a>
+      <a href="prestations.html">PRESTATIONS</a>
+      <a href="ebooks.html">E-BOOKS</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="drop001.html" class="drop-nav">DROP 001</a>
+    </nav>
   </header>
 
-  <!-- TITRE -->
-  <main class="artists-container">
-    <h1 class="page-title">Nos artistes</h1>
+  <main>
+    <section class="hero">
+      <h1>Nos artistes</h1>
+      <p>Découvrez les artistes produits par LTC STUDIOS</p>
+    </section>
 
-    <!-- GRID D’ARTISTES -->
-    <div class="artists-grid">
+    <section class="artists-list">
+      <div class="artist-card">
+        <img src="assets/portrait-seaklone3.jpg" alt="Portrait de SeaKlone3">
+        <h2><a href="seaklone3.html">SeaKlone3</a></h2>
+        <p>Beatmaker et producteur passionné, SeaKlone3 explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+      </div>
 
-      <!-- Seaklone3 -->
-      <article class="artist-card">
-        <img
-          src="assets/seaklon3.jpg"
-          alt="Portrait de Seaklone3"
-          class="artist-photo"
-        />
-        <h2 class="artist-name">Seaklone3</h2>
-        <p class="artist-bio">
-          Beatmaker et producteur passionné, Seaklone3 explore les textures
-          sonores pour créer des ambiances immersives et futuristes.
-        </p>
-        <div class="spotify-embed">
-          <iframe
-            src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-        </div>
-      </article>
-
-      <!-- Seel -->
-      <article class="artist-card">
-        <img
-          src="assets/seel.jpg"
-          alt="Portrait de Seel"
-          class="artist-photo"
-        />
-        <h2 class="artist-name">Seel</h2>
-        <p class="artist-bio">
-          Artiste polyvalent alliant rap et chant, Seel apporte une touche
-          mélodique unique à chaque projet.
-        </p>
-        <div class="spotify-embed">
-          <iframe
-            src="https://open.spotify.com/embed/playlist/0nBi5CB53mrgf3pFAWkdhz"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-        </div>
-      </article>
-
-      <!-- AJOUTEZ ICI D’AUTRES ARTISTES -->
-    </div>
+      <div class="artist-card">
+        <img src="assets/portrait-seel.jpg" alt="Portrait de Seel">
+        <h2><a href="seel.html">Seel</a></h2>
+        <p>Rappeur engagé, Seel partage des textes introspectifs et puissants, mêlant authenticité et musicalité.</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0nBi5CB53mrgf3pFAWkdhz?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </section>
   </main>
-
 </body>
 </html>
