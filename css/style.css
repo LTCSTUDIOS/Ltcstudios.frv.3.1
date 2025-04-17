@@ -243,3 +243,71 @@ main.contact-main {
     font-size: 0.9rem;
   }
 }
+/* ====== Studio Page ====== */
+body.galaxy-background {
+  background: url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0; padding: 0;
+  color: #fff;
+}
+
+.site-header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: rgba(0,0,0,0.5);
+  padding: 1rem 0; z-index: 1000;
+}
+
+main.studio-main {
+  margin-top: 6.5rem; /* espace sous header */
+  padding: 1rem;
+}
+
+/* Intro */
+.studio-intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+.studio-intro h1 {
+  font-size: 2.2rem;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+.studio-intro p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Galerie */
+.studio-gallery {
+  display: flex; flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.studio-gallery figure {
+  width: calc(50% - 1rem);
+  max-width: 320px;
+  margin: 0;
+  text-align: center;
+}
+.studio-gallery img {
+  width: 100%; height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+.studio-gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .studio-gallery figure {
+    width: 100%;
+  }
+  .studio-intro h1 {
+    font-size: 1.8rem;
+  }
+}
