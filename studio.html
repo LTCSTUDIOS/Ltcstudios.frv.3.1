@@ -2,31 +2,30 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Le Studio — LTC STUDIOS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Fonte Orbitron -->
+  <title>Le Studio – LTC STUDIOS</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Orbitron -->
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
     rel="stylesheet"
   >
-
-  <!-- CSS principal -->
+  <!-- Styles globaux -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-  <!-- HEADER + NAV (identique à index.html) -->
+<body class="galaxy-background">
+
+  <!-- HEADER + NAV (idem index.html) -->
   <header class="site-header">
     <div class="logo-container">
       <a href="index.html">
-        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS">
+        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" class="logo-rounded">
       </a>
     </div>
     <nav class="main-nav">
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="studio.html" class="active">Le Studio</a></li>
+        <li><a href="studio.html" class="active">Le Studio</a></li>
         <li><a href="artistes.html">Artistes</a></li>
         <li><a href="services.html">Prestations</a></li>
         <li><a href="ebooks.html">E‑books</a></li>
@@ -38,14 +37,18 @@
     </nav>
   </header>
 
-  <!-- CONTENU PRINCIPAL -->
-  <main>
-    <!-- On ajoute un margin-top pour que rien ne soit caché sous le header -->
+  <!-- CONTENU STUDIO -->
+  <main class="studio-main">
+    <!-- Intro -->
     <section class="studio-intro">
-      <h1>Le Studio</h1>
-      <p>Installé dans ton salon, équipé pro : Antelope, Presonus, Mindprint, MPC Studio…</p>
+      <h1>Le Studio</h1>
+      <p>
+        Installé dans ton salon, équipé pro :  
+        Antelope, Presonus, Mindprint, MPC Studio…
+      </p>
     </section>
 
+    <!-- Galerie -->
     <section class="studio-gallery">
       <figure>
         <img src="assets/studio1.jpg" alt="Photo du studio">
@@ -60,10 +63,8 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
+    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
 
-  <!-- JS global -->
-  <script src="js/main.js"></script>
 </body>
 </html>
