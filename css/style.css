@@ -301,3 +301,12 @@ main {
   margin-top: 0.5rem;
   z-index: 10;
 }
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent */
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
