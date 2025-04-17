@@ -212,3 +212,6 @@ main {
   }
 }
 main { margin-top: 5.5rem; }
+.hero::before {
+  display: none; /* déjà dans le CSS, on l'avait mis pour studio */
+}
