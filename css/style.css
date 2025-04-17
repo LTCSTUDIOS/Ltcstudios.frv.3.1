@@ -222,3 +222,72 @@ main { margin-top: 5.5rem; }
 .site-header { background: transparent; }
 .hero, .studio-intro { background: none; }
 main { margin-top: 6rem; }
+/* ===============================
+   Fix pour studio.html
+   =============================== */
+
+/* 1) On n’utilise plus .hero ni son overlay ici */
+.hero, .hero::before, .hero-box {
+  display: none !important;
+}
+
+/* 2) Décaler le main sous le header fixe */
+main {
+  margin-top: 6rem; /* Ajuste selon la hauteur exacte de ton header */
+  padding-bottom: 2rem;
+}
+
+/* 3) Style de la section studio-intro */
+.studio-intro {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.studio-intro h1 {
+  font-size: 2.4rem;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+.studio-intro p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* 4) Galerie responsive */
+.studio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+.studio-gallery figure {
+  width: calc(50% - 1rem);
+  max-width: 300px;
+  margin: 0;
+  text-align: center;
+}
+.studio-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+.studio-gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* 5) Mobile */
+@media (max-width: 500px) {
+  .studio-gallery figure {
+    width: 100%;
+  }
+  main {
+    margin-top: 5rem;
+  }
+}
