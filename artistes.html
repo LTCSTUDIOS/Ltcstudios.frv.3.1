@@ -1,46 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos artistes - LTC STUDIOS</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Artistes - LTC STUDIO</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .artistes-section {
+      padding: 6rem 1rem 2rem;
+      text-align: center;
+    }
+    .artiste-card {
+      border: 2px solid var(--color-accent);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+    }
+    .artiste-card:hover {
+      transform: scale(1.02);
+    }
+    .artiste-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px var(--color-accent);
+    }
+    .artiste-name {
+      color: var(--color-accent);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .artiste-bio {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 100%;
+      height: 152px;
+    }
+  </style>
 </head>
-<body class="artistes galaxy-background">
+<body class="artistes">
   <header class="site-header">
     <nav class="main-nav">
-      <a href="index.html">ACCUEIL</a>
-      <a href="studio.html">LE STUDIO</a>
-      <a href="artistes.html" class="active">ARTISTES</a>
-      <a href="prestations.html">PRESTATIONS</a>
-      <a href="ebooks.html">E-BOOKS</a>
-      <a href="contact.html">CONTACT</a>
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html" class="active">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">E-books</a>
+      <a href="contact.html">Contact</a>
       <a href="drop001.html" class="drop-nav">DROP 001</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Nos artistes</h1>
-      <p>Découvrez les artistes produits par LTC STUDIOS</p>
-    </section>
+  <section class="artistes-section">
+    <h1>LTC STUDIOS - Nos Artistes</h1>
 
-    <section class="artists-list">
-      <div class="artist-card">
-        <img src="assets/portrait-seaklone3.jpg" alt="Portrait de SeaKlone3">
-        <h2><a href="seaklone3.html">SeaKlone3</a></h2>
-        <p>Beatmaker et producteur passionné, SeaKlone3 explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-      </div>
+    <!-- Artiste 1 -->
+    <div class="artiste-card">
+      <img src="assets/seaklone.jpg" alt="Portrait de SeaKlone3" class="artiste-img" />
+      <div class="artiste-name">SeaKlone3</div>
+      <p class="artiste-bio">Beatmaker et producteur passionné, SeaKlone3 explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator" allowfullscreen loading="lazy"></iframe>
+    </div>
 
-      <div class="artist-card">
-        <img src="assets/portrait-seel.jpg" alt="Portrait de Seel">
-        <h2><a href="seel.html">Seel</a></h2>
-        <p>Rappeur engagé, Seel partage des textes introspectifs et puissants, mêlant authenticité et musicalité.</p>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0nBi5CB53mrgf3pFAWkdhz?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-      </div>
-    </section>
-  </main>
+    <!-- Artiste 2 -->
+    <div class="artiste-card">
+      <img src="assets/seel.jpg" alt="Portrait de Seel" class="artiste-img" />
+      <div class="artiste-name">Seel</div>
+      <p class="artiste-bio">Rappeur de la nouvelle génération, Seel impose son style brut, sincère et mélodique à travers des textes puissants et introspectifs.</p>
+      <iframe src="https://open.spotify.com/embed/playlist/0nBi5CB53mrgf3pFAWkdhz?utm_source=generator" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <!-- Autres artistes -->
+    <div class="artiste-card">
+      <img src="assets/naan.jpg" alt="Portrait de Naan" class="artiste-img" />
+      <div class="artiste-name">Naan</div>
+      <p class="artiste-bio">MC incisif, Naan partage ses convictions et son énergie à travers des rimes acérées et un flow millimétré.</p>
+    </div>
+
+    <div class="artiste-card">
+      <img src="assets/ozal.jpg" alt="Portrait de Ozal" class="artiste-img" />
+      <div class="artiste-name">Ozal</div>
+      <p class="artiste-bio">Artiste complet à l’univers riche et mélodique, Ozal navigue entre poésie moderne et musicalité planante.</p>
+    </div>
+
+    <div class="artiste-card">
+      <img src="assets/li2t.jpg" alt="Portrait de Li2t" class="artiste-img" />
+      <div class="artiste-name">Li2t</div>
+      <p class="artiste-bio">Li2t combine puissance et précision pour livrer des morceaux à la fois techniques, engagés et immersifs.</p>
+    </div>
+
+    <div class="artiste-card">
+      <img src="assets/nawak.jpg" alt="Portrait de NawaK" class="artiste-img" />
+      <div class="artiste-name">NawaK</div>
+      <p class="artiste-bio">Avec un style percutant et une sincérité brute, NawaK fait résonner des vérités dans chaque son.</p>
+    </div>
+
+    <div class="artiste-card">
+      <img src="assets/skylen.jpg" alt="Portrait de Skylen" class="artiste-img" />
+      <div class="artiste-name">Skylen</div>
+      <p class="artiste-bio">Skylen pose sa voix cristalline sur des instrus soignées, entre cloud rap et vibes planantes.</p>
+    </div>
+
+    <div class="artiste-card">
+      <img src="assets/harris.jpg" alt="Portrait de Harris" class="artiste-img" />
+      <div class="artiste-name">Harris</div>
+      <p class="artiste-bio">Voix grave et textes à cœur ouvert, Harris raconte ses réalités avec finesse et émotion.</p>
+    </div>
+
+  </section>
 </body>
 </html>
