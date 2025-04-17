@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>LTC STUDIOS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Fonte Orbitron -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LTC Studios</title>
+  <link rel="stylesheet" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- HEADER + NAV -->
-  <header class="site-header">
+  <div class="background-stars">
+    <img src="assets/fond-galaxie.gif" alt="Fond étoilé" class="background-gif">
+  </div>
+
+  <header>
     <div class="logo-container">
-      <a href="index.html">
-        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS">
-      </a>
+      <img src="assets/logo-ltc.png" alt="Logo LTC Studios" class="logo"/>
     </div>
-    <nav class="main-nav">
+    <nav>
       <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="studio.html">Le Studio</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html">Le Studio</a></li>
         <li><a href="artistes.html">Artistes</a></li>
-        <li><a href="services.html">Prestations</a></li>
-        <li><a href="ebooks.html">E‑books</a></li>
+        <li><a href="prestations.html">Prestations</a></li>
+        <li><a href="ebooks.html">E-books</a></li>
+        <li><a href="concours.html">Concours</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="drop001.html" class="drop-btn">Drop 001</a></li>
       </ul>
-      <div class="drop-nav">
-        <a href="drop001.html">Drop 001</a>
-      </div>
     </nav>
   </header>
 
-  <!-- HERO -->
   <main>
-    <section class="hero">
-      <div class="hero-box">
-        <h1>Bienvenue à<br>LTC STUDIOS</h1>
-        <p>Un espace créatif où l’art prend vie.<br>Votre musique, notre passion.</p>
-        <div class="hero-cta-group">
-          <a href="services.html" class="btn-primary">Réserver ma session</a>
-          <a href="drop001.html" class="btn-secondary">Voir le Drop 001</a>
-        </div>
-        <p class="hero-note">
-          Disponible le 1<sup>er</sup> mai — 50 exemplaires numérotés à la main, en coton bio premium.<br>
-          Toute personne qui se présente au studio avec ce t‑shirt gagne 1 h de session offerte.
-        </p>
-      </div>
+    <section class="intro-box">
+      <h1><span>Bienvenue à</span><br>LTC STUDIOS</h1>
+      <p>Un espace créatif où l’art prend vie.<br>Votre musique, notre passion.</p>
+      <a href="prestations.html" class="cta">Réserver ma session</a>
+      <p class="drop-info">
+        Disponible le 1er mai — 50 exemplaires numérotés à la main, en coton bio premium.<br>
+        Toute personne qui se présente au studio avec ce t-shirt gagne 1h de session offerte.
+      </p>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
+  <footer>
+    <p>&copy; 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
