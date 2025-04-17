@@ -91,3 +91,14 @@
   background: var(--color-accent);
   color: var(--color-bg);
 }
+/* Ajoute en fin de css/style.css */
+
+/* Superposition d’une image de logo sur le fond galaxie */
+body.galaxy-background {
+  background:
+    url('../assets/logo-ltc.png') no-repeat center top 1rem,   /* logo centré en haut */
+    url('../assets/fond-galaxie.gif') center/cover no-repeat fixed; /* galaxie derrière */
+  background-size:
+    60px auto,   /* taille du logo (60px de large) */
+    cover;
+}
