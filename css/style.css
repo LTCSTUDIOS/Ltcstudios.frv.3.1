@@ -418,4 +418,13 @@ body {
     padding: 0.3rem 0.4rem;
     font-size: 0.8rem;
   }
+}/* — Espace supplémentaire sous le header fixe — */
+body {
+  /* Si tu as déjà un padding-top pour décaler, augmente-le */
+  padding-top: 6rem; /* ≈ 96px, à ajuster selon la hauteur effective de ton header */
+}
+
+/* Si tu veux pousser spécifiquement ton hero un peu plus encore : */
+.hero {
+  padding-top: calc(6rem + 2rem); /* garde 2rem de marge en plus */
 }
