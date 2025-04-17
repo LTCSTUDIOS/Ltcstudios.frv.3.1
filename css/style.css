@@ -344,3 +344,26 @@ body.ebooks,
 body.contact {
   padding-top: 4rem;     /* hauteur de ton header + un peu */
 }
+/* ==== Ajustement logo/nav ==== */
+/* 1) Logo derrière la nav et non cliquable */
+.site-header .logo-container {
+  z-index: 0;               /* passe derrière la nav */
+}
+.site-header .logo-container img {
+  pointer-events: none;     /* ne capte plus le clic */
+  opacity: 0.9;             /* un peu plus discret */
+}
+
+/* 2) Nav au-dessus du logo */
+.site-header .main-nav {
+  position: relative;
+  z-index: 1;               /* passe devant le logo */
+  padding-left: 80px;       /* espace pour le logo */
+}
+
+/* 3) Si le logo cache encore, augmente ce padding-left */
+@media (max-width: 800px) {
+  .site-header .main-nav {
+    padding-left: 70px;     /* ajustement mobile */
+  }
+}
