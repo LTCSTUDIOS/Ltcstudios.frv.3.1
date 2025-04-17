@@ -215,3 +215,10 @@ main { margin-top: 5.5rem; }
 .hero::before {
   display: none; /* déjà dans le CSS, on l'avait mis pour studio */
 }
+.site-header {
+  background: transparent !important;
+}
+/* studio.css chargé après style.css */
+.site-header { background: transparent; }
+.hero, .studio-intro { background: none; }
+main { margin-top: 6rem; }
