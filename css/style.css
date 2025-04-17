@@ -1,69 +1,270 @@
-/* =================================================================== Style principal LTC STUDIOS =================================================================== */
+/* ===================================================================
+   LTC STUDIOS – Feuille de style complète
+   =================================================================== */
 
-/* -- Variables de couleurs et polices -- */ :root { --color-bg: #000; --color-fg: #FFF; --color-accent: #FFD700; --font-primary: 'Orbitron', sans-serif; }
+/* — Variables globales — */
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #ffd700;
+  --font-primary: 'Orbitron', sans-serif;
+}
 
-/* -- Reset & Base -- */
+/* — Reset & Base — */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: var(--font-primary);
+  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  color: var(--color-fg);
+  line-height: 1.4;
+}
 
-{ margin: 0; padding: 0; box-sizing: border-box; } body { font-family: var(--font-primary); background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed; color: var(--color-fg); } a { text-decoration: none; }
+/* — Lien par défaut — */
+a {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+a:hover {
+  color: var(--color-fg);
+}
 
+/* ===================================================================
+   HEADER & NAVIGATION
+   =================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+}
 
-/* =================================================================== Header & Navigation =================================================================== */ .site-header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.6); padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: center; z-index: 1000; }
+/* Logo pseudo-élément centré au-dessus de la nav */
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: url('../assets/logo-ltc.png') no-repeat center/contain;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 1001;
+}
 
-/* Logo intégré à gauche */ .logo-container { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); pointer-events: none; z-index: 1001; } .logo-nav { max-height: 40px; width: auto; border-radius: 50%; opacity: 0.9; box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+/* Ajustement des images logo éventuelles */
+.site-header img {
+  max-height: 40px;
+  width: auto;
+}
 
-/* Menu principal centré / .main-nav { position: relative; z-index: 1002; display: flex; align-items: center; justify-content: center; padding-left: 60px; / espace pour le logo */ gap: 1.5rem; } .main-nav a { color: var(--color-accent); font-weight: 700; transition: color 0.2s; } .main-nav a:hover, .main-nav a.active { color: var(--color-fg); } .drop-nav { border: 2px solid var(--color-accent); border-radius: 4px; padding: 0.25rem 0.75rem; transition: background 0.3s, color 0.3s; } .drop-nav:hover { background: var(--color-accent); color: var(--color-bg); }
+/* Navigation principale */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 60px; /* espace sous le pseudo-logo */
+  z-index: 1002;
+}
+.main-nav a {
+  font-weight: 700;
+  transition: color 0.2s;
+}
+.main-nav a.active,
+.main-nav a:hover {
+  color: var(--color-fg);
+}
 
-/* Décalage du contenu sous le header */ body.index, body.studio, body.artistes, body.ebooks, body.contact { padding-top: 4rem; }
+/* Bouton DROP 001 dans la nav */
+.drop-nav {
+  border: 2px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  transition: background 0.3s, color 0.3s;
+}
+.drop-nav:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
 
-/* =================================================================== Section "Hero" sur la page d'accueil =================================================================== */ .hero { text-align: center; padding: 6rem 1rem 2rem; } .hero .intro h1 { font-size: 2.5rem; color: var(--color-accent); line-height: 1.2; } .hero .intro p { margin-top: 1rem; font-size: 1rem; } .btn-primary { display: inline-block; margin: 1.5rem 0; background: var(--color-accent); color: var(--color-bg); font-weight: 700; padding: 0.75rem 2rem; border-radius: 50px; transition: background 0.3s, transform 0.2s; } .btn-primary:hover { background: var(--color-fg); transform: scale(1.05); } .info-drop { margin-top: 1rem; font-size: 0.9rem; line-height: 1.4; }
+/* Décalage contenu sous header */
+body.index,
+body.studio,
+body.artistes,
+body.ebooks,
+body.contact {
+  padding-top: 4rem;
+}
 
-/* =================================================================== Section Contact =================================================================== */ .contact-section { max-width: 600px; margin: 2rem auto; padding: 2rem 1rem; background: rgba(0, 0, 0, 0.7); border: 2px solid var(--color-accent); border-radius: 8px; } .contact-section h1 { text-align: center; font-size: 2rem; color: var(--color-accent); margin-bottom: 1.5rem; } .contact-form { display: flex; flex-direction: column; } .contact-form label { margin-top: 1rem; font-size: 0.9rem; } .contact-form input, .contact-form textarea { margin-top: 0.5rem; padding: 0.75rem; border: none; border-radius: 4px; font-family: var(--font-primary); } .contact-form textarea { resize: vertical; } .contact-form .btn-primary { align-self: center; }
+/* ===================================================================
+   SECTION HERO (index.html)
+   =================================================================== */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem 2rem;
+}
+.hero .intro h1 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  line-height: 1.2;
+}
+.hero .intro p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-primary {
+  margin: 1.5rem 0;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+}
+.btn-primary:hover {
+  background: var(--color-fg);
+  transform: scale(1.05);
+}
+.btn-secondary {
+  margin: 0.5rem 0 1.5rem;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0.6rem 1.2rem;
+}
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+.info-drop {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
 
-/* =================================================================== Galerie Studio =================================================================== */ .studio-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem 0; } .studio-gallery figure { width: calc(50% - 1rem); max-width: 320px; text-align: center; } .studio-gallery img { width: 100%; border-radius: 4px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); }
+/* ===================================================================
+   SECTION STUDIO (studio.html)
+   =================================================================== */
+.studio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+.studio-gallery figure {
+  width: calc(50% - 1rem);
+  max-width: 320px;
+  text-align: center;
+}
+.studio-gallery img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+.studio-gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+}
 
-/* =================================================================== Responsive =================================================================== */ @media (max-width: 800px) { .main-nav { padding-left: 50px; gap: 1rem; } } @media (max-width: 500px) { .studio-gallery figure, .contact-section { width: 100%; } .contact-section { padding: 1.5rem 1rem; } .hero .intro h1 { font-size: 2rem; } }
+/* ===================================================================
+   SECTION CONTACT (contact.html)
+   =================================================================== */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+}
+.contact-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form .btn-primary {
+  align-self: center;
+  margin-top: 1.5rem;
+}
 
-4
-/* ==== Ajustements Mobile ==== */
+/* ===================================================================
+   RESPONSIVE
+   =================================================================== */
 @media (max-width: 768px) {
-  /* Réduire légèrement le logo */
-  .logo-container {
-    left: 0.5rem;
-  }
-  .logo-nav {
-    max-height: 35px;
-  }
-
-  /* Permettre au menu de passer sur deux lignes */
+  .logo-container { left: 0.75rem; }
   .main-nav {
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: 0;    /* on retire le padding-left pour le logo */
-    gap: 1rem;
+    gap: 0.75rem;
+    padding-left: 0;
   }
   .main-nav a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
   }
   .drop-nav {
+    order: 1;
     margin-top: 0.5rem;
   }
 }
 
-/* Très petit écran : menu en colonne */
 @media (max-width: 480px) {
+  .site-header::before {
+    top: -1.2rem;
+    width: 40px;
+    height: 40px;
+  }
   .main-nav {
     flex-direction: column;
-    align-items: center;
     gap: 0.5rem;
   }
   .main-nav a,
   .drop-nav {
     width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-
-  /* Ajuster le hero pour éviter trop d’espace vide */
   .hero {
     padding: 4rem 1rem 2rem;
   }
@@ -74,31 +275,11 @@
   .info-drop {
     font-size: 0.9rem;
   }
-}
-/* ==== Bouton secondaire pour Drop 001 sous le hero ==== */
-.btn-secondary {
-  display: inline-block;
-  margin: 0.5rem 0 1.5rem;
-  border: 2px solid var(--color-accent);
-  color: var(--color-accent);
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  font-weight: 700;
-  transition: background 0.3s, color 0.3s;
-}
-
-.btn-secondary:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
-/* Ajoute en fin de css/style.css */
-
-/* Superposition d’une image de logo sur le fond galaxie */
-body.galaxy-background {
-  background:
-    url('../assets/logo-ltc.png') no-repeat center top 1rem,   /* logo centré en haut */
-    url('../assets/fond-galaxie.gif') center/cover no-repeat fixed; /* galaxie derrière */
-  background-size:
-    60px auto,   /* taille du logo (60px de large) */
-    cover;
+  .studio-gallery figure,
+  .contact-section {
+    width: 100%;
+  }
+  .contact-section {
+    padding: 1.5rem 1rem;
+  }
 }
