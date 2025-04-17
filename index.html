@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LTC STUDIOS</title>
-    <link rel="stylesheet" href="css/style.css">
-  <!-- Orbitron Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>LTC STUDIOS</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Fonte Orbitron -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="galaxy-background">
-    <header class="site-header">
-        <img src="assets/logo-ltc.png" class="logo-rounded" alt="Logo LTC" class="logo">
-        <nav class="menu">
-            <a href="index.html">ACCUEIL</a>
-            <a href="studio.html">LE STUDIO</a>
-            <a href="artistes.html">ARTISTES</a>
-            <a href="prestations.html">PRESTATIONS</a>
-            <a href="ebooks.html">E-BOOKS</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="drop001.html" class="drop">DROP 001</a>
-        </nav>
-    </header>
+
+<body class="galaxy-background index">
+
+  <!-- HEADER + NAV -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <!-- Logo à gauche -->
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" class="logo-nav">
+      </a>
+      <!-- Liens -->
+      <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="studio.html">Le Studio</a></li>
+        <li><a href="artistes.html">Artistes</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="ebooks.html">E‑books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Bouton Drop -->
+      <a href="drop001.html" class="drop-nav">Drop 001</a>
+    </nav>
+  </header>
+
+  <!-- HERO ACCUEIL -->
+  <main class="home-main">
     <section class="hero">
-        <div class="intro">
-            <h1>Bienvenue à <br><span>LTC STUDIOS</span></h1>
-            <p>Un espace créatif où l’art prend vie. <br>Votre musique, notre passion.</p>
-            <a href="contact.html" class="cta">Réserver ma session</a>
-            <p class="info-drop">Disponible le 1er mai — 50 exemplaires numérotés à la main, en coton bio premium.<br>Toute personne qui se présente au studio avec ce t-shirt gagne 1 h de session offerte.</p>
-        </div>
+      <div class="hero-box">
+        <h1>Bienvenue à LTC STUDIOS</h1>
+        <p>Un espace créatif où l’art prend vie. Votre musique, notre passion.</p>
+        <a href="drop001.html" class="btn-primary">Réserver ma session</a>
+        <p class="hero-note">
+          Disponible le 1er mai — 50 exemplaires numérotés à la main.  
+          Toute personne qui se présente au studio avec ce t‑shirt gagne 1 h de session offerte.
+        </p>
+      </div>
     </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
+  </footer>
+
 </body>
 </html>
