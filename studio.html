@@ -2,29 +2,59 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <title>Le Studio — LTC STUDIOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Le Studio — LTC STUDIO</title>
+  <!-- Fonte Orbitron -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- header identique à index.html -->
-  <header class="site-header">…</header>
 
+  <!-- HEADER + NAV (identique à index.html) -->
+  <header class="site-header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html" class="active">Le Studio</a></li>
+        <li><a href="artistes.html">Artistes</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="ebooks.html">E‑books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="drop-nav">
+        <a href="drop001.html">Drop 001</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENU STUDIO -->
   <main>
     <section class="studio-intro">
-      <h1>Le Studio</h1>
-      <p>Installé dans ton salon, équipé pro Antelope, Presonus, Mindprint, MPC Studio…</p>
+      <h1>Le Studio</h1>
+      <p>Installé dans ton salon, équipé pro : Antelope, Presonus, Mindprint, MPC Studio…</p>
     </section>
 
     <section class="studio-gallery">
-      <!-- À remplacer par tes vraies images -->
-      <img src="images/studio1.jpg" alt="Photo du studio">
-      <img src="images/studio2.jpg" alt="Photo du matériel">
+      <img src="assets/studio1.jpg" alt="Photo du studio">
+      <img src="assets/studio2.jpg" alt="Photo du matériel">
     </section>
   </main>
 
-  <!-- footer identique à index.html -->
-  <footer class="site-footer">…</footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
+  </footer>
+
+  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
