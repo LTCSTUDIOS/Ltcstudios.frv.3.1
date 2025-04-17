@@ -9,12 +9,12 @@
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
     rel="stylesheet"
   >
-  <!-- Feuille de styles -->
+  <!-- Feuille de styles principale -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="galaxy-background">
 
-  <!-- HEADER + NAV identiques aux autres pages -->
+  <!-- HEADER + NAV identiques -->
   <header class="site-header">
     <div class="logo-container">
       <a href="index.html">
@@ -37,15 +37,13 @@
   </header>
 
   <!-- CONTENU CONTACT -->
-  <main style="margin-top:6rem;">
+  <main class="contact-main">
     <section class="contact-section">
-      <h1>Contactez-nous</h1>
-      <form
-        action="mailto:contact@ltcstudios.fr"
-        method="POST"
-        enctype="text/plain"
-        class="contact-form"
-      >
+      <h1>Contactez‑nous</h1>
+      <form action="mailto:contact@ltcstudios.fr"
+            method="POST"
+            enctype="text/plain"
+            class="contact-form">
         <label for="name">Nom et Prénom</label>
         <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
 
@@ -53,20 +51,18 @@
         <input type="email" id="email" name="Email" placeholder="votre@exemple.com" required>
 
         <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="Message"
-          rows="6"
-          placeholder="Votre message…"
-          required
-        ></textarea>
+        <textarea id="message"
+                  name="Message"
+                  rows="6"
+                  placeholder="Votre message…"
+                  required></textarea>
 
-        <button type="submit">Envoyer</button>
+        <button type="submit" class="btn-primary">Envoyer</button>
       </form>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER identique -->
   <footer class="site-footer">
     <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
