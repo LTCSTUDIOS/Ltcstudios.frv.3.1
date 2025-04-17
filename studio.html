@@ -4,18 +4,23 @@
   <meta charset="UTF-8">
   <title>Le Studio — LTC STUDIOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Fonte Orbitron -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
   <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- HEADER + NAV -->
+  <!-- HEADER + NAV (identique à index.html) -->
   <header class="site-header">
     <div class="logo-container">
       <a href="index.html">
-        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS">
+        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS">
       </a>
     </div>
     <nav class="main-nav">
@@ -35,14 +40,21 @@
 
   <!-- CONTENU PRINCIPAL -->
   <main>
+    <!-- On ajoute un margin-top pour que rien ne soit caché sous le header -->
     <section class="studio-intro">
       <h1>Le Studio</h1>
-      <p>Installé dans ton salon, équipé pro : Antelope, Presonus, Mindprint, MPC Studio…</p>
+      <p>Installé dans ton salon, équipé pro : Antelope, Presonus, Mindprint, MPC Studio…</p>
     </section>
 
     <section class="studio-gallery">
-      <img src="assets/studio1.jpg" alt="Photo du studio">
-      <img src="assets/studio2.jpg" alt="Photo du matériel">
+      <figure>
+        <img src="assets/studio1.jpg" alt="Photo du studio">
+        <figcaption>Photo du studio</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/studio2.jpg" alt="Photo du matériel">
+        <figcaption>Photo du matériel</figcaption>
+      </figure>
     </section>
   </main>
 
@@ -51,6 +63,7 @@
     <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
 
+  <!-- JS global -->
   <script src="js/main.js"></script>
 </body>
 </html>
