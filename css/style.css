@@ -75,3 +75,19 @@
     font-size: 0.9rem;
   }
 }
+/* ==== Bouton secondaire pour Drop 001 sous le hero ==== */
+.btn-secondary {
+  display: inline-block;
+  margin: 0.5rem 0 1.5rem;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
