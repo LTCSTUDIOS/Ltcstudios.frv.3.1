@@ -1,69 +1,122 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>eBooks - LTC STUDIO</title>
-<link href="style.css" rel="stylesheet"/>
-<style>
-body {
-    background: url('assets/fond-etoile.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-</style></head>
-<body><img alt="Logo LTC STUDIOS" src="assets/logo-ltc.png" style="display:block;margin:20px auto;width:120px;"/>
-<header>
-<nav>
-<a href="index.html">Accueil</a>
-<a href="studio.html">Le Studio</a>
-<a href="artistes.html">Artistes</a>
-<a href="prestations.html">Prestations</a>
-<a href="ebooks.html">eBooks</a>
-<a href="concours.html">1h Gratuite</a>
-<a href="contact.html">Contact</a>
-<a href="drop001.html">Drop 001</a>
-</nav>
-</header>
-<main>
-<section class="hero">
-<h1>Les eBooks LTC STUDIO</h1>
-<p>Apprends, maîtrise et propulse ta carrière artistique.</p>
-</section>
-<section class="ebooks">
-<div class="ebook">
-<h2>eBook Gratuit</h2>
-<p>Introduction au monde de l’indépendance artistique. Télécharge-le maintenant.</p>
-<a class="btn" download="" href="assets/ebook-gratuit.pdf">Télécharger</a>
-</div>
-<div class="ebook">
-<h2>Devenir Beatmaker</h2>
-<p>MAO, sound design, VST, arrangements, DAW…</p>
-<span class="btn">Bientôt disponible</span>
-</div>
-<div class="ebook">
-<h2>Devenir Rappeur</h2>
-<p>Texte, flow, interprétation, scène, vision, message.</p>
-<span class="btn">Bientôt disponible</span>
-</div>
-<div class="ebook">
-<h2>Devenir Ingé Son</h2>
-<p>Mix, master, plugins, acoustique, oreille pro.</p>
-<span class="btn">Bientôt disponible</span>
-</div>
-<div class="ebook">
-<h2>Exploser en Indépendant</h2>
-<p>Stratégie, branding, image, diffusion, merchandising.</p>
-<span class="btn">Bientôt disponible</span>
-</div>
-</section>
-</main>
-<footer>
-<p>LTC STUDIO © 2025 — Tous droits réservés</p>
-</footer>
+  <meta charset="UTF-8">
+  <title>E‑book – LTC STUDIOS</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Fonte Orbitron -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Styles généraux -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="galaxy-background">
+
+  <!-- HEADER commun -->
+  <header class="site-header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" class="logo-rounded">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html">Le Studio</a></li>
+        <li><a href="artistes.html">Artistes</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="ebooks.html" class="active">E‑books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="drop-nav">
+        <a href="drop001.html">Drop 001</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO E-BOOK -->
+  <main class="ebook-main">
+    <section class="ebook-hero">
+      <figure>
+        <img src="assets/ebook-cover.jpg" alt="Couverture E‑book LTC" class="ebook-cover">
+        <figcaption class="ebook-title">
+          <h1>Votre Guide Ultime du Mix & Mastering</h1>
+          <p class="ebook-subtitle">Boostez vos productions en 10 étapes</p>
+        </figcaption>
+      </figure>
+      <a href="assets/ebook-full.pdf" download class="btn-primary btn-hero">
+        Télécharger l’E‑book (PDF)
+      </a>
+    </section>
+
+    <!-- RÉSUMÉ -->
+    <section class="ebook-summary">
+      <h2>Résumé</h2>
+      <p>
+        Dans cet e‑book gratuit, découvrez les secrets d’un mix et d’un mastering
+        professionnels : de la préparation de vos pistes à l’export final. Chaque
+        étape est illustrée, expliquée et accompagnée de conseils pratiques pour
+        gagner du temps et de la qualité.
+      </p>
+      <p>
+        Vous apprendrez notamment :
+        <ul>
+          <li>Le setup idéal de votre session</li>
+          <li>Les techniques d’égalisation avancées</li>
+          <li>L’utilisation optimale de la compression</li>
+          <li>Le choix des plugins de spatialisation</li>
+          <li>Les astuces pour un mastering percutant</li>
+        </ul>
+      </p>
+    </section>
+
+    <!-- SOMMAIRE -->
+    <section class="ebook-toc">
+      <h2>Sommaire</h2>
+      <ol>
+        <li>Introduction & objectifs</li>
+        <li>Préparation de la session</li>
+        <li>Égalisation et filtrage</li>
+        <li>Compression et dynamique</li>
+        <li>Effets et spatialisation</li>
+        <li>Automation créative</li>
+        <li>Mix final et export</li>
+        <li>Mastering pas à pas</li>
+        <li>Contrôle qualité et formats</li>
+        <li>Conclusion & ressources</li>
+      </ol>
+    </section>
+
+    <!-- APERÇU PDF -->
+    <section class="ebook-preview">
+      <h2>Aperçu</h2>
+      <div class="preview-container">
+        <!-- affiche une page 2 du PDF en aperçu -->
+        <object data="assets/ebook-preview.pdf#page=2" type="application/pdf" class="pdf-preview">
+          <p>Votre navigateur ne supporte pas l’affichage PDF. <a href="assets/ebook-preview.pdf">Téléchargez l’aperçu ici</a>.</p>
+        </object>
+      </div>
+    </section>
+
+    <!-- FORMULAIRE D’INSCRIPTION -->
+    <section class="ebook-form">
+      <h2>Recevez le PDF par email</h2>
+      <form action="mailto:contact@ltcstudios.fr" method="POST" enctype="text/plain" class="contact-form">
+        <label for="userEmail">Votre email</label>
+        <input type="email" id="userEmail" name="Email" placeholder="votre@exemple.com" required>
+        <button type="submit" class="btn-primary">Envoyer</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER commun -->
+  <footer class="site-footer">
+    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
+  </footer>
+
 </body>
 </html>
