@@ -1,0 +1,85 @@
+/* Fichier : css/style.css */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.main-nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFD700; /* jaune LTC */
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.main-nav a:hover {
+  color: #FFD700;
+}
+
+.hero {
+  height: 70vh;
+  background: url('../images/galaxie.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.8);
+  font-size: .9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none; /* prévoir menu burger */
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
