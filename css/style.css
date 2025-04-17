@@ -1,244 +1,213 @@
+/* ------------------------------------------------------------------
+   1. Import + Reset
+------------------------------------------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  background: url('../assets/fond-galaxie.gif') center/cover no-repeat;
-  font-family: 'Orbitron', sans-serif;
-  color: #FFD700;
-}
-
-/* HEADER & NAV */
-.site-header {
-  background: #444;
-  padding: 1rem 0;
-}
-.logo-container img {
-  display: block; margin:0 auto 0.5rem;
-  width: 140px; max-width: 60%;
-}
-.main-nav ul {
-  display: flex; flex-wrap: wrap;
-  justify-content: center; gap: 1.5rem;
-  list-style: none;
-}
-.main-nav a {
-  color: #FFD700; text-decoration: none;
-  font-weight: 700; font-size: 0.9rem;
-  text-transform: uppercase;
-}
-.main-nav a:hover { color: #fff; }
-.drop-nav {
-  text-align: center; margin-top: 0.75rem;
-}
-.drop-nav a {
-  color: #FFD700; text-decoration: none;
-  font-weight: 700; font-size: 0.9rem;
-  text-transform: uppercase;
-  border: 2px solid #FFD700; padding: 0.25rem 1rem;
-  border-radius: 4px; display: inline-block;
-}
-.drop-nav a:hover { background: #FFD700; color:#000; }
-
-/* HERO */
-.hero { display:flex; justify-content:center; padding:3rem 1rem; }
-.hero-box {
-  background: #555; border: 2px solid #FFD700;
-  padding: 2rem; max-width: 600px; border-radius: 8px;
-  text-align: center;
-}
-.hero-box h1 {
-  color: #FFD700; font-size: 2.4rem; margin-bottom:0.5rem;
-  line-height:1.2;
-}
-.hero-box p {
-  color: #fff; font-size: 1rem; margin-bottom:1.5rem;
-}
-.btn-primary {
-  background: #FFD700; color:#000;
-  padding: 0.75rem 2rem; border-radius:50px;
-  font-size:1rem; font-weight:700;
-  text-decoration:none;
-}
-.btn-primary:hover { background:#fff; }
-
-/* HERO NOTE */
-.hero-note {
-  color: #fff; font-size:0.85rem; margin-top:1rem;
-  line-height:1.4; opacity:0.85;
-}
-
-/* RESPONSIVE */
-@media(max-width:500px) {
-  .hero-box { padding:1.5rem 1rem; }
-  .hero-box h1 { font-size:2rem; }
-  .main-nav a, .drop-nav a { font-size:0.8rem; }
-}
-/* 1. Fond étoilé en arrière-plan global */
+/* ------------------------------------------------------------------
+   2. Corps de page
+------------------------------------------------------------------ */
 body {
   background: url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
   font-family: 'Orbitron', sans-serif;
   color: #FFD700;
-  margin: 0;
-  padding: 0;
 }
 
-/* 2. Header transparent, au-dessus du flux, fixe en haut */
+/* ------------------------------------------------------------------
+   3. Header & Nav (transparent + semi‑opaque)
+------------------------------------------------------------------ */
 .site-header {
-  background: transparent;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
+  top: 0; left: 0; width: 100%;
+  background: rgba(0, 0, 0, 0.4);
   padding: 1rem 0;
+  z-index: 1000;
 }
 
-/* 3. Menu centré en deux lignes si besoin */
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  width: 140px;
+  max-width: 60%;
+  border-radius: 50%;
+  border: 2px solid #FFD700;
+  background: rgba(0,0,0,0.3);
+  padding: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
 .main-nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
 }
+
+.main-nav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.main-nav a:hover {
+  background: rgba(255,215,0,0.2);
+  color: #000;
+  border-radius: 4px;
+}
+
+.main-nav .active {
+  background: #FFD700;
+  color: #000;
+  border-radius: 4px;
+}
+
 .drop-nav {
   width: 100%;
   text-align: center;
   margin-top: 0.75rem;
 }
 
-/* 4. Hero : on retire le fond global gris pour n’avoir que la box */
+.drop-nav a {
+  display: inline-block;
+  color: #FFD700;
+  background: transparent;
+  border: 2px solid #FFD700;
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.drop-nav a:hover {
+  background: #FFD700;
+  color: #000;
+}
+
+/* ------------------------------------------------------------------
+   4. Hero
+------------------------------------------------------------------ */
+main {
+  margin-top: 5.5rem; /* espace sous header */
+}
+
 .hero {
   display: flex;
   justify-content: center;
-  padding: 8rem 1rem 4rem; /* top = header height + espace */
+  align-items: center;
+  padding: 4rem 1rem;
   position: relative;
-  min-height: 100vh;       /* occupe tout l’écran */
 }
 
-/* on ajoute un overlay sombre si nécessaire */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-/* 5. Hero‑box au-dessus de l’overlay */
 .hero-box {
   position: relative;
   z-index: 2;
-  background: #555;
+  background: rgba(0,0,0,0.7);
   border: 2px solid #FFD700;
   border-radius: 8px;
   padding: 2rem;
   max-width: 600px;
   text-align: center;
-  color: #fff;
 }
 
-/* 6. Ajustements responsive (mobile) */
-@media (max-width: 500px) {
-  .hero {
-    padding: 6rem 1rem 2rem;
-  }
-  .hero-box {
-    padding: 1.5rem 1rem;
-    max-width: 90%;
-  }/* ===================================================================
-   Optimisations pour studio.html
-   =================================================================== */
-
-/* 1) On déplace tout le contenu principal sous l'en‑tête fixe */
-main {
-  margin-top: 6rem; /* ajuste selon la hauteur de ton header */
-}
-
-/* 2) Section d’intro centrée et lisible */
-.studio-intro {
-  padding: 2rem 1rem;
-  text-align: center;
-  color: #FFD700;
-}
-.studio-intro h1 {
+.hero-box h1 {
   font-size: 2.4rem;
-  margin-bottom: 0.5rem;
+  color: #FFD700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
-.studio-intro p {
+
+.hero-box p {
   font-size: 1rem;
+  color: #fff;
   margin-bottom: 1.5rem;
 }
 
-/* 3) Galerie responsive en flexbox */
-.studio-gallery {
+.hero-cta-group {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  padding: 0 1rem 3rem;
-  z-index: 2; /* au‑dessus de l'overlay éventuel */
-}
-.studio-gallery img {
-  width: calc(50% - 1rem);
-  max-width: 300px; /* ou la taille max que tu préfères */
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
-/* 4) On désactive l’overlay .hero pour toutes les pages sauf index */
-.hero::before {
-  display: none;
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.2s, background 0.3s;
 }
 
-/* 5) Petite correction de couleurs */
-.studio-intro p,
-.studio-gallery figcaption {
+.btn-primary {
+  background: #FFD700;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+}
+
+.btn-secondary:hover {
+  background: #FFD700;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.hero-note {
+  font-size: 0.85rem;
   color: #fff;
+  opacity: 0.85;
+  line-height: 1.4;
 }
 
-/* 6) Mobile */
-@media (max-width: 500px) {
-  .studio-gallery img {
-    width: 100%;
-    max-width: none;
-  }
-}
-}
-/* Galerie Studio */
-.studio-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem 1rem;
-  margin-top: 2rem;
-}
-.studio-gallery figure {
-  margin: 0;
+/* ------------------------------------------------------------------
+   5. Footer
+------------------------------------------------------------------ */
+.site-footer {
   text-align: center;
-  width: calc(50% - 1rem);
-  max-width: 300px;
-}
-.studio-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  display: block;
-}
-.studio-gallery figcaption {
-  margin-top: 0.5rem;
+  padding: 1rem 0;
+  background: rgba(0,0,0,0.4);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
+/* ------------------------------------------------------------------
+   6. Responsive (mobiles)
+------------------------------------------------------------------ */
 @media (max-width: 500px) {
-  .studio-gallery figure {
-    width: 100%;
+  .hero-box {
+    padding: 1.5rem 1rem;
+  }
+  .hero-box h1 {
+    font-size: 2rem;
+  }
+  .main-nav a,
+  .drop-nav a {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
 }
