@@ -310,3 +310,16 @@ main {
   backdrop-filter: blur(4px);
   z-index: 1000;
 }
+main {
+  margin-top: 130px; /* Ajusté pour laisser respirer le contenu */
+  padding: 1rem;
+}
+.main-nav ul {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+<img src="assets/logo-ltc.png" alt="Logo LTC STUDIO" style="width:90px; height:90px; border-radius:50%; margin-top:10px;">
