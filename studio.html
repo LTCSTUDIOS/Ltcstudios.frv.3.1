@@ -2,68 +2,42 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Le Studio — LTC STUDIOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Fonte Orbitron -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+  <title>Le Studio – LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" 
     rel="stylesheet"
   >
-
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="galaxy-background">
+<body class="galaxy-background studio">
 
-  <!-- HEADER + NAV (identique à index.html) -->
+  <!-- HEADER + NAVIGATION -->
   <header class="site-header">
-    <div class="logo-container">
-      <a href="index.html">
-        <img src="assets/logo-ltc.png" class="logo-rounded" alt="Logo LTC STUDIOS">
-      </a>
-    </div>
+    <!-- (le logo en pseudo-élément, pas besoin d’img ici) -->
     <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="studio.html" class="active">Le Studio</a></li>
-        <li><a href="artistes.html">Artistes</a></li>
-        <li><a href="services.html">Prestations</a></li>
-        <li><a href="ebooks.html">E‑books</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="drop-nav">
-        <a href="drop001.html">Drop 001</a>
-      </div>
+      <a href="index.html">ACCUEIL</a>
+      <a href="studio.html" class="active">LE STUDIO</a>
+      <a href="artistes.html">ARTISTES</a>
+      <a href="prestations.html">PRESTATIONS</a>
+      <a href="ebooks.html">E‑BOOKS</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="drop001.html" class="drop-nav">DROP 001</a>
     </nav>
   </header>
 
-  <!-- CONTENU PRINCIPAL -->
-  <main>
-    <!-- On ajoute un margin-top pour que rien ne soit caché sous le header -->
-    <section class="studio-intro">
-      <h1>Le Studio</h1>
-      <p>Installé dans ton salon, équipé pro : Antelope, Presonus, Mindprint, MPC Studio…</p>
-    </section>
+  <!-- GALERIE DU STUDIO -->
+  <section class="studio-gallery">
+    <figure>
+      <img src="assets/studio1.jpg" alt="Photo du studio">
+      <figcaption>Photo du studio</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/studio2.jpg" alt="Photo du matériel">
+      <figcaption>Photo du matériel</figcaption>
+    </figure>
+    <!-- Ajoute d'autres figures si nécessaire -->
+  </section>
 
-    <section class="studio-gallery">
-      <figure>
-        <img src="assets/studio1.jpg" alt="Photo du studio">
-        <figcaption>Photo du studio</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/studio2.jpg" alt="Photo du matériel">
-        <figcaption>Photo du matériel</figcaption>
-      </figure>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
-  </footer>
-
-  <!-- JS global -->
-  <script src="js/main.js"></script>
 </body>
 </html>
