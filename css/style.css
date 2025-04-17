@@ -1,164 +1,293 @@
-/* ======================================================
-   RESET & BASE
-   ====================================================== */
-* {
+/* ===================================================================
+   LTC STUDIOS – Feuille de style complète
+   =================================================================== */
+
+/* — Variables globales — */
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #ffd700;
+  --font-primary: 'Orbitron', sans-serif;
+  --nav-height: 4rem;
+}
+
+/* — Reset & Base — */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 16px;
-  scroll-behavior: smooth;
+  font-size: 100%;
 }
 body {
-  color: #fff;
-  background-color: #000;
-  overflow-x: hidden;
+  font-family: var(--font-primary);
+  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  color: var(--color-fg);
+  line-height: 1.5;
+  padding-top: var(--nav-height);
 }
+
+/* — Liens — */
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-accent);
+}
+a:hover {
+  color: var(--color-fg);
 }
 
-/* ======================================================
-   GALAXY BACKGROUND
-   ====================================================== */
-.galaxy-background {
-  background: url('../assets/fond_galaxie.gif') center/cover no-repeat fixed;
-}
-
-/* ======================================================
-   HEADER & MENU
-   ====================================================== */
+/* ===================================================================
+   HEADER & NAVIGATION
+   =================================================================== */
 .site-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  z-index: 100;
-}
-.site-header .header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-}
-.logo-small {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.menu a {
-  padding: 0.4rem 0.6rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #f2c94c;
-  transition: background 0.2s;
-}
-.menu a:hover {
-  background: rgba(242,201,76,0.2);
-  border-radius: 4px;
-}
-.menu a.active {
-  background: #f2c94c;
-  color: #000;
-  border-radius: 4px;
-}
-.cta-drop {
-  border: 2px solid #f2c94c;
-  border-radius: 4px;
-  padding: 0.4rem 0.6rem;
-}
-
-/* ======================================================
-   ARTISTES PAGE STRUCTURE
-   ====================================================== */
-.artistes-page .artists-container {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-.page-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #f2c94c;
-}
-
-/* ======================================================
-   GRILLE D’ARTISTES
-   ====================================================== */
-.artists-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-.artist-card {
-  background: rgba(0,0,0,0.5);
-  padding: 1rem;
-  border: 2px solid #f2c94c;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.artist-photo {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 0.75rem;
-}
-.artist-name {
-  font-size: 1.4rem;
-  color: #f2c94c;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-.artist-bio {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.spotify-embed {
-  width: 100%;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  overflow: hidden;
-  border-radius: 6px;
-}
-.spotify-embed iframe {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  border: none;
+  height: var(--nav-height);
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 1000;
 }
 
-/* ======================================================
-   RESPONSIVE FINESSE
-   ====================================================== */
-@media (max-width: 500px) {
-  .site-header .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .menu {
+/* Logo intégré dans le bandeau */
+.site-header .logo-rounded {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* Navigation principale */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-nav a {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  transition: color 0.2s, background 0.2s;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+
+/* Bouton DROP 001 */
+.main-nav .drop-nav {
+  border: 2px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+}
+.main-nav .drop-nav:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* ===================================================================
+   SECTION HERO (index.html)
+   =================================================================== */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.hero .intro h1 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  line-height: 1.2;
+}
+.hero .intro p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.cta,
+.drop-secondary {
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.2s;
+}
+.cta {
+  margin: 1.5rem 0;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+}
+.cta:hover {
+  background: var(--color-fg);
+  color: var(--color-bg);
+  transform: scale(1.05);
+}
+.drop-secondary {
+  margin: 0.5rem 0 1rem;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0.6rem 1.2rem;
+}
+.drop-secondary:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+.info-drop {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ===================================================================
+   SECTION STUDIO (studio.html)
+   =================================================================== */
+.studio-intro {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.studio-intro h1 {
+  color: var(--color-accent);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.studio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.studio-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* ===================================================================
+   SECTION ARTISTES (artistes.html)
+   =================================================================== */
+.artistes-section {
+  padding: 2rem 1rem;
+}
+.artistes-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+}
+.artist-card {
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.artist-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+.artist-card h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.artist-card p.bio {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.artist-card iframe {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  height: 380px;
+}
+
+/* ===================================================================
+   SECTION CONTACT (contact.html)
+   =================================================================== */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+}
+.contact-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact-form .btn-submit {
+  display: block;
+  margin: 1.5rem auto 0;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ===================================================================
+   RESPONSIVE
+   =================================================================== */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    gap: 0.5rem;
   }
-  .logo-small {
+  .main-nav a {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+  .site-header .logo-rounded {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  .site-header .logo-rounded {
     margin-bottom: 0.5rem;
+  }
+  .main-nav {
+    flex-direction: column;
+    gap: 0.4rem;
   }
 }
