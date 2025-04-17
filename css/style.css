@@ -352,3 +352,70 @@ body {
     font-size: 0.9rem;
   }
 }
+/* ===================================================================
+   Compactage du header & nav
+   =================================================================== */
+
+/* 1) On réduit encore la hauteur du header */
+:root {
+  --nav-height: 2.5rem; /* ~40px */
+}
+
+.site-header {
+  height: var(--nav-height);
+  padding: 0 0.5rem;     /* moins d’espaces latéraux */
+}
+
+/* 2) On réduit la taille du logo pseudo-élément */
+.site-header::before {
+  width: 32px;
+  height: 32px;
+  top: calc(-1 * (32px / 2)); /* pour qu'il reste centré */
+}
+
+/* 3) On compacte les liens */
+.main-nav {
+  gap: 0.5rem;
+  padding-left: 0;       /* plus d’espace perdu */
+}
+.main-nav a,
+.main-nav .drop-nav {
+  font-size: 0.8rem;      /* un peu plus petit */
+  padding: 0.2rem 0.5rem; /* moins de padding */
+  line-height: 1;         /* évite l’alignement foireux */
+}
+
+/* 4) On recale le contenu sous le header */
+body {
+  padding-top: var(--nav-height);
+}
+
+/* ===================================================================
+   Responsive (mobile) : menu horizontal plutôt que colonne
+   =================================================================== */
+@media (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-header::before {
+    width: 28px;
+    height: 28px;
+    top: -14px;
+  }
+
+  .main-nav {
+    flex-direction: row;    /* passe en ligne sur mobile */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .main-nav a,
+  .main-nav .drop-nav {
+    width: auto;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.8rem;
+  }
+}
