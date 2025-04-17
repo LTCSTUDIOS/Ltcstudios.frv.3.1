@@ -454,3 +454,13 @@ body {
   background-color: #fff;
   color: #000;
 }
+.artist-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+  display: block;
+  margin: 0 auto 1rem;
+}
