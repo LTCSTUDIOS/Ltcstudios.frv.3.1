@@ -149,5 +149,63 @@ body {
   .hero-box {
     padding: 1.5rem 1rem;
     max-width: 90%;
+  }/* ===================================================================
+   Optimisations pour studio.html
+   =================================================================== */
+
+/* 1) On déplace tout le contenu principal sous l'en‑tête fixe */
+main {
+  margin-top: 6rem; /* ajuste selon la hauteur de ton header */
+}
+
+/* 2) Section d’intro centrée et lisible */
+.studio-intro {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #FFD700;
+}
+.studio-intro h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+.studio-intro p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 3) Galerie responsive en flexbox */
+.studio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem 3rem;
+  z-index: 2; /* au‑dessus de l'overlay éventuel */
+}
+.studio-gallery img {
+  width: calc(50% - 1rem);
+  max-width: 300px; /* ou la taille max que tu préfères */
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* 4) On désactive l’overlay .hero pour toutes les pages sauf index */
+.hero::before {
+  display: none;
+}
+
+/* 5) Petite correction de couleurs */
+.studio-intro p,
+.studio-gallery figcaption {
+  color: #fff;
+}
+
+/* 6) Mobile */
+@media (max-width: 500px) {
+  .studio-gallery img {
+    width: 100%;
+    max-width: none;
   }
+}
 }
