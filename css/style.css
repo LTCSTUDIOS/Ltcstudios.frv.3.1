@@ -183,3 +183,120 @@ header .logo-rounded:hover {
   box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
   opacity: 1;
 }
+/* Prestations – grille de cartes */
+.prestations-section {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.prestations-section .lead {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255,215,0,0.3);
+}
+.service-card h2 {
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+.service-card p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.service-card .price {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Boutons “Réserver” */
+.btn-book {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-book:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Modal de réservation */
+.modal {
+  display: none;
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  align-items: center; justify-content: center;
+  z-index: 2000;
+}
+.modal-content {
+  background: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 0.5rem; right: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+#modal-date {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.75rem 0;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+}
+
+/* Bouton plein pour le pre‑paiement */
+#confirm-book {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#confirm-book:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Ajustement responsive */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
