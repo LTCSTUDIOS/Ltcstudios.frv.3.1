@@ -1,13 +1,9 @@
-// main.js
-(() => {
+// Ajoute un effet blur + ombre au scroll sur le header
+window.addEventListener('scroll', () => {
   const header = document.querySelector('.site-header');
-  const compactThreshold = 60; // en px
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > compactThreshold) {
-      header.classList.add('header--compact');
-    } else {
-      header.classList.remove('header--compact');
-    }
-  });
-})();
+  if (window.scrollY > 30) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
