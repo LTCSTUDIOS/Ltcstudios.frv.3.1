@@ -4,13 +4,22 @@
   --fg: #fff;
   --accent: #ffd700;
   --font: 'Orbitron', sans-serif;
-  --nav-h: 3.2rem;
-  --transition: 0.2s ease-out;
+  --nav-h: 3rem;
+  --transition: 0.2s ease;
 }
 
-/* Reset & base */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* — RESET & BASE — */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
 body {
   font-family: var(--font);
   color: var(--fg);
@@ -19,33 +28,46 @@ body {
   line-height: 1.4;
 }
 
-/* Header fixe */
+/* — HEADER FIXE & NAV — */
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--nav-h);
   background: rgba(0,0,0,0.85);
-  display: flex; align-items: center; justify-content: center;
-  padding: 0 1rem; z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: 1000;
   transition: background var(--transition);
 }
-.site-header.scrolled { background: rgba(0,0,0,0.95); }
+.site-header.scrolled {
+  background: rgba(0,0,0,0.95);
+}
 
-/* Logo */
+/* Logo (coin supérieur gauche) */
 .logo-nav {
   position: absolute;
-  top: 50%; left: 1rem;
+  top: 50%;
+  left: 1rem;
   transform: translateY(-50%);
-  width: 2.4rem; height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 0 6px rgba(255,215,0,0.3);
   transition: transform var(--transition);
 }
-.logo-nav:hover { transform: translateY(-50%) scale(1.1); }
+.logo-nav:hover {
+  transform: translateY(-50%) scale(1.1);
+}
 
-/* Nav links */
+/* Barre de liens */
 .navbar {
-  display: flex; gap: 1rem; flex-wrap: nowrap; white-space: nowrap;
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 .navbar a {
   display: inline-block;
@@ -61,36 +83,46 @@ body {
   background: var(--accent);
   color: var(--bg);
 }
+
+/* Bouton DROP 001 dans la nav */
 .navbar .btn-outline {
   border: 2px solid var(--accent);
+  background: transparent;
 }
 .navbar .btn-outline:hover {
   background: var(--accent);
   color: var(--bg);
 }
 
-/* Hamburger */
+/* — HAMBURGER (mobile) — */
 .burger {
   display: none;
-  flex-direction: column;
-  gap: 0.25rem;
   background: none;
   border: none;
   cursor: pointer;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 .burger span {
-  width: 1.5rem; height: 2px;
+  width: 1.5rem;
+  height: 2px;
   background: var(--accent);
-  transition: transform var(--transition);
+  transition: transform var(--transition), opacity var(--transition);
 }
-.burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.burger.open span:nth-child(2) { opacity: 0; }
-.burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.burger.open span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
 
-/* Hero */
+/* — HERO — */
 .hero {
   text-align: center;
-  padding: 6rem 1rem 3rem;
+  padding: calc(var(--nav-h) + 2rem) 1rem 3rem;
 }
 .hero-title {
   font-size: 2.5rem;
@@ -116,7 +148,9 @@ body {
   text-transform: uppercase;
   transition: transform var(--transition);
 }
-.btn-full:hover { transform: scale(1.05); }
+.btn-full:hover {
+  transform: scale(1.05);
+}
 .btn-outline {
   background: transparent;
   color: var(--accent);
@@ -124,16 +158,18 @@ body {
   border: 2px solid var(--accent);
   border-radius: 50px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .btn-outline:hover {
   background: var(--accent);
   color: var(--bg);
 }
 
-/* Prestations */
+/* — PRESTATIONS — */
 .prestations-section {
   padding: 2rem 1rem;
-  max-width: 960px; margin: 0 auto;
+  max-width: 960px;
+  margin: 0 auto;
 }
 .lead {
   text-align: center;
@@ -161,9 +197,13 @@ body {
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
-.service-card p { line-height: 1.4; margin-bottom: 1rem; }
+.service-card p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
 .service-card .price {
-  font-weight: 700; margin-bottom: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 .btn-book {
   background: var(--accent);
@@ -172,53 +212,80 @@ body {
   border: none;
   border-radius: 50px;
   font-weight: 700;
-  cursor: pointer;
   transition: transform var(--transition);
+  cursor: pointer;
 }
 .btn-book:hover {
   transform: scale(1.05);
 }
 
-/* Modal */
+/* — MODAL RÉSERVATION — */
 .modal {
   display: none;
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.7);
-  align-items: center; justify-content: center;
+  align-items: center;
+  justify-content: center;
   z-index: 2000;
 }
-.modal.open { display: flex; }
+.modal.open {
+  display: flex;
+}
 .modal-content {
   background: var(--bg);
   padding: 1.5rem;
   border-radius: 8px;
-  width: 90%; max-width: 320px;
+  width: 90%;
+  max-width: 320px;
   text-align: center;
   position: relative;
 }
 .modal-close {
-  position: absolute; top: .5rem; right: .5rem;
-  font-size: 1.5rem; cursor: pointer; color: #888;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
 }
 #modal-date {
-  width: 100%; padding: .5rem; margin: .75rem 0;
-  background: #111; color: #fff;
-  border: 1px solid #444; border-radius: 4px;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.75rem 0;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+}
+#confirm-book {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+#confirm-book:hover {
+  background: #fff;
+  color: #000;
 }
 
-/* Footer */
+/* — FOOTER — */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
 }
 
-/* Responsive */
+/* — RESPONSIVE — */
 @media (max-width: 768px) {
   .navbar { display: none; }
   .burger { display: flex; }
-  .navbar.open { 
+  .navbar.open {
     position: absolute;
     top: var(--nav-h);
     left: 0; right: 0;
@@ -226,5 +293,6 @@ footer {
     flex-direction: column;
     display: flex;
     padding: 1rem 0;
+    gap: 1rem;
   }
 }
