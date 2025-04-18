@@ -332,3 +332,15 @@ header .logo-nav {
   left: 1rem !important;
   transform: translateY(-50%) !important;
 }
+/* ==========================================================================
+   OVERRIDE GÉNÉRAL DU LOGO DANS LE HEADER
+   ========================================================================== */
+header img.logo-nav,
+header img.logo,
+header img.logo-rounded {
+  width: 2rem !important;
+  height: 2rem !important;
+  /* on recentre verticalement au cas où */
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
