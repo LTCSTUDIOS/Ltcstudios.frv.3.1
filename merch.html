@@ -1,61 +1,71 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<title>Merchandising - LTC STUDIO</title>
-<link href="style.css" rel="stylesheet"/>
-<style>
-    body {
-      background: black url('assets/stars-bg.jpg') repeat;
-      font-family: Orbitron, sans-serif;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Merch - LTC Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER FIXE -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="LTC Studios" class="logo-nav" />
+    </a>
+    <nav class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">E-books</a>
+      <a href="contact.html">Contact</a>
+      <a href="drop.html" class="drop-nav">Drop 001</a>
+    </nav>
+  </header>
 
-    h1 {
-      font-size: 2.2rem;
-      color: yellow;
-      margin-bottom: 40px;
-    }
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <section class="merch-section" style="padding: 2rem 1rem; max-width: 960px; margin: 0 auto;">
+      <h1 style="text-align:center; color: var(--accent); margin-bottom:1rem;">Merchandising</h1>
+      <p style="text-align:center; color:#ddd; margin-bottom:2rem;">
+        Retrouvez nos produits exclusifs, en édition limitée.
+      </p>
+      <div class="services-grid">
+        <!-- Carte T-Shirt -->
+        <div class="service-card">
+          <img src="assets/merch/tshirt-drop001.jpg" alt="T-Shirt Drop 001" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+          <h2>Drop 001 T-Shirt</h2>
+          <p>Coton bio premium, numéroté à la main.</p>
+          <p class="price">25 €</p>
+          <button class="btn-book">Commander</button>
+        </div>
+        <!-- Carte Casquette -->
+        <div class="service-card">
+          <img src="assets/merch/casquette.jpg" alt="Casquette LTC" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+          <h2>Casquette LTC</h2>
+          <p>Bord incurvé, broderie 3D.</p>
+          <p class="price">20 €</p>
+          <button class="btn-book">Commander</button>
+        </div>
+        <!-- Carte Sweat -->
+        <div class="service-card">
+          <img src="assets/merch/sweat.jpg" alt="Sweat LTC" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+          <h2>Sweat à Capuche</h2>
+          <p>100% coton, impression série limitée.</p>
+          <p class="price">45 €</p>
+          <button class="btn-book">Commander</button>
+        </div>
+        <!-- Ajoutez d’autres cartes au besoin -->
+      </div>
+    </section>
+  </main>
 
-    .merch-text {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: auto;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
+  <!-- FOOTER -->
+  <footer>
+    © 2025 LTC STUDIOS. Tous droits réservés.
+  </footer>
 
-    .btn-drop {
-      background-color: yellow;
-      color: black;
-      font-weight: bold;
-      font-size: 1.1rem;
-      padding: 12px 25px;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 0 10px yellow;
-    }
-  </style>
-<style>
-body {
-    background: url('assets/fond-etoile.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-</style></head>
-<body><img alt="Logo LTC STUDIOS" src="assets/logo-ltc.png" style="display:block;margin:20px auto;width:120px;"/>
-<h1>Merchandising</h1>
-<p class="merch-text">
-    Découvrez nos produits exclusifs. Pour l’instant, le <strong>Drop 001</strong> est disponible – 
-    et le devis pour les t-shirts est en cours. 
-    Restez connectés pour plus d’infos !
-  </p>
-<a class="btn-drop" href="drop001.html">Voir le Drop 001</a>
+  <!-- Si vous utilisez un JS pour la modale de commande -->
+  <script src="js/booking.js"></script>
 </body>
 </html>
