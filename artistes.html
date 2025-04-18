@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LTC STUDIOS - Nos Artistes</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Artistes - LTC STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="artistes">
-
   <header class="site-header">
     <nav class="main-nav">
       <a href="index.html">Accueil</a>
       <a href="studio.html">Le Studio</a>
-      <a class="active" href="artistes.html">Artistes</a>
+      <a href="artistes.html" class="active">Artistes</a>
       <a href="prestations.html">Prestations</a>
       <a href="ebooks.html">E-books</a>
       <a href="contact.html">Contact</a>
-      <a class="drop-nav" href="drop001.html">DROP 001</a>
+      <a href="drop001.html" class="drop-nav">DROP 001</a>
     </nav>
   </header>
 
-  <main class="container" style="padding: 6rem 1rem 3rem; text-align: center;">
-    <h1 style="color: var(--color-accent); margin-bottom: 2rem;">LTC STUDIOS - Nos Artistes</h1>
-
-    <!-- SEAklone3 -->
-    <div style="background-color: rgba(0,0,0,0.75); border: 2px solid var(--color-accent); border-radius: 20px; padding: 2rem; margin-bottom: 2rem;">
-      <img src="assets/seaklone.jpg" alt="Portrait de SeaKlone3" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-      <h2 style="color: var(--color-accent); font-size: 1.5rem;">SeaKlone3</h2>
-      <p style="margin: 1rem 0;">Beatmaker et producteur passionné, SeaKlone3 explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+  <section class="hero">
+    <div class="intro">
+      <h1>LTC STUDIOS - Nos Artistes</h1>
+      <p>Découvrez les artistes produits par <strong>LTC STUDIOS</strong></p>
     </div>
+  </section>
 
-    <!-- Seel -->
-    <div style="background-color: rgba(0,0,0,0.75); border: 2px solid var(--color-accent); border-radius: 20px; padding: 2rem; margin-bottom: 2rem;">
-      <img src="assets/seel.jpg" alt="Portrait de Seel" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-      <h2 style="color: var(--color-accent); font-size: 1.5rem;">Seel</h2>
-      <p style="margin: 1rem 0;">Un univers sombre et poétique, entre égotrip et introspection. Seel incarne la voix grave du label.</p>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0nBi5CB53mrgf3pFAWkdhz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-    </div>
+  <section class="artiste-card">
+    <img src="assets/seaklone.jpg" alt="Portrait de SeaKlone3">
+    <h2>SeaKlone3</h2>
+    <p>Beatmaker et producteur passionné, SeaKlone3 explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+  </section>
 
-    <!-- Ajoute ici les artistes suivants : naan.jpg, ozal.jpg, li2t.jpg, nawak.jpg, skylen.jpg, harris.jpg -->
+  <!-- Tu peux ajouter ici les autres artistes en dupliquant .artiste-card -->
 
-  </main>
-
+  <footer>
+    <p style="text-align:center; color: var(--color-fg); margin: 2rem 0;">© 2025 LTC STUDIOS. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
