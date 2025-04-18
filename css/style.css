@@ -1,72 +1,15 @@
 /* ===================================================================
-   LTC STUDIOS – style.css propre et consolidé
+   LTC STUDIOS – Feuille de style complète et corrigée
    =================================================================== */
 
 /* — Variables globales — */
 :root {
-  --bg-color: #000;
-  --fg-color: #fff;
-  --accent: #ffd700;
-  --font-main: 'Orbitron', sans-serif;
-  --nav-height: 3rem;
-  --logo-size: 2rem;
-  --transition: 0.2s ease;
-}
-/* ===================================================================
-   LTC STUDIOS – style.css ajusté (taille du logo réduite)
-   =================================================================== */
-
-/* — Variables globales — */
-:root {
-  --bg-color: #000;
-  --fg-color: #fff;
-  --accent: #ffd700;
-  --font-main: 'Orbitron', sans-serif;
-  --nav-height: 3rem;
-  --logo-size: 1.6rem;    /* ← réduit pour un logo plus discret */
-  --transition: 0.2s ease;
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #ffd700;
+  --font-primary: 'Orbitron', sans-serif;
 }
 
-/* … le reste du CSS reste inchangé jusqu’à la section HEADER … */
-
-/* ===================================================================
-   HEADER & NAVIGATION
-   =================================================================== */
-header.site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: var(--nav-height);
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  z-index: 1000;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-header.site-header::-webkit-scrollbar {
-  display: none;
-}
-
-/* Logo cliquable à gauche (taille ajustée) */
-header.site-header .logo-nav {
-  position: absolute;
-  top: 50%; left: 1rem;
-  transform: translateY(-50%);
-  width: var(--logo-size);
-  height: var(--logo-size);
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform var(--transition);
-}
-header.site-header .logo-nav:hover {
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* … le reste du CSS (navbar, boutons, sections, footer, responsive) reste identique … */
 /* — Reset & Base — */
 *,
 *::before,
@@ -77,286 +20,212 @@ header.site-header .logo-nav:hover {
 }
 html {
   font-size: 100%;
-  scroll-behavior: smooth;
 }
 body {
-  font-family: var(--font-main);
-  color: var(--fg-color);
-  background: var(--bg-color) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
-  line-height: 1.5;
-  padding-top: calc(var(--nav-height) + 1rem);
+  font-family: var(--font-primary);
+  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  color: var(--color-fg);
+  line-height: 1.4;
+  padding-top: 70px; /* espace sous header */
 }
 
-/* — Liens — */
+/* — Liens par défaut — */
 a {
-  color: var(--accent);
   text-decoration: none;
-  transition: color var(--transition);
+  color: var(--color-accent);
 }
 a:hover {
-  color: var(--fg-color);
+  color: var(--color-fg);
 }
 
 /* ===================================================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION (corrigé)
    =================================================================== */
-header.site-header {
+.site-header {
   position: fixed;
-  top: 0; left: 0; right: 0;
-  height: var(--nav-height);
-  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.9);
+  height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 0 1rem;
   z-index: 1000;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-header.site-header::-webkit-scrollbar {
-  display: none;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
-/* Logo cliquable à gauche */
-header.site-header .logo-nav {
-  position: absolute;
-  top: 50%; left: 1rem;
-  transform: translateY(-50%);
-  width: var(--logo-size);
-  height: var(--logo-size);
+.logo-nav {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  margin-right: 1rem;
   cursor: pointer;
-  transition: transform var(--transition);
-}
-header.site-header .logo-nav:hover {
-  transform: translateY(-50%) scale(1.1);
 }
 
-/* Menu centré */
-header.site-header .navbar {
+.nav-links {
   display: flex;
   gap: 1rem;
-  white-space: nowrap;
-  font-size: 0.9rem;
-}
-header.site-header .navbar a {
-  flex-shrink: 0;
-  padding: 0.3rem 0.6rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--accent);
-  border-radius: 4px;
-  transition: background var(--transition), color var(--transition);
-}
-header.site-header .navbar a:hover,
-header.site-header .navbar a.active {
-  background: var(--accent);
-  color: var(--bg-color);
+  flex-wrap: wrap;
 }
 
-/* Bouton secondaire “DROP 001” */
-header.site-header .navbar .drop-nav {
-  border: 2px solid var(--accent);
+.nav-links a {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  transition: 0.2s;
 }
-header.site-header .navbar .drop-nav:hover {
-  background: var(--accent);
-  color: var(--bg-color);
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* Bouton DROP 001 dans la nav */
+.drop-nav {
+  border: 2px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+}
+.drop-nav:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
 }
 
 /* ===================================================================
-   BOUTONS GÉNÉRAUX
+   SECTION HERO (index.html)
    =================================================================== */
-.btn-full {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--bg-color);
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: transform var(--transition);
+.hero {
+  text-align: center;
+  padding: 6rem 1rem 2rem;
 }
-.btn-full:hover {
+.hero .intro h1 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+}
+.hero .intro p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-primary {
+  margin: 1.5rem 0;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+}
+.btn-primary:hover {
+  background: var(--color-fg);
   transform: scale(1.05);
 }
-
-.btn-outline {
-  display: inline-block;
-  background: transparent;
-  color: var(--accent);
+.btn-secondary {
+  margin: 0.5rem 0 1.5rem;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
   padding: 0.6rem 1.2rem;
-  border: 2px solid var(--accent);
-  border-radius: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: background var(--transition), color var(--transition);
 }
-.btn-outline:hover {
-  background: var(--accent);
-  color: var(--bg-color);
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
 }
-
-/* ===================================================================
-   HERO (accueil) 
-   =================================================================== */
-.hero-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-.hero-sub {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-.cta-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-@media (min-width: 600px) {
-  .cta-group {
-    flex-direction: row;
-  }
-}
-
-/* ===================================================================
-   SECTION PRESTATIONS – grille de cartes 
-   =================================================================== */
-.prestations-section {
-  padding: 2rem 1rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-.prestations-section .lead {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  color: #ddd;
-}
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.service-card {
-  background: rgba(0,0,0,0.6);
-  border: 2px solid var(--accent);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(255,215,0,0.3);
-}
-.service-card h2 {
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-  font-size: 1.4rem;
-}
-.service-card p {
-  margin-bottom: 1rem;
+.info-drop {
+  margin-top: 1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
-.service-card .price {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.service-card .btn-full {
-  width: 80%;
-  max-width: 200px;
-}
 
 /* ===================================================================
-   MODAL RÉSERVATION 
+   SECTION STUDIO
    =================================================================== */
-.modal {
-  display: none;
-  position: fixed; top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
-  align-items: center; justify-content: center;
-  z-index: 2000;
-}
-.modal-content {
-  background: var(--bg-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  max-width: 320px;
-  width: 90%;
-  text-align: center;
-  position: relative;
-}
-.modal-close {
-  position: absolute;
-  top: 0.5rem; right: 0.5rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #888;
-}
-#modal-date {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0.75rem 0;
-  border-radius: 4px;
-  border: 1px solid #444;
-  background: #111;
-  color: #fff;
-}
-#confirm-book {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--bg-color);
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 50px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background var(--transition);
-}
-#confirm-book:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* ===================================================================
-   FOOTER 
-   =================================================================== */
-footer {
-  text-align: center;
+.studio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   padding: 2rem 1rem;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.7);
+}
+.studio-gallery figure {
+  width: calc(50% - 1rem);
+  max-width: 320px;
+  text-align: center;
+}
+.studio-gallery img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+.studio-gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-accent);
 }
 
 /* ===================================================================
-   RESPONSIVE 
+   SECTION CONTACT
+   =================================================================== */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+}
+.contact-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form .btn-primary {
+  align-self: center;
+  margin-top: 1.5rem;
+}
+
+/* ===================================================================
+   RESPONSIVE
    =================================================================== */
 @media (max-width: 768px) {
-  header.site-header { padding: 0 0.5rem; }
-  header.site-header .navbar { gap: 0.6rem; font-size: 0.85rem; }
-}
-@media (max-width: 480px) {
-  header.site-header {
+  .site-header {
     flex-direction: column;
     height: auto;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
   }
-  header.site-header .logo-nav { margin-bottom: 0.5rem; }
-  header.site-header .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.4rem;
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
   }
-  .services-grid {
-    grid-template-columns: 1fr;
+  .hero .intro h1 {
+    font-size: 2rem;
   }
-   }
+  .studio-gallery figure {
+    width: 100%;
+  }
+}
