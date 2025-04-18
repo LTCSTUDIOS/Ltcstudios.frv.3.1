@@ -1,253 +1,140 @@
-/* ===============================
-   LTC STUDIOS – CSS GLOBAL
-   =============================== */
-
-/* — Variables — */
-:root {
-  --color-bg: #000;
-  --color-fg: #fff;
-  --color-accent: #FFD700;
-  --font-main: 'Orbitron', sans-serif;
-}
-
-/* — Reset — */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Style général de la page */
 body {
-  font-family: var(--font-main);
-  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover fixed no-repeat;
-  color: var(--color-fg);
-  padding-top: 80px;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
-/* ===============================
-   HEADER / NAVIGATION
-   =============================== */
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.9);
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  z-index: 999;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-.logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* MENU NAV */
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.nav-links a {
-  color: var(--color-accent);
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-.nav-links a:hover {
-  color: white;
-}
-.drop-nav {
-  border: 2px solid var(--color-accent);
-  padding: 4px 10px;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  transition: 0.3s ease;
-}
-.drop-nav:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
-
-/* ===============================
-   HERO (accueil)
-   =============================== */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
-}
-.hero h1 {
-  font-size: 2.4rem;
-  color: var(--color-accent);
-  margin-bottom: 1rem;
-}
-.hero span {
-  font-size: 2.8rem;
-}
-.hero p {
-  font-size: 1rem;
-  margin: 1rem 0;
-}
-.btn-primary,
-.btn-secondary {
-  display: inline-block;
-  font-weight: 700;
-  border-radius: 30px;
-  padding: 0.7rem 1.6rem;
-  margin: 0.5rem;
-  transition: all 0.3s ease;
-  font-size: 0.95rem;
-}
-.btn-primary {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
-.btn-primary:hover {
-  background: var(--color-fg);
-  color: var(--color-bg);
-}
-.btn-secondary {
-  border: 2px solid var(--color-accent);
-  color: var(--color-accent);
-  background: transparent;
-}
-.btn-secondary:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
-.info-drop {
-  font-size: 0.85rem;
-  margin-top: 1rem;
-  color: #ccc;
-}
-
-/* ===============================
-   RESPONSIVE
-   =============================== */
-@media screen and (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .hero span {
-    font-size: 2.2rem;
-  }
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* ===============================
-   LTC STUDIOS – MENU FIXE
-   =============================== */
-
-/* Header & Menu Fixe */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);  /* Ajout de la transparence pour l'arrière-plan */
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); /* Ombre légère */
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  transition: all 0.3s ease;
-}
-
-/* Logo dans le menu */
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-.logo {
-  width: 40px;  /* Réduit la taille du logo */
-  height: 40px;  /* Réduit la taille du logo */
-  border-radius: 50%;
-  object-fit: contain;
-  margin-right: 10px; /* Ajoute un peu d'espace entre le logo et le texte */
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1rem;
-}
-
-.nav-links a {
-  color: var(--color-accent);
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: white;
-}
-
-/* Pour mobile – Menu hamburgers */
-@media screen and (max-width: 768px) {
-  .site-header {
-    padding: 10px 15px;
-  }
-
-  .nav-links {
-    display: none;  /* Masque le menu en version mobile */
-  }
-
-  .menu-icon {
-    display: block;
+button {
+    background-color: #f1c40f;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-  }
+}
 
-  .nav-links.open {
-    display: block;  /* Affiche le menu quand il est ouvert */
-    position: absolute;
-    top: 80px;  /* Ajuste la position du menu déroulant */
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
-    text-align: center;
-  }
+button a {
+    color: black;
+    text-decoration: none;
+}
 
-  .nav-links a {
-    display: block;
-    padding: 1rem 0;
-    font-size: 1.1rem;
-  }
+button:hover {
+    background-color: #d4b50e;
+}
 
-  .logo {
-    width: 35px;  /* Taille ajustée pour le mobile */
-    height: 35px;
-  }
+/* Styles du header avec le logo */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* Ajuste la taille du logo */
+    width: auto;
+}
+
+h1 {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #f1c40f;
+}
+
+/* Menu principal */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: yellow;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Menu hamburger visible sur mobile */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: yellow;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Cacher les liens sur mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .nav-links a:hover {
+        background-color: #333;
+    }
+
+    /* Afficher le menu hamburger sur mobile */
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Section principale */
+main {
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+
+/* Section spécifique */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #f1c40f;
+}
+
+section p {
+    font-size: 16px;
+    color: #ccc;
 }
