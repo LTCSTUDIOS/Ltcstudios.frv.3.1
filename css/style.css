@@ -229,3 +229,31 @@ nav ul li {
   line-height: 1.2rem; /* Réduit la hauteur de ligne pour compacter encore */
   font-size: 1rem; /* Tu peux aussi réduire la taille du texte si nécessaire */
 }
+/* Logo rond en haut à gauche */
+.logo-top-left {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 999;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 8px #FFD700;
+}
+
+/* Réduction de l'espacement du menu */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 6px 0;  /* réduit l'espacement vertical */
+  font-size: 1.1rem;
+  line-height: 1.1em;
+}
