@@ -60,7 +60,7 @@ a:hover {
 }
 
 /* Logo rond cliquable */
-.site-header .logo-top {
+.logo-top {
   position: absolute;
   top: 50%;
   left: var(--nav-gap);
@@ -72,7 +72,7 @@ a:hover {
   cursor: pointer;
   transition: box-shadow 0.3s;
 }
-.site-header .logo-top:hover {
+.logo-top:hover {
   box-shadow: 0 0 8px var(--color-accent);
 }
 
@@ -155,134 +155,6 @@ a:hover {
 }
 
 /* ===================================================================
-   SECTION STUDIO (studio.html)
-   =================================================================== */
-.studio-intro {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-.studio-intro h1 {
-  color: var(--color-accent);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.studio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-.studio-gallery img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-}
-
-/* ===================================================================
-   SECTION ARTISTES (artistes.html)
-   =================================================================== */
-.artistes-section {
-  padding: 2rem 1rem;
-}
-.artistes-section h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--color-accent);
-  margin-bottom: 2rem;
-}
-.artist-card {
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid var(--color-accent);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin: 0 auto 2rem;
-  max-width: 600px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-.artist-card:hover {
-  transform: scale(1.02);
-}
-.artist-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 2px solid var(--color-accent);
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
-}
-.artist-card h2 {
-  font-size: 1.5rem;
-  color: var(--color-accent);
-  margin-bottom: 0.75rem;
-}
-.artist-card p.bio {
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-.artist-card iframe {
-  width: 100%;
-  max-width: 320px;
-  height: 380px;
-  border: none;
-  border-radius: 12px;
-  margin: 0 auto;
-}
-
-/* ===================================================================
-   SECTION CONTACT (contact.html)
-   =================================================================== */
-.contact-section {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem 1rem;
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid var(--color-accent);
-  border-radius: 8px;
-}
-.contact-section h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--color-accent);
-  margin-bottom: 1.5rem;
-}
-.contact-form label {
-  display: block;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-top: 0.5rem;
-  border: none;
-  border-radius: 4px;
-  font-family: var(--font-primary);
-}
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-.btn-submit {
-  display: block;
-  margin: 1.5rem auto 0;
-  background: var(--color-accent);
-  color: var(--color-bg);
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.btn-submit:hover {
-  background: #ffffff;
-  color: #000000;
-}
-
-/* ===================================================================
    RESPONSIVE
    =================================================================== */
 @media (max-width: 768px) {
@@ -290,17 +162,9 @@ a:hover {
     gap: 0.5rem;
   }
   .cta-buttons {
-    flex-direction: column;
-  }
-  .studio-gallery {
-    grid-template-columns: 1fr;
-  }
-  .artist-card {
-    width: 90%;
-    padding: 1rem;
+    gap: 0.75rem;
   }
 }
-
 @media (max-width: 480px) {
   :root {
     --nav-height: 3rem;
