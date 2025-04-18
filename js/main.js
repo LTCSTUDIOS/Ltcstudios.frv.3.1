@@ -1,9 +1,9 @@
-// Ajoute un effet blur + ombre au scroll sur le header
+// On ajoute la classe "scrolled" au header dès qu'on descend un peu
 window.addEventListener('scroll', () => {
-  const header = document.querySelector('.site-header');
-  if (window.scrollY > 30) {
-    header.classList.add('scrolled');
+  const hdr = document.querySelector('.site-header');
+  if (window.scrollY > 50) {
+    hdr.classList.add('scrolled');
   } else {
-    header.classList.remove('scrolled');
+    hdr.classList.remove('scrolled');
   }
 });
