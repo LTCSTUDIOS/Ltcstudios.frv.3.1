@@ -39,7 +39,74 @@ a {
 a:hover {
   color: var(--fg-color);
 }
+/* ===================================================================
+   HEADER FIXE & NAV COMPACTE
+   =================================================================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem; /* Ajustable selon la taille souhaitée */
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centre la nav */
+  padding: 0 1rem;
+  z-index: 1000;
+}
 
+/* Logo cliquable à gauche */
+header .logo-nav {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s;
+}
+header .logo-nav:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Barre de liens */
+header .navbar {
+  display: flex;
+  gap: 1.25rem;  /* Écart réduit */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+header .navbar a {
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+header .navbar a:hover,
+header .navbar a.active {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Bouton DROP (bouton secondaire dans la nav) */
+header .navbar .drop-nav {
+  border: 2px solid var(--color-accent);
+  padding: 0.4rem 0.8rem;
+}
+header .navbar .drop-nav:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Décale tout le contenu sous le header fixé */
+body {
+  padding-top: calc(3.5rem + 1rem);
+}
 /* ===================================================================
    HEADER & NAV
    =================================================================== */
