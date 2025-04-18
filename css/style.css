@@ -190,3 +190,26 @@ textarea {
     flex-direction: column;
   }
 }
+/* FIX mise à l’échelle des images dans studio.html */
+.studio-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.studio-gallery img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+/* Pour éviter les débordements sur petits écrans */
+@media (max-width: 768px) {
+  .studio-gallery img {
+    width: 95%;
+  }
+}
