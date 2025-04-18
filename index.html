@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- HEADER FIXE + NAV -->
   <header class="site-header">
     <a href="index.html" class="logo-link">
       <img src="assets/logo.png" alt="LTC Studio" class="logo-nav">
     </a>
+    <button class="burger" aria-label="Menu">&#9776;</button>
     <nav class="navbar">
       <a href="index.html" class="active">Accueil</a>
       <a href="studio.html">Le Studio</a>
@@ -23,18 +25,51 @@
   </header>
 
   <main>
+    <!-- HERO + CTA -->
     <section class="hero">
       <h1 class="hero-title">LTC STUDIOS</h1>
       <p class="hero-sub">Un espace créatif où l'art prend vie. Votre musique, notre passion.</p>
       <div class="cta-group">
-        <a href="reserver.html" class="btn-full">Réserver ma session</a>
+        <a href="#!" class="btn-full" id="open-book">Réserver ma session</a>
         <a href="drop001.html" class="btn-outline">Précommander le T‑shirt DROP 001</a>
+      </div>
+    </section>
+
+    <!-- Section Services (exemple) -->
+    <section class="services-section">
+      <p class="lead">Découvrez nos services sur‑mesure, de l’enregistrement au coaching créatif.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h2>Enregistrement</h2>
+          <p>Voix &amp; instruments – micro studio, multi‑pistes, prise pro.</p>
+          <p class="price">À partir de 80 €</p>
+          <button class="btn-book" data-service="Enregistrement">Réserver</button>
+        </div>
+        <div class="service-card">
+          <h2>Mixage &amp; Mastering</h2>
+          <p>Équilibrage, spatialisation, mastering CD/streaming.</p>
+          <p class="price">À partir de 100 €</p>
+          <button class="btn-book" data-service="Mixage & Mastering">Réserver</button>
+        </div>
+        <!-- ... autres cartes ... -->
       </div>
     </section>
   </main>
 
+  <!-- MODAL RÉSERVATION -->
+  <div class="modal" id="modal-book">
+    <div class="modal-content">
+      <span class="modal-close" id="close-book">&times;</span>
+      <h3 id="modal-title">Réserver</h3>
+      <input type="date" id="modal-date">
+      <button id="confirm-book">Valider (20 % pré‑paiement)</button>
+    </div>
+  </div>
+
   <footer>
-    © 2025 LTC STUDIOS. Tous droits réservés.
+    © 2025 LTC STUDIOS. Tous droits réservés.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
