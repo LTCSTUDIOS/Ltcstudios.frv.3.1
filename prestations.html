@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LTC STUDIOS – Prestations</title>
+  <title>LTC STUDIOS – Prestations</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
-<body>
-  <header>
-    <a href="index.html">
-      <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" class="logo"/>
+<body class="page-prestations">
+  <!-- header + logo + nav -->
+  <header class="site-header">
+    <a href="index.html" class="logo-container">
+      <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" class="logo-rounded"/>
     </a>
-    <nav>
+    <nav class="main-nav">
       <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
+      <a href="studio.html">Le Studio</a>
       <a href="artistes.html">Artistes</a>
       <a href="prestations.html" class="active">Prestations</a>
       <a href="ebooks.html">E‑books</a>
       <a href="contact.html">Contact</a>
-      <a href="drop001.html" class="drop">DROP 001</a>
+      <a href="drop001.html" class="drop-nav">DROP 001</a>
     </nav>
   </header>
 
-  <main>
-    <h1 class="hero-title">Nos Prestations</h1>
-    <ul style="list-style: disc inside; margin-top: 1rem; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+  <main class="prestations-section">
+    <h1>Nos Prestations</h1>
+    <p class="intro-text">Découvrez tout ce que notre studio vous propose :</p>
+    <ul class="prestations-list">
       <li>Enregistrement voix et instruments</li>
       <li>Mixage & mastering</li>
       <li>Production musicale complète</li>
@@ -33,8 +35,8 @@
     </ul>
   </main>
 
-  <footer>
-    &copy; 2025 LTC STUDIOS. Tous droits réservés.
+  <footer class="site-footer">
+    <p>&copy; 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
