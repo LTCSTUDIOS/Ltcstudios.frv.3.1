@@ -40,6 +40,153 @@ a:hover {
   color: var(--fg-color);
 }
 /* ===================================================================
+   Styles globaux – Appliqués à toutes les pages
+   =================================================================== */
+
+/* -- Variables & Reset -- */
+:root {
+  --bg-color: #000;
+  --fg-color: #fff;
+  --accent: #ffd700;
+  --font-main: 'Orbitron', sans-serif;
+  --nav-height: 3.5rem;
+  --transition: 0.2s ease-out;
+}
+*,
+*::before,
+*::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-main);
+  color: var(--fg-color);
+  background: var(--bg-color) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  line-height: 1.5;
+  padding-top: var(--nav-height);
+}
+
+/* -- Header fixe et nav globale -- */
+header.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.85);
+  padding: 0 1rem;
+  z-index: 1000;
+  transition: background var(--transition);
+}
+header.site-header.scrolled {
+  background: rgba(0,0,0,0.95);
+}
+
+/* Logo (en absolu à gauche) */
+header.site-header .logo-nav {
+  position: absolute;
+  top: 50%; left: 1rem;
+  transform: translateY(-50%);
+  width: 2.4rem; height: 2.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+header.site-header .logo-nav:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Barre de navigation centrée */
+header.site-header .navbar {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+header.site-header .navbar a {
+  color: var(--accent);
+  padding: 0.3rem 0.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background var(--transition), color var(--transition);
+}
+header.site-header .navbar a:hover,
+header.site-header .navbar a.active {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+
+/* Bouton secondaire (DROP 001) */
+header.site-header .navbar .btn-outline {
+  border: 2px solid var(--accent);
+}
+header.site-header .navbar .btn-outline:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+
+/* -- Boutons généraux -- */
+.btn-full {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform var(--transition);
+}
+.btn-full:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background var(--transition), color var(--transition);
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+
+/* -- Footer global -- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* -- Responsive global -- */
+@media (max-width: 768px) {
+  header.site-header { padding: 0 0.5rem; }
+  header.site-header .navbar { gap: 0.6rem; font-size: 0.85rem; }
+}
+@media (max-width: 480px) {
+  header.site-header {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  header.site-header .logo-nav { margin-bottom: 0.5rem; }
+  header.site-header .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+}
+/* ===================================================================
    HEADER FIXE & NAV COMPACTE
    =================================================================== */
 header {
