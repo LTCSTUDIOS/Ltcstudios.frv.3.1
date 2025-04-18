@@ -213,3 +213,14 @@ textarea {
     width: 95%;
   }
 }
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem; /* Réduit l’espace entre les liens (valeur précédente probablement plus haute) */
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+nav ul li {
+  margin: 0;
+}
