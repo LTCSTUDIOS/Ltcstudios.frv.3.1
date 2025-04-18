@@ -2,79 +2,74 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>LTC STUDIOS – Prestations</title>
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Flatpickr (calendrier) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nos Prestations – LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
-<body class="prestations">
-  <header class="site-header">
-    <a href="index.html"><img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" class="logo-rounded"></a>
-    <nav class="main-nav">
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="assets/logo-ltc.png" alt="LTC Logo" class="logo-nav"/>
+    </a>
+    <nav class="navbar">
       <a href="index.html">Accueil</a>
       <a href="studio.html">Le Studio</a>
       <a href="artistes.html">Artistes</a>
       <a href="prestations.html" class="active">Prestations</a>
       <a href="ebooks.html">E‑books</a>
       <a href="contact.html">Contact</a>
-      <a href="drop001.html" class="drop-nav">DROP 001</a>
+      <a href="drop001.html" class="btn-outline">DROP 001</a>
     </nav>
   </header>
 
-  <main class="prestations-section">
-    <h1>Nos Prestations</h1>
-    <p class="lead">
+  <main class="main">
+    <h1 class="main-title">Nos Prestations</h1>
+    <p class="sub-text">
       Découvrez nos services sur‑mesure, de l’enregistrement studio au coaching créatif.
     </p>
 
-    <div class="services-grid">
-      <div class="service-card" data-service="Enregistrement">
+    <section class="services">
+      <div class="service-card">
         <h2>Enregistrement</h2>
-        <p>Voix & instruments — micro studio, multi-pistes, prise pro.</p>
+        <p>Voix &amp; instruments – micro studio, multi‑pistes, prise pro.</p>
         <p class="price">À partir de <strong>80 €</strong></p>
-        <button class="btn-book">Réserver</button>
+        <a href="contact.html#reserver?service=enregistrement" class="btn-full">Réserver</a>
       </div>
-      <div class="service-card" data-service="Mixage & Mastering">
-        <h2>Mixage & Mastering</h2>
+
+      <div class="service-card">
+        <h2>Mixage &amp; Mastering</h2>
         <p>Équilibrage, spatialisation, mastering CD/streaming.</p>
         <p class="price">À partir de <strong>100 €</strong></p>
-        <button class="btn-book">Réserver</button>
+        <a href="contact.html#reserver?service=mixage" class="btn-full">Réserver</a>
       </div>
-      <div class="service-card" data-service="Production musicale">
+
+      <div class="service-card">
         <h2>Production musicale</h2>
-        <p>Composition, arrangement, sound design, ambiances.</p>
+        <p>Composition, arrangement, sound design et ambiances.</p>
         <p class="price">À partir de <strong>150 €</strong></p>
-        <button class="btn-book">Réserver</button>
+        <a href="contact.html#reserver?service=production" class="btn-full">Réserver</a>
       </div>
-      <div class="service-card" data-service="Coaching & Ateliers">
-        <h2>Coaching & Ateliers</h2>
-        <p>Workflow, tutoriels, sessions de formation.</p>
-        <p class="price">À partir de <strong>60 €</strong></p>
-        <button class="btn-book">Réserver</button>
+
+      <div class="service-card">
+        <h2>Coaching &amp; Ateliers</h2>
+        <p>Accompagnement créatif, workflow, tutoriels et formation.</p>
+        <p class="price">À partir de <strong>60 €</strong>/h</p>
+        <a href="contact.html#reserver?service=coaching" class="btn-full">Réserver</a>
       </div>
-    </div>
+    </section>
   </main>
 
-  <!-- Modal réservations -->
-  <div id="booking-modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <h3 id="modal-service-name"></h3>
-      <label for="modal-date">Choisissez une date :</label>
-      <input id="modal-date" type="text" placeholder="Sélectionnez un créneau" readonly/>
-      <p>Un acompte de 20 % vous sera demandé pour confirmer.</p>
-      <button id="confirm-book" class="btn-full">Payer 20 %</button>
-    </div>
-  </div>
-
   <footer>
-    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
+    &copy; 2025 LTC STUDIOS. Tous droits réservés.
   </footer>
 
-  <!-- Flatpickr et notre script -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="js/bookings.js"></script>
+  <script>
+    // active link
+    document.querySelectorAll('.navbar a').forEach(link => {
+      if (link.href === location.href) link.classList.add('active');
+    });
+  </script>
 </body>
 </html>
