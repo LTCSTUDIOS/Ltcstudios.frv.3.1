@@ -1,628 +1,192 @@
-/* ===================================================================
-   LTC STUDIOS – Feuille de style complète
-   =================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-/* — Variables globales — */
 :root {
   --color-bg: #000000;
   --color-fg: #ffffff;
   --color-accent: #ffd700;
   --font-primary: 'Orbitron', sans-serif;
-  --nav-height: 4rem;
 }
 
-/* — Reset & Base — */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 100%;
-}
+
 body {
   font-family: var(--font-primary);
   background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
   color: var(--color-fg);
   line-height: 1.5;
-  padding-top: var(--nav-height);
+  overflow-x: hidden;
 }
 
-/* — Liens — */
 a {
-  text-decoration: none;
   color: var(--color-accent);
+  text-decoration: none;
 }
+
 a:hover {
   color: var(--color-fg);
+  text-shadow: 0 0 5px var(--color-accent);
 }
 
-/* ===================================================================
-   HEADER & NAVIGATION
-   =================================================================== */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--nav-height);
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  z-index: 1000;
-}
-
-/* Logo intégré dans le bandeau */
-.site-header .logo-rounded {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  object-fit: contain;
-  opacity: 0.9;
-}
-
-/* Navigation principale */
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.main-nav a {
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.5rem;
-  transition: color 0.2s, background 0.2s;
-}
-.main-nav a:hover,
-.main-nav a.active {
-  color: var(--color-bg);
-  background: var(--color-accent);
-  border-radius: 4px;
-}
-
-/* Bouton DROP 001 */
-.main-nav .drop-nav {
-  border: 2px solid var(--color-accent);
-  border-radius: 4px;
-  padding: 0.25rem 0.75rem;
-}
-.main-nav .drop-nav:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
-
-/* ===================================================================
-   SECTION HERO (index.html)
-   =================================================================== */
-.hero {
+header {
   text-align: center;
-  padding: 2rem 1rem;
-}
-.hero .intro h1 {
-  font-size: 2.5rem;
-  color: var(--color-accent);
-  line-height: 1.2;
-}
-.hero .intro p {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-.cta,
-.drop-secondary {
-  display: inline-block;
-  font-weight: 700;
-  border-radius: 50px;
-  transition: background 0.3s, transform 0.2s;
-}
-.cta {
-  margin: 1.5rem 0;
-  background: var(--color-accent);
-  color: var(--color-bg);
-  padding: 0.75rem 2rem;
-}
-.cta:hover {
-  background: var(--color-fg);
-  color: var(--color-bg);
-  transform: scale(1.05);
-}
-.drop-secondary {
-  margin: 0.5rem 0 1rem;
-  border: 2px solid var(--color-accent);
-  color: var(--color-accent);
-  padding: 0.6rem 1.2rem;
-}
-.drop-secondary:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
-.info-drop {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  padding-top: 1.5rem;
 }
 
-/* ===================================================================
-   SECTION STUDIO (studio.html)
-   =================================================================== */
-.studio-intro {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-.studio-intro h1 {
-  color: var(--color-accent);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.studio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-.studio-gallery img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
-
-/* ===================================================================
-   SECTION ARTISTES (artistes.html)
-   =================================================================== */
-.artistes-section {
-  padding: 2rem 1rem;
-}
-.artistes-section h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--color-accent);
-}
-.artist-card {
-  background: rgba(0,0,0,0.7);
-  border: 2px solid var(--color-accent);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 2rem;
-}
-.artist-card img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1rem;
-}
-.artist-card h2 {
-  text-align: center;
-  font-size: 1.5rem;
+.logo-top {
+  width: 80px;
   margin-bottom: 0.5rem;
 }
-.artist-card p.bio {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.artist-card iframe {
-  display: block;
-  margin: 0 auto;
-  border: none;
-  width: 100%;
-  max-width: 300px;
-  height: 380px;
-}
 
-/* ===================================================================
-   SECTION CONTACT (contact.html)
-   =================================================================== */
-.contact-section {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem 1rem;
-  background: rgba(0,0,0,0.7);
-  border: 2px solid var(--color-accent);
-  border-radius: 8px;
-}
-.contact-section h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--color-accent);
-  margin-bottom: 1.5rem;
-}
-.contact-form label {
-  display: block;
-  margin-top: 1rem;
-}
-.contact-form input,
-.contact-form textarea {
-  margin-top: 0.5rem;
-  width: 100%;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  font-family: var(--font-primary);
-}
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-.contact-form .btn-submit {
-  display: block;
-  margin: 1.5rem auto 0;
-  background: var(--color-accent);
-  color: var(--color-bg);
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-/* ===================================================================
-   RESPONSIVE
-   =================================================================== */
-@media (max-width: 768px) {
-  .main-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  .main-nav a {
-    font-size: 0.85rem;
-    padding: 0.4rem;
-  }
-  .site-header .logo-rounded {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
-@media (max-width: 480px) {
-  .site-header {
-    flex-direction: column;
-    height: auto;
-    padding: 0.5rem 1rem;
-  }
-  .site-header .logo-rounded {
-    margin-bottom: 0.5rem;
-  }
-  .main-nav {
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-}
-:root {
-  /* passe le bandeau de 4rem (64px) à 3rem (48px) */
-  --nav-height: 3rem;
-}
-
-/* ajuste la hauteur du header sur desktop & mobile */
-.site-header {
-  height: var(--nav-height);
-  padding: 0 1rem;
-}
-
-/* logo un peu plus petit pour qu’il ne déborde pas */
-.site-header .logo-rounded {
-  width: 2.2rem;
-  height: 2.2rem;
-}
-
-/* navigation plus compacte */
-.main-nav {
-  gap: 0.75rem;
-}
-.main-nav a {
-  padding: 0.3rem 0.6rem;
-  font-size: 0.85rem;
-}
-
-/* bouton DROP 001 aligné et plus petit */
-.main-nav .drop-nav {
-  padding: 0.2rem 0.6rem;
-  font-size: 0.85rem;
-}
-
-/* recaler le contenu sous le header */
-body {
-  padding-top: var(--nav-height);
-}
-
-/* ajustements mobile */
-@media (max-width: 480px) {
-  .site-header {
-    flex-direction: column;
-    height: auto; /* laisser s’adapter */
-    padding: 0.5rem 1rem;
-  }
-  .site-header .logo-rounded {
-    margin-bottom: 0.3rem;
-    width: 2rem;
-    height: 2rem;
-  }
-  .main-nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .main-nav a,
-  .main-nav .drop-nav {
-    width: 100%;
-    text-align: center;
-    padding: 0.4rem 0;
-    font-size: 0.9rem;
-  }
-}
-/* ===================================================================
-   Compactage du header & nav
-   =================================================================== */
-
-/* 1) On réduit encore la hauteur du header */
-:root {
-  --nav-height: 2.5rem; /* ~40px */
-}
-
-.site-header {
-  height: var(--nav-height);
-  padding: 0 0.5rem;     /* moins d’espaces latéraux */
-}
-
-/* 2) On réduit la taille du logo pseudo-élément */
-.site-header::before {
-  width: 32px;
-  height: 32px;
-  top: calc(-1 * (32px / 2)); /* pour qu'il reste centré */
-}
-
-/* 3) On compacte les liens */
-.main-nav {
-  gap: 0.5rem;
-  padding-left: 0;       /* plus d’espace perdu */
-}
-.main-nav a,
-.main-nav .drop-nav {
-  font-size: 0.8rem;      /* un peu plus petit */
-  padding: 0.2rem 0.5rem; /* moins de padding */
-  line-height: 1;         /* évite l’alignement foireux */
-}
-
-/* 4) On recale le contenu sous le header */
-body {
-  padding-top: var(--nav-height);
-}
-
-/* ===================================================================
-   Responsive (mobile) : menu horizontal plutôt que colonne
-   =================================================================== */
-@media (max-width: 480px) {
-  .site-header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .site-header::before {
-    width: 28px;
-    height: 28px;
-    top: -14px;
-  }
-
-  .main-nav {
-    flex-direction: row;    /* passe en ligne sur mobile */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.4rem;
-  }
-
-  .main-nav a,
-  .main-nav .drop-nav {
-    width: auto;
-    padding: 0.3rem 0.4rem;
-    font-size: 0.8rem;
-  }
-}/* — Espace supplémentaire sous le header fixe — */
-body {
-  /* Si tu as déjà un padding-top pour décaler, augmente-le */
-  padding-top: 6rem; /* ≈ 96px, à ajuster selon la hauteur effective de ton header */
-}
-
-/* Si tu veux pousser spécifiquement ton hero un peu plus encore : */
-.hero {
-  padding-top: calc(6rem + 2rem); /* garde 2rem de marge en plus */
-}
-.cta-buttons {
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 1rem 0;
 }
 
-.btn-primary {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  border: none;
-  font-size: 1rem;
-  min-width: 280px;
-  text-align: center;
+.navbar a {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 2px solid transparent;
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #fff;
-  color: #000;
-}
-.artist-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--color-accent);
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
-  display: block;
-  margin: 0 auto 1rem;
-}
-/* Pour corriger la page artistes */
-body.artistes {
-  background: var(--color-bg) url('assets/fond-galaxie.gif') center/cover no-repeat fixed;
-  font-family: var(--font-primary);
-  color: var(--color-fg);
-  padding-top: 6rem;
-}
-
-.artistes-section h1 {
-  color: var(--color-accent);
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.artiste-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid var(--color-accent);
-  border-radius: 16px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  max-width: 600px;
-  text-align: center;
-  color: var(--color-fg);
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-.artiste-card:hover {
-  transform: scale(1.01);
-}
-
-.artiste-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 10px var(--color-accent);
-  border: 2px solid var(--color-accent);
-}
-
-.artiste-name {
-  font-size: 1.5rem;
+.navbar a:hover,
+.navbar a.active {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
   font-weight: bold;
-  color: var(--color-accent);
-  margin-bottom: 0.5rem;
 }
 
-.artiste-bio {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-iframe {
-  width: 100%;
-  height: 152px;
-  border-radius: 12px;
-  border: none;
-}
-/* === PAGE ARTISTES STYLE === */
-.artiste-card {
-  background: rgba(0, 0, 0, 0.8);
+.btn-outline {
   border: 2px solid var(--color-accent);
-  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
   padding: 2rem;
-  margin: 2rem auto;
-  max-width: 600px;
   text-align: center;
-  color: var(--color-fg);
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
-  transition: transform 0.3s ease;
 }
-.artiste-card:hover {
-  transform: translateY(-5px);
-}
-.artiste-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 2px solid var(--color-accent);
-}
-.artiste-card h2 {
+
+.main-title {
+  font-size: 2.4rem;
   color: var(--color-accent);
-  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.artiste-card p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
+
+.sub-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
-.artiste-card iframe {
+
+.studio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.studio-img {
   width: 100%;
-  max-width: 100%;
+  max-width: 480px;
   border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
-.artist-card {
-  background: rgba(0, 0, 0, 0.7);
+
+.studio-description,
+.equipment,
+.form-container {
+  background-color: rgba(0, 0, 0, 0.7);
   border: 2px solid var(--color-accent);
-  border-radius: 20px;
-  max-width: 600px;
+  border-radius: 12px;
+  padding: 1.5rem;
   margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  color: var(--color-fg);
+  max-width: 800px;
+  text-align: left;
 }
-.artist-photo {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
+
+h2 {
+  color: var(--color-accent);
   margin-bottom: 1rem;
 }
-.bio {
-  margin: 1rem 0 2rem;
-  line-height: 1.5;
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
-``
-.artist-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid var(--color-accent);
-  border-radius: 16px;
-  padding: 1rem;
-  width: 320px;
-  color: var(--color-fg);
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.btn-full {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-full:hover {
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+  transform: scale(1.05);
+}
+
+footer {
   text-align: center;
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
-  transition: transform 0.3s ease;
+  color: #888;
+  margin-top: 3rem;
+  font-size: 0.9rem;
 }
-.artist-card:hover {
-  transform: scale(1.02);
+
+.form-container label {
+  display: block;
+  margin-top: 1rem;
 }
-.artist-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border-radius: 6px;
+  border: none;
+  font-family: var(--font-primary);
 }
-.artist-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid var(--color-accent);
-  border-radius: 16px;
-  padding: 1rem;
-  width: 320px;
-  color: var(--color-fg);
-  text-align: center;
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
-  transition: transform 0.3s ease;
+
+textarea {
+  resize: vertical;
 }
-.artist-card:hover {
-  transform: scale(1.02);
-}
-.artist-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .studio-img {
+    width: 90%;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
 }
