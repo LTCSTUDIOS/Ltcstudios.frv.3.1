@@ -1,71 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact – LTC STUDIOS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Fonte Orbitron -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Contact – LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="galaxy-background" class="galaxy-background">
+<body>
+  <header class="site-header">…</header>
 
-  <!-- HEADER + NAV -->
-  <header class="site-header">
-    <div class="logo-container">
-      <a href="index.html">
-        <img src="assets/logo-ltc.png" class="logo-rounded" alt="Logo LTC STUDIOS" class="logo-rounded">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="studio.html">Le Studio</a></li>
-        <li><a href="artistes.html">Artistes</a></li>
-        <li><a href="services.html">Prestations</a></li>
-        <li><a href="ebooks.html">E‑books</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-      <div class="drop-nav">
-        <a href="drop001.html">Drop 001</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- CONTENU CONTACT -->
-  <main class="contact-main">
+  <main class="container">
     <section class="contact-section">
       <h1>Contactez‑nous</h1>
-      <form action="mailto:contact@ltcstudios.fr"
-            method="POST"
-            enctype="text/plain"
-            class="contact-form">
-        <label for="name">Nom et Prénom</label>
-        <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required />
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="Email" placeholder="votre@exemple.com" required>
+        <input type="email" id="email" name="email" required />
 
         <label for="message">Message</label>
-        <textarea id="message"
-                  name="Message"
-                  rows="6"
-                  placeholder="Votre message…"
-                  required></textarea>
+        <textarea id="message" name="message" required></textarea>
 
-        <button type="submit" class="btn-primary">Envoyer</button>
+        <button type="submit" class="btn-submit">Envoyer</button>
       </form>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
-  </footer>
-
+  <footer>…</footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
