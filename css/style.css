@@ -1,33 +1,326 @@
-/* =================================================================== LTC STUDIOS – style.css revu =================================================================== */
+/* ===================================================================
+   LTC STUDIOS – Feuille de style principale
+   =================================================================== */
 
-/* — Variables globales — */ :root { --bg-color: #000; --fg-color: #fff; --accent: #ffd700; --font-main: 'Orbitron', sans-serif; --nav-height: 3rem; --transition: 0.3s ease; }
-
-/* — Reset & Base — */ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; } html { font-size: 100%; scroll-behavior: smooth; } body { font-family: var(--font-main); background: var(--bg-color) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed; color: var(--fg-color); line-height: 1.5; padding-top: var(--nav-height); }
-
-a { color: var(--accent); text-decoration: none; transition: color var(--transition); } a:hover { color: var(--fg-color); }
-
-/* Ajustement définitif de la taille du logo dans le header */
-header .logo-nav {
-  width: 2rem;    /* ancienne valeur 2.5rem */
-  height: 2rem;   /* ancienne valeur 2.5rem */
+/* — Variables globales — */
+:root {
+  --bg-color: #000;
+  --fg-color: #fff;
+  --accent: #ffd700;
+  --font-main: 'Orbitron', sans-serif;
+  --nav-height: 3rem;
+  --transition: .2s ease-out;
 }
-/* =================================================================== HEADER & NAV =================================================================== */ header.site-header { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); background: rgba(0, 0, 0, 0.85); display: flex; align-items: center; justify-content: center; padding: 0 1rem; z-index: 1000; }
 
-/* Logo cliquable à gauche */ .logo-nav { position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; border-radius: 50%; object-fit: cover; box-shadow: 0 0 6px rgba(255,215,0,0.5); transition: transform var(--transition); cursor: pointer; } .logo-nav:hover { transform: translateY(-50%) scale(1.1); }
+/* — Reset & Base — */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-main);
+  color: var(--fg-color);
+  background: var(--bg-color) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  line-height: 1.5;
+  padding-top: calc(var(--nav-height) + 1rem);
+}
 
-/* Navigation */ .navbar { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; justify-content: center; } .navbar a { padding: 0.3rem 0.6rem; border-radius: 4px; text-transform: uppercase; font-weight: 600; transition: background var(--transition), color var(--transition); } .navbar a:hover, .navbar a.active { background: var(--accent); color: var(--bg-color); } .navbar .drop-nav { border: 2px solid var(--accent); } .navbar .drop-nav:hover { background: var(--accent); color: var(--bg-color); }
+/* — Liens — */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--fg-color);
+}
 
-/* =================================================================== MAIN LAYOUT =================================================================== */ main.container { max-width: 960px; margin: 0 auto; padding: calc(var(--nav-height) + 1rem) 1rem 2rem; }
+/* ===================================================================
+   HEADER FIXE ET NAVIGATION
+   =================================================================== */
+header.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: 1000;
+  transition: background var(--transition);
+}
+header.site-header.scrolled {
+  background: rgba(0,0,0,0.95);
+}
 
-/* — Hero section — */ .hero-title { text-align: center; font-size: 2.5rem; color: var(--accent); margin-bottom: 0.5rem; } .hero-sub { text-align: center; font-size: 1.1rem; margin-bottom: 2rem; } .cta-buttons { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+/* Logo cliquable (réduit) */
+header .logo-nav {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 6px rgba(255,215,0,0.5);
+  transition: transform var(--transition);
+  cursor: pointer;
+}
+header .logo-nav:hover {
+  transform: translateY(-50%) scale(1.1);
+}
 
-/* — Buttons — */ .btn-full { background: var(--accent); color: var(--bg-color); padding: 0.75rem 2rem; border-radius: 50px; font-weight: 700; text-transform: uppercase; transition: transform var(--transition); display: inline-block; } .btn-full:hover { transform: scale(1.05); } .btn-outline { background: transparent; color: var(--accent); padding: 0.6rem 1.2rem; border: 2px solid var(--accent); border-radius: 50px; font-weight: 700; text-transform: uppercase; transition: background var(--transition), color var(--transition); } .btn-outline:hover { background: var(--accent); color: var(--bg-color); }
+/* Barre de navigation centrée et défilante */
+nav.navbar {
+  display: flex;
+  gap: 1rem;
+  font-size: .9rem;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+nav.navbar::-webkit-scrollbar { display: none; }
+nav.navbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+nav.navbar a {
+  flex-shrink: 0;
+  padding: .4rem .8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background var(--transition), color var(--transition);
+}
+nav.navbar a:hover,
+nav.navbar a.active {
+  background: var(--accent);
+  color: var(--bg-color);
+}
 
-/* — Footer — */ footer { text-align: center; padding: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+/* Bouton secondaire dans la nav (DROP 001) */
+nav.navbar .btn-outline {
+  border: 2px solid var(--accent);
+}
+nav.navbar .btn-outline:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+}
 
-/* =================================================================== SERVICES (prestations.html) =================================================================== */ .prestations-section { padding: 2rem 1rem; max-width: 960px; margin: 0 auto; } .prestations-section .lead { text-align: center; margin-bottom: 2rem; font-size: 1.1rem; color: #ddd; } .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; } .service-card { background: rgba(0,0,0,0.6); border: 1px solid var(--accent); border-radius: 12px; padding: 1.5rem; text-align: center; transition: transform var(--transition), box-shadow var(--transition); } .service-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(255,215,0,0.3); } .service-card h2 { color: var(--accent); margin-bottom: 0.5rem; font-size: 1.4rem; } .service-card p { margin-bottom: 1rem; line-height: 1.4; } .service-card .price { font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; } .service-card .btn-book { background: var(--accent); color: var(--bg-color); border: none; padding: 0.6rem 1.2rem; border-radius: 50px; cursor: pointer; transition: background var(--transition), transform var(--transition); } .service-card .btn-book:hover { transform: scale(1.05); }
+/* ===================================================================
+   BOUTONS GÉNÉRAUX
+   =================================================================== */
+.btn-full {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg-color);
+  padding: .8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform var(--transition);
+}
+.btn-full:hover {
+  transform: scale(1.05);
+}
 
-/* — Reservation modal — */ .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 2000; } .modal-content { background: var(--bg-color); padding: 1.5rem; border-radius: 8px; width: 90%; max-width: 320px; text-align: center; position: relative; } .modal-close { position: absolute; top: 0.5rem; right: 0.5rem; font-size: 1.5rem; cursor: pointer; color: #888; } #modal-date { width: 100%; padding: 0.5rem; margin: 0.75rem 0; border-radius: 4px; border: 1px solid #444; background: #111; color: #fff; } #confirm-book { background: var(--accent); color: var(--bg-color); padding: 0.6rem 1.2rem; border: none; border-radius: 50px; cursor: pointer; transition: background var(--transition); } #confirm-book:hover { background: #fff; color: #000; }
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent);
+  padding: .7rem 1.2rem;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background var(--transition), color var(--transition);
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+}
 
-/* — Responsive — */ @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr 1fr; } } @media (max-width: 480px) { header.site-header { padding: 0.5rem 1rem; height: 3.2rem; } .services-grid { grid-template-columns: 1fr; } }
+/* ===================================================================
+   MAIN / HERO (Accueil)
+   =================================================================== */
+main.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
+.hero-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+.hero-sub {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 600px) {
+  .cta-group { flex-direction: row; }
+}
+
+/* ===================================================================
+   PRESTATIONS – GRILLE DE CARTES
+   =================================================================== */
+.prestations-section {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.prestations-section .lead {
+  text-align: center;
+  color: #ddd;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255,215,0,0.3);
+}
+.service-card h2 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+.service-card p {
+  font-size: .95rem;
+  line-height: 1.4;
+  margin: .5rem 0;
+}
+.service-card .price {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+.service-card .btn-book {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg-color);
+  padding: .6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  width: 80%;
+  max-width: 200px;
+}
+.service-card .btn-book:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===================================================================
+   MODAL DE RÉSERVATION
+   =================================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal-content {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+.modal-close {
+  position: absolute;
+  top: .5rem; right: .5rem;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+}
+#modal-date {
+  width: 100%;
+  padding: .5rem;
+  margin: .75rem 0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #111;
+  color: #fff;
+}
+#confirm-book {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg-color);
+  padding: .6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: background var(--transition);
+}
+#confirm-book:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===================================================================
+   FOOTER
+   =================================================================== */
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: .85rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===================================================================
+   RÉPONSIVE
+   =================================================================== */
+@media (max-width: 768px) {
+  header.site-header { padding: 0 .5rem; }
+  nav.navbar { gap: .6rem; font-size: .85rem; }
+}
+@media (max-width: 480px) {
+  header.site-header {
+    flex-direction: column;
+    height: auto;
+    padding: .5rem 1rem;
+  }
+  nav.navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .4rem;
+  }
+  .services-grid { grid-template-columns: 1fr; }
+}
