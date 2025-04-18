@@ -3,42 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LTC Studio</title>
+  <title>LTC Studios</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header class="site-header">
-    <img src="ton-logo.png" alt="LTC Studio" class="logo">
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav class="nav-links">
-      <a href="#accueil" class="active">Accueil</a>
-      <a href="#studio">Le Studio</a>
-      <a href="#artistes">Artistes</a>
-      <a href="#prestations">Prestations</a>
-      <a href="#ebooks">E‑books</a>
-      <a href="#contact">Contact</a>
-      <a href="#drop001" class="btn-outline">DROP 001</a>
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" alt="LTC Studio" class="logo-nav">
+    </a>
+    <nav class="navbar">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">E‑books</a>
+      <a href="contact.html">Contact</a>
+      <a href="drop001.html" class="btn-outline">DROP 001</a>
     </nav>
   </header>
 
   <main>
-    <section id="accueil" class="hero">
+    <section class="hero">
       <h1 class="hero-title">LTC STUDIOS</h1>
-      <p class="hero-sub">Un espace créatif où l’art prend vie.<br>Votre musique, notre passion.</p>
+      <p class="hero-sub">Un espace créatif où l'art prend vie. Votre musique, notre passion.</p>
       <div class="cta-group">
-        <a href="#reservations" class="btn-full">Réserver ma session</a>
-        <a href="#drop001" class="btn-outline">Précommander le T‑shirt exclusif DROP 001</a>
+        <a href="reserver.html" class="btn-full">Réserver ma session</a>
+        <a href="drop001.html" class="btn-outline">Précommander le T‑shirt DROP 001</a>
       </div>
     </section>
-
-    <!-- Autres sections… -->
   </main>
 
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    }
-  </script>
+  <footer>
+    © 2025 LTC STUDIOS. Tous droits réservés.
+  </footer>
 </body>
 </html>
