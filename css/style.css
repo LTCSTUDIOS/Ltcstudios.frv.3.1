@@ -672,3 +672,37 @@ header.site-header .navbar a.active {
 body {
   padding-top: calc(3rem + 1rem) !important;
 }
+/* ===================================================================
+   NAVBAR FIX : toujours afficher tous les liens
+   =================================================================== */
+
+/* 1) Autoriser le débordement horizontal si nécessaire */
+header.site-header {
+  overflow-x: auto;
+}
+
+/* 2) Forcer la nav à ne pas écraser ses liens */
+header.site-header .navbar {
+  flex-wrap: nowrap;           /* tout sur une ligne */
+  white-space: nowrap;         /* empêche le retour à la ligne */
+}
+
+/* 3) Interdire le rétrécissement des liens */
+header.site-header .navbar a {
+  flex-shrink: 0;              /* garde toujours leur largeur */
+}
+
+/* 4) Masquer la scrollbar tout en gardant le scroll possible */
+header.site-header::-webkit-scrollbar {
+  display: none;
+}
+header.site-header {
+  -ms-overflow-style: none;    /* IE & Edge */
+  scrollbar-width: none;       /* Firefox */
+}
+
+/* 5) Optionnel : si tu préfères wrap multi‑ligne plutôt qu’un scroll */
+header.site-header .navbar.wrap {
+  flex-wrap: wrap;             /* la classe “wrap” permet de repasser */
+  justify-content: center;
+}
