@@ -8,8 +8,8 @@
   --fg-color: #fff;
   --accent: #ffd700;
   --font-main: 'Orbitron', sans-serif;
-  --nav-height: 3rem;
-  --transition: .2s ease-out;
+  --nav-height: 3.5rem;
+  --transition: 0.2s ease-out;
 }
 
 /* — Reset & Base — */
@@ -29,7 +29,7 @@ body {
   color: var(--fg-color);
   background: var(--bg-color) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
   line-height: 1.5;
-  padding-top: calc(var(--nav-height) + 1rem);
+  padding-top: var(--nav-height);
 }
 
 /* — Liens — */
@@ -43,13 +43,13 @@ a:hover {
 }
 
 /* ===================================================================
-   HEADER FIXE ET NAVIGATION
+   HEADER & NAVIGATION
    =================================================================== */
 header.site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--nav-height);
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,59 +58,50 @@ header.site-header {
   transition: background var(--transition);
 }
 header.site-header.scrolled {
-  background: rgba(0,0,0,0.95);
+  background: rgba(0, 0, 0, 0.95);
 }
 
-/* Logo cliquable (réduit) */
+/* Logo cliquable à gauche */
 header .logo-nav {
   position: absolute;
-  top: 50%;
-  left: 1rem;
+  top: 50%; left: 1rem;
   transform: translateY(-50%);
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem; height: 2.5rem;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 6px rgba(255,215,0,0.5);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
   transition: transform var(--transition);
-  cursor: pointer;
 }
 header .logo-nav:hover {
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Barre de navigation centrée et défilante */
-nav.navbar {
+/* Navigation centrée */
+header .navbar {
   display: flex;
   gap: 1rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   overflow-x: auto;
 }
-nav.navbar::-webkit-scrollbar { display: none; }
-nav.navbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-nav.navbar a {
-  flex-shrink: 0;
-  padding: .4rem .8rem;
+header .navbar a {
+  padding: 0.3rem 0.6rem;
   border-radius: 4px;
   font-weight: 600;
   text-transform: uppercase;
   transition: background var(--transition), color var(--transition);
 }
-nav.navbar a:hover,
-nav.navbar a.active {
+header .navbar a:hover,
+header .navbar a.active {
   background: var(--accent);
   color: var(--bg-color);
 }
 
-/* Bouton secondaire dans la nav (DROP 001) */
-nav.navbar .btn-outline {
+/* Bouton « Drop » */
+header .navbar .drop-nav {
   border: 2px solid var(--accent);
 }
-nav.navbar .btn-outline:hover {
+header .navbar .drop-nav:hover {
   background: var(--accent);
   color: var(--bg-color);
 }
@@ -122,7 +113,7 @@ nav.navbar .btn-outline:hover {
   display: inline-block;
   background: var(--accent);
   color: var(--bg-color);
-  padding: .8rem 1.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 50px;
   font-weight: 700;
   text-transform: uppercase;
@@ -136,7 +127,7 @@ nav.navbar .btn-outline:hover {
   display: inline-block;
   background: transparent;
   color: var(--accent);
-  padding: .7rem 1.2rem;
+  padding: 0.7rem 1.5rem;
   border: 2px solid var(--accent);
   border-radius: 50px;
   font-weight: 700;
@@ -149,19 +140,13 @@ nav.navbar .btn-outline:hover {
 }
 
 /* ===================================================================
-   MAIN / HERO (Accueil)
+   HERO (Accueil)
    =================================================================== */
-main.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
 .hero-title {
   text-align: center;
   font-size: 2.5rem;
   color: var(--accent);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .hero-sub {
   text-align: center;
@@ -173,134 +158,71 @@ main.container {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 @media (min-width: 600px) {
-  .cta-group { flex-direction: row; }
+  .cta-group {
+    flex-direction: row;
+  }
 }
 
 /* ===================================================================
-   PRESTATIONS – GRILLE DE CARTES
+   GRILLE DE SERVICES & MERCH
    =================================================================== */
-.prestations-section {
-  padding: 2rem 1rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-.prestations-section .lead {
-  text-align: center;
-  color: #ddd;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  margin: 2rem 1rem;
 }
 .service-card {
   background: rgba(0,0,0,0.6);
   border: 2px solid var(--accent);
   border-radius: 12px;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(255,215,0,0.3);
 }
 .service-card h2 {
-  font-size: 1.4rem;
   color: var(--accent);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .service-card p {
-  font-size: .95rem;
+  margin-bottom: 1rem;
   line-height: 1.4;
-  margin: .5rem 0;
 }
 .service-card .price {
   font-size: 1.1rem;
-  margin: 1rem 0;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-.service-card .btn-book {
-  display: inline-block;
+.btn-book {
   background: var(--accent);
   color: var(--bg-color);
-  padding: .6rem 1.2rem;
+  border: none;
+  padding: 0.6rem 1.2rem;
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
   transition: background var(--transition), transform var(--transition);
-  width: 80%;
-  max-width: 200px;
 }
-.service-card .btn-book:hover {
+.btn-book:hover {
   background: #fff;
   color: #000;
   transform: scale(1.05);
 }
 
 /* ===================================================================
-   MODAL DE RÉSERVATION
-   =================================================================== */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-.modal-content {
-  background: var(--bg-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  max-width: 320px;
-  width: 90%;
-  position: relative;
-  text-align: center;
-}
-.modal-close {
-  position: absolute;
-  top: .5rem; right: .5rem;
-  font-size: 1.5rem;
-  color: #888;
-  cursor: pointer;
-}
-#modal-date {
-  width: 100%;
-  padding: .5rem;
-  margin: .75rem 0;
-  border: 1px solid #444;
-  border-radius: 4px;
-  background: #111;
-  color: #fff;
-}
-#confirm-book {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--bg-color);
-  padding: .6rem 1.2rem;
-  border-radius: 50px;
-  font-weight: 700;
-  transition: background var(--transition);
-}
-#confirm-book:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* ===================================================================
    FOOTER
    =================================================================== */
 footer {
-  padding: 2rem 1rem;
   text-align: center;
-  font-size: .85rem;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
 }
 
@@ -308,39 +230,20 @@ footer {
    RÉPONSIVE
    =================================================================== */
 @media (max-width: 768px) {
-  header.site-header { padding: 0 .5rem; }
-  nav.navbar { gap: .6rem; font-size: .85rem; }
+  header.site-header { padding: 0 0.5rem; }
+  header .navbar { gap: 0.6rem; font-size: 0.85rem; }
 }
 @media (max-width: 480px) {
   header.site-header {
     flex-direction: column;
     height: auto;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
-  nav.navbar {
+  header .logo-nav { margin-bottom: 0.5rem; }
+  header .navbar {
     flex-wrap: wrap;
     justify-content: center;
-    gap: .4rem;
+    gap: 0.4rem;
   }
-  .services-grid { grid-template-columns: 1fr; }
-}
-/* === OVERRIDE TAILLE LOGO === */
-header .logo-nav {
-  width: 2rem !important;
-  height: 2rem !important;
-  top: 50% !important;
-  left: 1rem !important;
-  transform: translateY(-50%) !important;
-}
-/* ==========================================================================
-   OVERRIDE GÉNÉRAL DU LOGO DANS LE HEADER
-   ========================================================================== */
-header img.logo-nav,
-header img.logo,
-header img.logo-rounded {
-  width: 2rem !important;
-  height: 2rem !important;
-  /* on recentre verticalement au cas où */
-  top: 50% !important;
-  transform: translateY(-50%) !important;
+  .cta-group { margin-bottom: 2rem; }
 }
