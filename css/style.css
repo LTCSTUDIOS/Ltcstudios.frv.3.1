@@ -1,6 +1,6 @@
-/* =========================================
-   Variables & Reset
-   ========================================= */
+/* ===================================================================
+   Variables globales
+   =================================================================== */
 :root {
   --color-bg: #000;
   --color-fg: #fff;
@@ -9,6 +9,9 @@
   --nav-height: 3.5rem;
 }
 
+/* ===================================================================
+   Reset & Base
+   =================================================================== */
 *,
 *::before,
 *::after {
@@ -16,176 +19,317 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 100%;
 }
-
 body {
   font-family: var(--font-primary);
-  background: var(--color-bg)
-    url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
   color: var(--color-fg);
   line-height: 1.5;
   padding-top: var(--nav-height);
 }
 
-/* =========================================
-   Header & Nav
-   ========================================= */
+/* ===================================================================
+   HEADER fixe & NAV
+   =================================================================== */
 .site-header {
   position: fixed;
-  top: 0;
+  top: 0; left: 0;
   width: 100%;
   height: var(--nav-height);
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 0 1rem;
-  background: rgba(0, 0, 0, 0.6);
-  transition: backdrop-filter 0.3s, box-shadow 0.3s;
+  background: rgba(0, 0, 0, 0.75);
   z-index: 1000;
-}
-
-.site-header.scrolled {
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .logo-link {
   display: block;
-  width: 2.8rem;
-  height: 2.8rem;
+  margin-left: 0;
 }
-
-.logo {
-  width: 100%;
-  height: 100%;
+.logo-link img {
+  width: 2.5rem;
+  height: 2.5rem;
   object-fit: contain;
   border-radius: 50%;
 }
 
 .main-nav {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
-
 .main-nav a {
   color: var(--color-accent);
-  text-decoration: none;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.3rem 0.6rem;
-  border-radius: 4px;
+  text-transform: uppercase;
   transition: background 0.2s, color 0.2s;
 }
-
 .main-nav a:hover,
 .main-nav a.active {
   background: var(--color-accent);
   color: var(--color-bg);
+  border-radius: 4px;
 }
-
-.drop-btn {
+.main-nav .drop-btn {
   border: 2px solid var(--color-accent);
+  border-radius: 4px;
 }
 
-.drop-btn:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
-
-/* =========================================
-   Hero Section
-   ========================================= */
-.hero {
-  text-align: center;
-  padding: 4rem 1rem 2rem;
-  max-width: 800px;
+/* ===================================================================
+   Conteneur commun
+   =================================================================== */
+.container {
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  color: var(--color-accent);
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
+/* ===================================================================
+   BOUTONS & CTA
+   =================================================================== */
 .cta-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
-
 .btn-full {
   display: inline-block;
   background: var(--color-accent);
   color: var(--color-bg);
-  font-weight: 700;
-  text-transform: uppercase;
   padding: 0.75rem 2rem;
   border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
   transition: transform 0.2s;
 }
-
 .btn-full:hover {
   transform: scale(1.05);
 }
 
+/* ===================================================================
+   SECTION HERO (index.html)
+   =================================================================== */
+.hero .main-title {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  text-align: center;
+  margin-top: 1rem;
+}
+.hero .sub-text {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
 .drop-info {
   font-size: 0.9rem;
-  line-height: 1.4;
+  text-align: center;
+}
+
+/* ===================================================================
+   SECTION STUDIO (studio.html)
+   =================================================================== */
+.studio-intro {
+  text-align: center;
+  margin: 2rem 0;
+}
+.studio-intro h1 {
+  color: var(--color-accent);
+  font-size: 2rem;
+}
+.studio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+}
+.studio-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+.studio-gear {
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.studio-gear h2 {
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+.studio-gear ul {
+  list-style: none;
+}
+.studio-gear li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===================================================================
+   SECTION ARTISTES (artistes.html)
+   =================================================================== */
+.artistes-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin: 2rem 0;
+}
+.artist-card {
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+.artist-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  margin-bottom: 1rem;
+}
+.artist-name {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.artist-bio {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.artist-card iframe {
+  width: 100%;
+  max-width: 300px;
+  height: 380px;
+  border: none;
+}
+
+/* ===================================================================
+   SECTION PRESTATIONS
+   =================================================================== */
+.prestations-section {
+  margin: 2rem 0;
+}
+.prestations-section h1 {
+  text-align: center;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+.prestations-list {
+  list-style: none;
   max-width: 600px;
   margin: 0 auto;
+  padding: 0;
+}
+.prestations-list li {
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* =========================================
-   Footer
-   ========================================= */
+/* ===================================================================
+   SECTION E-BOOKS
+   =================================================================== */
+.ebooks-section {
+  margin: 2rem 0;
+}
+.ebooks-section h1 {
+  text-align: center;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+.ebook-item {
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* ===================================================================
+   SECTION CONTACT
+   =================================================================== */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.contact-section h1 {
+  text-align: center;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  font-family: var(--font-primary);
+}
+.contact-form .btn-submit {
+  display: block;
+  margin: 1.5rem auto 0;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ===================================================================
+   FOOTER
+   =================================================================== */
 footer {
   text-align: center;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.6);
-  font-size: 0.85rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
 }
 
-/* =========================================
+/* ===================================================================
    Responsive
-   ========================================= */
+   =================================================================== */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1rem;
+  .main-nav {
+    gap: 0.5rem;
   }
 }
-
 @media (max-width: 480px) {
   .site-header {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
     padding: 0.5rem 1rem;
-    flex-direction: column;
     height: auto;
   }
-  .logo-link {
-    margin-bottom: 0.5rem;
+  .logo-link img {
+    width: 2rem;
+    height: 2rem;
   }
   .main-nav {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.3rem;
-  }
-  .main-nav a,
-  .drop-btn {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.8rem;
   }
 }
