@@ -247,3 +247,70 @@ footer {
   }
   .cta-group { margin-bottom: 2rem; }
 }
+/* ==============================
+   HEADER & LOGO – Ajustements
+   ============================== */
+
+header.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3.5rem;                /* Hauteur de la barre */
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+header.site-header .logo-nav {
+  position: absolute;
+  top: 50%; left: 1rem;          /* Collé à gauche */
+  transform: translateY(-50%);
+  width: 2.2rem; height: 2.2rem; /* Taille réduite */
+  border-radius: 50%;            /* Rond parfait */
+  object-fit: cover;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+header.site-header .logo-nav:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+header.site-header .navbar {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;           /* Empêche le wrapping */
+  overflow-x: auto;              /* Scroll si nécessaire */
+  font-size: 0.9rem;
+}
+
+header.site-header .navbar a {
+  padding: 0.3rem 0.6rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+header.site-header .navbar a:hover,
+header.site-header .navbar a.active {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+
+header.site-header .navbar .drop-nav {
+  border: 2px solid var(--accent);
+}
+
+header.site-header .navbar .drop-nav:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+
+/* Décalage du contenu sous le header */
+body {
+  padding-top: calc(3.5rem + 1rem);
+}
