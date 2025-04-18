@@ -3,49 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nos Artistes - LTC STUDIO</title>
+  <title>Nos Artistes - LTC STUDIOS</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-
 <body class="artistes">
 
-  <!-- HEADER -->
   <header class="site-header">
     <nav class="main-nav">
-      <a href="index.html">ACCUEIL</a>
-      <a href="studio.html">LE STUDIO</a>
-      <a href="artistes.html" class="active">ARTISTES</a>
-      <a href="prestations.html">PRESTATIONS</a>
-      <a href="ebooks.html">E-BOOKS</a>
-      <a href="contact.html">CONTACT</a>
-      <a href="drop001.html" class="drop-nav">DROP 001</a>
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a class="active" href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">E-books</a>
+      <a href="contact.html">Contact</a>
+      <a class="drop-nav" href="drop001.html">DROP 001</a>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="intro">
-      <h1>LTC STUDIOS</h1>
-      <p>Découvrez les artistes produits par le label.</p>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="intro">
+        <img src="assets/logo-ltc.png" alt="Logo LTC" style="max-width: 80px; margin-bottom: 1rem;">
+        <h1>LTC STUDIOS</h1>
+        <p>Découvrez les artistes produits par le label.</p>
+      </div>
+    </section>
 
-  <!-- SECTION ARTISTES -->
-  <section class="studio-gallery">
+    <section class="artist-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem;">
+      <!-- ARTISTE TEMPLATE -->
+      <div class="artist-card">
+        <img src="assets/seaklone.jpg" alt="SeaKlone" class="artist-img" />
+        <h2>SeaKlone</h2>
+        <p>Beatmaker et producteur passionné, SeaKlone explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1SWX6XWr3XMS44GowjNnDe" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
 
-    <!-- SeaKlone3 -->
-    <figure>
-      <img src="assets/seaklone.jpg" alt="SeaKlone3" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
-      <figcaption>
-        <h2>SeaKlone3</h2>
-        <p>Beatmaker et producteur passionné, SeaKlone3 explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
-        <iframe style="border-radius:12px; margin-top: 1rem;" src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </figcaption>
-    </figure>
+      <div class="artist-card">
+        <img src="assets/seel.jpg" alt="Seel" class="artist-img" />
+        <h2>Seel</h2>
+        <p>Un univers brut, sincère et poétique. Seel livre des textes sombres et authentiques dans une forme musicale maîtrisée.</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1sQGkFGLv4qLo1T6PCy0ql" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
 
-    <!-- Ajoute ici les blocs <figure> pour Seel, Li2t, Naan, Ozal, etc. -->
+      <!-- À répéter pour les autres artistes -->
+      <div class="artist-card"><img src="assets/naan.jpg" alt="Naan" class="artist-img" /><h2>Naan</h2><p>MC percutant aux lyrics conscients, Naan jongle entre old school et trap moderne avec style.</p></div>
+      <div class="artist-card"><img src="assets/ozal.jpg" alt="Ozal" class="artist-img" /><h2>Ozal</h2><p>Poète engagé, Ozal navigue entre flow incisif et envolées lyriques.</p></div>
+      <div class="artist-card"><img src="assets/li2t.jpg" alt="Li2t" class="artist-img" /><h2>Li2t</h2><p>Des rimes aiguisées et des punchlines chirurgicales, Li2t représente la voix brute du crew.</p></div>
+      <div class="artist-card"><img src="assets/nawak.jpg" alt="NawaK" class="artist-img" /><h2>NawaK</h2><p>Un flow énergique, une voix grave et des prods puissantes. NawaK fait trembler les murs.</p></div>
+      <div class="artist-card"><img src="assets/skylen.jpg" alt="Skylen" class="artist-img" /><h2>Skylen</h2><p>Entre rap conscient et vibes planantes, Skylen insuffle une douceur mélancolique à chaque track.</p></div>
+      <div class="artist-card"><img src="assets/harris.jpg" alt="Harris" class="artist-img" /><h2>Harris</h2><p>Technicien du verbe, Harris livre un rap percutant, parfois introspectif, toujours précis.</p></div>
+    </section>
+  </main>
 
-  </section>
 </body>
 </html>
