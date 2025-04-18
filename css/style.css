@@ -1,13 +1,15 @@
 /* ===================================================================
-   1. Variables & Reset (on ajoute easing global)
+   Variables & Reset
    =================================================================== */
 :root {
   --color-bg: #000;
   --color-fg: #fff;
   --color-accent: #ffd700;
   --font-primary: 'Orbitron', sans-serif;
+
   --nav-height: 3.5rem;
   --nav-gap: 0.75rem;
+
   --transition-fast: 0.2s ease-out;
   --transition-medium: 0.4s ease-out;
   --transition-slow: 0.6s ease-out;
@@ -32,26 +34,24 @@ body {
   color: var(--color-fg);
   line-height: 1.4;
   padding-top: var(--nav-height);
-  overflow-x: hidden;
   transition: background-position var(--transition-slow);
 }
 
-/* Parallax très léger */
 body:hover {
   background-position: center calc(50% - 20px);
 }
 
 /* ===================================================================
-   2. Header / Navbar (fixe + smooth)
+   Header & Navbar
    =================================================================== */
 .site-header {
   position: fixed;
   top: 0; left: 0; width: 100%; height: var(--nav-height);
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
-  display: flex; justify-content: center; align-items: center;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1rem;
   z-index: 1000;
-  transform: translateY(0);
   animation: slideDown var(--transition-medium) ease-out;
 }
 
@@ -60,20 +60,23 @@ body:hover {
   to   { transform: translateY(0); }
 }
 
-.navbar {
-  display: flex; align-items: center; gap: var(--nav-gap);
-  opacity: 0;
-  animation: fadeIn var(--transition-medium) ease-out 0.3s forwards;
-}
-
-.navbar .logo-nav img {
-  width: 2.5rem; height: 2.5rem;
+.logo-nav img {
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   transition: transform var(--transition-fast);
 }
 
-.navbar .logo-nav:hover img {
+.logo-nav:hover img {
   transform: scale(1.1);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: var(--nav-gap);
+  opacity: 0;
+  animation: fadeIn var(--transition-medium) ease-out 0.3s forwards;
 }
 
 .navbar a {
@@ -81,26 +84,18 @@ body:hover {
   padding: 0.3rem 0.6rem;
   font-size: 0.9rem;
   font-weight: 700;
-  border-radius: 4px;
   color: var(--color-accent);
-  transition: 
-    background var(--transition-fast), 
+  border-radius: 4px;
+  transition:
+    background var(--transition-fast),
     color var(--transition-fast),
     transform var(--transition-fast);
 }
 
-/* état actif & hover */
-.navbar a.active,
-.navbar a:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-  transform: translateY(-2px);
-}
-
-/* underline animé */
 .navbar a::after {
   content: "";
-  position: absolute; left: 0; bottom: -2px;
+  position: absolute;
+  left: 0; bottom: -2px;
   width: 0; height: 2px;
   background: var(--color-accent);
   transition: width var(--transition-medium);
@@ -111,10 +106,18 @@ body:hover {
   width: 100%;
 }
 
-/* bouton outline */
+.navbar a:hover,
+.navbar a.active {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
 .btn-outline {
   border: 2px solid var(--color-accent);
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .btn-outline:hover {
@@ -123,10 +126,12 @@ body:hover {
 }
 
 /* ===================================================================
-   3. Hero Section (entrées en douceur)
+   Hero Section
    =================================================================== */
 .container {
-  max-width: 960px; margin: 0 auto; padding: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .main-title {
@@ -134,30 +139,36 @@ body:hover {
   font-size: 2.5rem;
   color: var(--color-accent);
   margin-top: 1rem;
-  opacity: 0; animation: fadeInUp var(--transition-medium) ease-out 0.4s forwards;
+  opacity: 0;
+  animation: fadeInUp var(--transition-medium) ease-out 0.4s forwards;
 }
 
 .sub-text {
   text-align: center;
   margin: 0.5rem 0 2rem;
-  opacity: 0; animation: fadeInUp var(--transition-medium) ease-out 0.6s forwards;
+  opacity: 0;
+  animation: fadeInUp var(--transition-medium) ease-out 0.6s forwards;
 }
 
 .cta-buttons {
-  display: flex; flex-direction: column; align-items: center; gap: 1rem;
-  opacity: 0; animation: fadeInUp var(--transition-medium) ease-out 0.8s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeInUp var(--transition-medium) ease-out 0.8s forwards;
 }
 
 .btn-full {
   background: var(--color-accent);
   color: var(--color-bg);
-  font-weight: 700;
-  text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   min-width: 240px;
   text-align: center;
-  transition: 
+  text-transform: uppercase;
+  font-weight: 700;
+  transition:
     background var(--transition-fast),
     color var(--transition-fast),
     box-shadow var(--transition-fast),
@@ -176,35 +187,35 @@ body:hover {
   margin: 2rem auto 4rem;
   max-width: 600px;
   line-height: 1.4;
-  opacity: 0; animation: fadeInUp var(--transition-medium) ease-out 1s forwards;
+  opacity: 0;
+  animation: fadeInUp var(--transition-medium) ease-out 1s forwards;
 }
 
 /* ===================================================================
-   4. Footer
+   Footer
    =================================================================== */
 footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: var(--color-fg);
-  opacity: 0; animation: fadeIn var(--transition-medium) ease-out 1.2s forwards;
+  opacity: 0;
+  animation: fadeIn var(--transition-medium) ease-out 1.2s forwards;
 }
 
 /* ===================================================================
-   5. Animations Keyframes
+   Animations
    =================================================================== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ===================================================================
-   6. Responsive
+   Responsive
    =================================================================== */
 @media (max-width: 768px) {
   .navbar { gap: 0.5rem; }
@@ -212,17 +223,24 @@ footer {
 }
 
 @media (max-width: 480px) {
-  :root { --nav-height: 3rem; --nav-gap: 0.5rem; }
+  :root {
+    --nav-height: 3rem;
+    --nav-gap: 0.5rem;
+  }
   .site-header {
-    flex-direction: column; height: auto; padding: 0.5rem;
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
   }
   .logo-nav { margin-bottom: 0.5rem; }
   .navbar {
-    flex-wrap: wrap; justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .navbar a,
   .btn-outline {
-    font-size: 0.8rem; padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
   }
   .main-title { font-size: 2rem; }
 }
