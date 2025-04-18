@@ -463,3 +463,65 @@ header {
 body {
   padding-top: calc(var(--nav-height) + 1rem);
 }
+/* ===================================================================
+   OVERRIDE HEADER & NAV (à placer en bas de style.css)
+   =================================================================== */
+
+/* 1) Force le header en full‑width et centre la nav */
+header.site-header {
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  height: 3rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(0,0,0,0.85) !important;
+  padding: 0 1rem !important;
+  z-index: 1000 !important;
+}
+
+/* 2) Replace toutes les anciennes règles de logo */
+header.site-header .logo-nav {
+  position: absolute !important;
+  left: 1rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+/* 3) Assure l’affichage complet des liens de navigation */
+header.site-header .navbar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  font-size: 0.9rem !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* 4) Uniformise tous les liens du menu */
+header.site-header .navbar a {
+  display: inline-block !important;
+  padding: 0.3rem 0.6rem !important;
+  text-transform: uppercase !important;
+  color: var(--accent) !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 4px !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+header.site-header .navbar a:hover,
+header.site-header .navbar a.active {
+  background: var(--accent) !important;
+  color: var(--bg-color) !important;
+}
+
+/* 5) Décale le contenu sous le header corrigé */
+body {
+  padding-top: calc(3rem + 1rem) !important;
+}
