@@ -163,3 +163,91 @@ body {
     text-align: center;
   }
 }
+/* ===============================
+   LTC STUDIOS – MENU FIXE
+   =============================== */
+
+/* Header & Menu Fixe */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);  /* Ajout de la transparence pour l'arrière-plan */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); /* Ombre légère */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  transition: all 0.3s ease;
+}
+
+/* Logo dans le menu */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 40px;  /* Réduit la taille du logo */
+  height: 40px;  /* Réduit la taille du logo */
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 10px; /* Ajoute un peu d'espace entre le logo et le texte */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.nav-links a {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* Pour mobile – Menu hamburgers */
+@media screen and (max-width: 768px) {
+  .site-header {
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    display: none;  /* Masque le menu en version mobile */
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links.open {
+    display: block;  /* Affiche le menu quand il est ouvert */
+    position: absolute;
+    top: 80px;  /* Ajuste la position du menu déroulant */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
+
+  .logo {
+    width: 35px;  /* Taille ajustée pour le mobile */
+    height: 35px;
+  }
+}
