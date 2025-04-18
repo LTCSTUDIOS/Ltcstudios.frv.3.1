@@ -2,58 +2,33 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nos Artistes - LTC STUDIOS</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Nos Artistes – LTC STUDIOS</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="artistes">
+<body>
+  <header class="site-header">…</header>
 
-  <header class="site-header">
-    <nav class="main-nav">
-      <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a class="active" href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="ebooks.html">E-books</a>
-      <a href="contact.html">Contact</a>
-      <a class="drop-nav" href="drop001.html">DROP 001</a>
-    </nav>
-  </header>
+  <main class="container">
+    <section class="artistes-section">
+      <h1>Nos Artistes</h1>
 
-  <main>
-    <section class="hero">
-      <div class="intro">
-        <img src="assets/logo-ltc.png" alt="Logo LTC" style="max-width: 80px; margin-bottom: 1rem;">
-        <h1>LTC STUDIOS</h1>
-        <p>Découvrez les artistes produits par le label.</p>
-      </div>
-    </section>
-
-    <section class="artist-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem;">
-      <!-- ARTISTE TEMPLATE -->
       <div class="artist-card">
-        <img src="assets/seaklone.jpg" alt="SeaKlone" class="artist-img" />
-        <h2>SeaKlone</h2>
-        <p>Beatmaker et producteur passionné, SeaKlone explore les textures sonores pour créer des ambiances immersives et futuristes.</p>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5P7AlqcbRAZWy0Nv1e7Y1y?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <div class="artist-card">
-        <img src="assets/seel.jpg" alt="Seel" class="artist-img" />
-        <h2>Seel</h2>
-        <p>Un univers brut, sincère et poétique.
-           Seel livre des textes sombres et authentiques dans une forme musicale maîtrisée.
-          Harmonisciste/Rappeur/clippeur/beatmaker le Federer de l'équipe </p>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/playlist/0nBi5CB53mrgf3pFAWkdhz?si=NkGZevJ-QP2aEEdIJ7QLhA&pi=GJucnVbeT1GRV" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <img src="assets/seaklone.jpg" alt="" class="artist-img" />
+        <h2 class="artist-name">SeaKlone</h2>
+        <p class="artist-bio">
+          Beatmaker et producteur passionné, SeaKlone explore les textures sonores
+          pour créer des ambiances immersives et futuristes.
+        </p>
+        <iframe src="https://open.spotify.com/embed/playlist/…"
+                allow="encrypted-media"></iframe>
       </div>
 
-      <!-- À répéter pour les autres artistes -->
-      <div class="artist-card"><img src="assets/naan.jpg" alt="Naan" class="artist-img" /><h2>Naan</h2><p>MC percutant aux lyrics conscients, Naan jongle entre old school et trap moderne avec style.</p></div>
-      <div class="artist-card"><img src="assets/ozal.jpg" alt="Ozal" class="artist-img" /><h2>Ozal</h2><p>Poète engagé, Ozal navigue entre flow incisif et envolées lyriques.</p></div>
-      <div class="artist-card"><img src="assets/li2t.jpg" alt="Li2t" class="artist-img" /><h2>Li2t</h2><p>Des rimes aiguisées et des punchlines chirurgicales, Li2t représente la voix brute du crew.</p></div>
-      <div class="artist-card"><img src="assets/nawak.jpg" alt="NawaK" class="artist-img" /><h2>NawaK</h2><p>Un flow énergique, une voix grave et des prods puissantes. NawaK fait trembler les murs.</p></div>
-      <div class="artist-card"><img src="assets/skylen.jpg" alt="Skylen" class="artist-img" /><h2>Skylen</h2><p>Entre rap conscient et vibes planantes, Skylen insuffle une douceur mélancolique à chaque track.</p></div>
-      <div class="artist-card"><img src="assets/harris.jpg" alt="Harris" class="artist-img" /><h2>Harris</h2><p>Technicien du verbe, Harris livre un rap percutant, parfois introspectif, toujours précis.</p></div>
+      <!-- clonez .artist-card pour chaque artiste -->
     </section>
   </main>
 
+  <footer>…</footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
