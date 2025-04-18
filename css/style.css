@@ -121,3 +121,12 @@ footer {
   }
   .cta-buttons { gap: 0.5rem; }
 }
+/* Header compacté au scroll down */
+.site-header {
+  transition: height 0.3s ease, padding 0.3s ease, backdrop-filter 0.3s ease;
+}
+.site-header.header--compact {
+  height: 2.5rem;
+  padding: 0.25rem 1rem;
+  backdrop-filter: blur(6px);
+}
