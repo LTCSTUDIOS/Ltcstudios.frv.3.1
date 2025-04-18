@@ -300,3 +300,56 @@ header .logo-rounded:hover {
     grid-template-columns: 1fr;
   }
 }
+/* — Services Cards (prestations.html) — */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255,215,0,0.2);
+  transition: transform .3s, background .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0,0,0,0.8);
+}
+
+.service-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.service-card .price {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: var(--fg-color);
+}
+
+.service-card .btn-full {
+  margin-top: 1rem;
+  width: 80%;
+  max-width: 200px;
+}
+
+/* Responsive services */
+@media (max-width: 480px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
