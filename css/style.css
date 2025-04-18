@@ -324,3 +324,11 @@ footer {
   }
   .services-grid { grid-template-columns: 1fr; }
 }
+/* === OVERRIDE TAILLE LOGO === */
+header .logo-nav {
+  width: 2rem !important;
+  height: 2rem !important;
+  top: 50% !important;
+  left: 1rem !important;
+  transform: translateY(-50%) !important;
+}
