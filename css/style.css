@@ -167,3 +167,19 @@ footer {
     margin: 0 1rem;
   }
 }
+/* ================================================
+   LOGO – réduction du halo glow
+   ================================================ */
+header .logo-rounded {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+  opacity: 0.85;
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+}
+header .logo-rounded:hover {
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+  opacity: 1;
+}
