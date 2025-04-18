@@ -1,107 +1,156 @@
-/* Police */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* style.css */
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
-  color: white;
   background-color: black;
-  position: relative;
-  overflow-x: hidden;
+  color: white;
 }
 
-/* Fond étoilé animé */
-.stars-background {
-  background: url("../assets/fond-galaxie.gif") no-repeat center center fixed;
-  background-size: cover;
+a {
+  text-decoration: none;
+  color: yellow;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px yellow;
+  transition: transform 0.3s;
+}
+
+.logo-top:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.navbar a {
+  color: yellow;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: yellow;
+  color: black;
+  border-radius: 5px;
+}
+
+.navbar a.active {
+  background-color: yellow;
+  color: black;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 32px;
+  color: yellow;
+  margin-top: 20px;
+}
+
+.sub-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: white;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn-full {
+  background-color: yellow;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-full:hover {
+  background-color: #ffdd00;
+}
+
+.btn-outline {
+  border: 2px solid yellow;
+  color: yellow;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: yellow;
+  color: black;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Background étoilé */
+.stars {
   position: fixed;
   width: 100%;
   height: 100%;
+  background: url('../assets/fond-galaxie.png') repeat;
   z-index: -1;
+  opacity: 0.1;
 }
 
-/* Logo haut gauche */
-.logo-top-left {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-}
-.logo-top-left img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 10px #FFD700;
-}
-
-/* Logo centré */
-.logo-center {
-  text-align: center;
-  margin-top: 80px;
-}
-.logo-glow {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 20px #FFD700;
-  object-fit: cover;
-}
-
-/* Navigation */
-nav {
-  margin-top: 20px;
-  text-align: center;
-}
-.main-nav {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-.main-nav li {
-  margin: 6px 0;
-}
-.main-nav a {
-  text-decoration: none;
-  color: #FFD700;
-  font-size: 1.1rem;
-  padding: 6px 12px;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
-}
-.main-nav a:hover,
-.main-nav a.active {
-  background-color: #FFD700;
-  color: black;
-  transform: scale(1.05);
-}
-
-/* Section principale */
-.main-section {
-  text-align: center;
-  margin: 60px 20px;
-}
-.main-section h1 {
-  font-size: 2.2rem;
-  color: #FFD700;
-  margin-bottom: 10px;
-}
-.main-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Responsive mobile ajustement (optionnel) */
-@media screen and (max-width: 600px) {
-  .logo-center {
-    margin-top: 60px;
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
   }
 
-  .main-nav a {
-    font-size: 1rem;
-    padding: 5px 10px;
+  .main-title {
+    font-size: 26px;
+  }
+
+  .sub-text {
+    font-size: 16px;
+  }
+
+  .btn-full, .btn-outline {
+    font-size: 14px;
+    padding: 8px 14px;
   }
 }
