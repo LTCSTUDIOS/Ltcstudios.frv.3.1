@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Le Studio – LTC STUDIOS</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" 
-    rel="stylesheet"
-  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Studio - LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="galaxy-background studio">
-
-  <!-- HEADER + NAVIGATION -->
-  <header class="site-header">
-    <!-- (le logo en pseudo-élément, pas besoin d’img ici) -->
-    <nav class="main-nav">
-      <a href="index.html">ACCUEIL</a>
-      <a href="studio.html" class="active">LE STUDIO</a>
-      <a href="artistes.html">ARTISTES</a>
-      <a href="prestations.html">PRESTATIONS</a>
-      <a href="ebooks.html">E‑BOOKS</a>
-      <a href="contact.html">CONTACT</a>
-      <a href="drop001.html" class="drop-nav">DROP 001</a>
+<body>
+  <div class="stars"></div>
+  <header>
+    <img src="assets/logo-ltc.png" alt="LTC Logo" class="logo-top"/>
+    <nav class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="studio.html" class="active">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">E-books</a>
+      <a href="contact.html">Contact</a>
+      <a href="drop001.html" class="btn-outline">DROP 001</a>
     </nav>
   </header>
 
-  <!-- GALERIE DU STUDIO -->
-  <section class="studio-gallery">
-    <figure>
-      <img src="assets/studio1.jpg" alt="Photo du studio">
-      <figcaption>Photo du studio</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/studio2.jpg" alt="Photo du matériel">
-      <figcaption>Photo du matériel</figcaption>
-    </figure>
-    <!-- Ajoute d'autres figures si nécessaire -->
-  </section>
+  <main class="container">
+    <h1 class="main-title">LE STUDIO</h1>
+    <p class="sub-text">Un lieu conçu pour donner vie à vos idées.</p>
 
+    <div class="studio-gallery">
+      <img src="assets/studio1.jpg" alt="Studio photo 1" />
+      <img src="assets/studio2.jpg" alt="Studio photo 2" />
+    </div>
+
+    <section class="studio-info">
+      <h2>Présentation du Matériel</h2>
+      <p>
+        LTC STUDIO est un espace professionnel, installé avec soin pour offrir le meilleur confort de création et de production sonore. Chaque élément a été choisi pour garantir un son de qualité studio, tout en gardant une ambiance conviviale et inspirante.
+      </p>
+
+      <ul>
+        <li><strong>Carte Son :</strong> Antelope Audio Discrete 8 – interface haut de gamme avec conversion AD/DA ultra précise.</li>
+        <li><strong>Préampli :</strong> Mindprint avec lampes pour une chaleur analogique organique (à noter : lampes à changer prochainement).</li>
+        <li><strong>Compresseur :</strong> Fat Man 2 pour colorer et maîtriser les prises avec précision.</li>
+        <li><strong>Micros :</strong> 
+          <ul>
+            <li>Edge Duo (modélisation de micros vintage haut de gamme)</li>
+            <li>Shure SM7B x2 (grunts, freestyles, voix assises, prise live)</li>
+          </ul>
+        </li>
+        <li><strong>Casques :</strong> 
+          <ul>
+            <li>DT770 Pro (enregistrement)</li>
+            <li>DT990 Pro (mixage)</li>
+            <li>AKG K72 (monitoring fermé secondaire)</li>
+          </ul>
+        </li>
+        <li><strong>Enceintes :</strong> Presonus Eris 5" + Subwoofer Eris 10" – réponse étendue, idéal pour le mix et le master.</li>
+        <li><strong>Contrôle & MAO :</strong> 
+          <ul>
+            <li>KeyLab 61 (Arturia)</li>
+            <li>Akai MPC Studio</li>
+            <li>FL Studio 21 avec bundle complet de plugins (Waves, FabFilter, SSL, etc.)</li>
+            <li>Double écran incurvé 32" + double écran plat 24" pour un workflow fluide</li>
+          </ul>
+        </li>
+        <li><strong>Poste de travail :</strong> PC portable Acer Predator i9, 32Go RAM, SSD 1To, GeForce RTX 4070 – performance maximale.</li>
+        <li><strong>Confort :</strong> Siège Aero One, traitement acoustique soigné, ambiance tamisée et focus garanti.</li>
+      </ul>
+
+      <h2>Enregistrement - Mix - Mastering</h2>
+      <p>
+        Que ce soit pour une maquette, un single, un EP ou un album complet, LTC STUDIO
+        t’accompagne de A à Z. Qualité pro, ambiance chill, vision respectée. Ici, on t’écoute, on t’élève.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LTC STUDIOS. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
