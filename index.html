@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LTC Studio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Relie le fichier CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LTC Studio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER avec logo et menu -->
-    <header class="site-header">
-        <div class="logo-container">
-            <!-- Le logo de LTC Studio -->
-            <img src="ton-logo.png" alt="LTC Studio" class="logo">
-            <h1>LTC Studio</h1>
-        </div>
 
-        <!-- Menu hamburger visible sur mobile -->
-        <div class="menu-icon" onclick="toggleMenu()">
-            ☰
-        </div>
+  <header class="site-header">
+    <img src="ton-logo.png" alt="LTC Studio" class="logo">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links">
+      <a href="#accueil" class="active">Accueil</a>
+      <a href="#studio">Le Studio</a>
+      <a href="#artistes">Artistes</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#ebooks">E‑books</a>
+      <a href="#contact">Contact</a>
+      <a href="#drop001" class="btn-outline">DROP 001</a>
+    </nav>
+  </header>
 
-        <!-- Liens du menu -->
-        <nav class="nav-links">
-            <a href="#accueil">Accueil</a>
-            <a href="#le-studio">Le Studio</a>
-            <a href="#artistes">Artistes</a>
-            <a href="#prestations">Prestations</a>
-            <a href="#ebooks">E-books</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <main>
+    <section id="accueil" class="hero">
+      <h1 class="hero-title">LTC STUDIOS</h1>
+      <p class="hero-sub">Un espace créatif où l’art prend vie.<br>Votre musique, notre passion.</p>
+      <div class="cta-group">
+        <a href="#reservations" class="btn-full">Réserver ma session</a>
+        <a href="#drop001" class="btn-outline">Précommander le T‑shirt exclusif DROP 001</a>
+      </div>
+    </section>
 
-    <!-- Contenu de la page ici -->
-    <main>
-        <section id="accueil">
-            <h2>Bienvenue à LTC Studios</h2>
-            <p>Un espace créatif où l'art prend vie. Votre musique, notre passion.</p>
-            <button><a href="#reservations">Réserver ma session</a></button>
-        </section>
+    <!-- Autres sections… -->
+  </main>
 
-        <!-- Autres sections selon ton site -->
-
-        <section id="reservations">
-            <h2>Précommander le T-shirt DROP 001</h2>
-            <p>Disponible le 1er mai - 50 exemplaires numérotés à la main, en coton bio premium.</p>
-            <button><a href="#checkout">Réserver</a></button>
-        </section>
-    </main>
-
-    <!-- Script pour faire fonctionner le menu hamburger -->
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.nav-links');
-            menu.classList.toggle('open');
-        }
-    </script>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
