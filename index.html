@@ -2,109 +2,42 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LTC STUDIO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #000;
-      color: #FFD700;
-    }
-    nav {
-      background-color: #000;
-      border-bottom: 2px solid #FFD700;
-      text-align: center;
-      padding: 1rem;
-    }
-    nav a {
-      color: #FFD700;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
-    .logo-container img {
-      width: 150px;
-    }
-    .drop {
-      max-width: 800px;
-      margin: 60px auto;
-      text-align: center;
-      background-color: #111;
-      padding: 2rem;
-      border-radius: 20px;
-      border: 2px solid #FFD700;
-      box-shadow: 0 0 30px #FFD70033;
-    }
-    .drop h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #FFD700;
-    }
-    .drop p {
-      font-size: 1rem;
-      color: #eee;
-      margin-bottom: 20px;
-    }
-    .drop .btn-preco {
-      background-color: #FFD700;
-      color: #000;
-      border: none;
-      padding: 12px 24px;
-      font-weight: bold;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .drop .btn-preco:hover {
-      background-color: #ffe000;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="stars"></div>
+  <header>
+    <img src="assets/logo-ltc.png" alt="LTC Logo" class="logo-top"/>
+    <nav class="navbar">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">E-books</a>
+      <a href="contact.html">Contact</a>
+      <a href="drop001.html" class="btn-outline">DROP 001</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="studio.html">Le Studio</a>
-    <a href="artistes.html">Artistes</a>
-    <a href="prestations.html">Prestations</a>
-    <a href="ebooks.html">eBooks</a>
-    <a href="concours.html">1h Gratuite</a>
-    <a href="contact.html">Contact</a>
-    <a href="drop001.html">Drop 001</a>
-  </nav>
+  <main class="container">
+    <h1 class="main-title">LTC STUDIOS</h1>
+    <p class="sub-text">Un espace créatif où l’art prend vie.<br/>Votre musique, notre passion.</p>
 
-  <div class="logo-container">
-    <img src="img/logo-ltc.png" alt="Logo LTC Studio">
-  </div>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-full">RÉSERVER MA SESSION</a>
+      <a href="drop001.html" class="btn-full">PRÉCOMMANDER LE T-SHIRT EXCLUSIF DROP 001</a>
+    </div>
 
-  <section class="drop">
-    <h2>DROP 001 – T-Shirt Édition Limitée</h2>
-    <p>
-      Disponible le 1er mai – 50 exemplaires numérotés à la main, en coton bio premium.
-      Toute personne qui se présente au studio avec ce t-shirt gagne 1H de session offerte.
+    <p class="drop-info">
+      Disponible le 1er mai – 50 exemplaires numérotés à la main, en coton bio premium.<br/>
+      Toute personne qui se présente au studio avec ce t-shirt gagne 1 h de session offerte.
     </p>
-    <a href="drop001.html" class="btn-preco">Précommander</a>
-  </section>
+  </main>
 
   <footer>
-    LTC STUDIO &copy; 2025 – True Earth Connexion
+    <p>&copy; 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
-
 </body>
 </html>
