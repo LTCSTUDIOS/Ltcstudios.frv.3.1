@@ -1,259 +1,107 @@
+/* Police */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-:root {
-  --color-bg: #000000;
-  --color-fg: #ffffff;
-  --color-accent: #ffd700;
-  --font-primary: 'Orbitron', sans-serif;
-}
-
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-primary);
-  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
-  color: var(--color-fg);
-  line-height: 1.5;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background-color: black;
+  position: relative;
   overflow-x: hidden;
 }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-fg);
-  text-shadow: 0 0 5px var(--color-accent);
-}
-
-header {
-  text-align: center;
-  padding-top: 1.5rem;
-}
-
-.logo-top {
-  width: 80px;
-  margin-bottom: 0.5rem;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 1rem 0;
-}
-
-.navbar a {
-  padding: 8px 16px;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-  font-weight: bold;
-}
-
-.btn-outline {
-  border: 2px solid var(--color-accent);
-  padding: 6px 12px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.main-title {
-  font-size: 2.4rem;
-  color: var(--color-accent);
-  margin-bottom: 0.5rem;
-}
-
-.sub-text {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-.studio-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.studio-img {
+/* Fond étoilé animé */
+.stars-background {
+  background: url("../assets/fond-galaxie.gif") no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
   width: 100%;
-  max-width: 480px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  height: 100%;
+  z-index: -1;
 }
 
-.studio-description,
-.equipment,
-.form-container {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 2px solid var(--color-accent);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  text-align: left;
+/* Logo haut gauche */
+.logo-top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+.logo-top-left img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 10px #FFD700;
 }
 
-h2 {
-  color: var(--color-accent);
-  margin-bottom: 1rem;
+/* Logo centré */
+.logo-center {
+  text-align: center;
+  margin-top: 80px;
+}
+.logo-glow {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 20px #FFD700;
+  object-fit: cover;
 }
 
-ul {
+/* Navigation */
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+.main-nav {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 10px 0;
 }
-
-li {
-  margin-bottom: 0.8rem;
+.main-nav li {
+  margin: 6px 0;
 }
-
-.cta-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
+.main-nav a {
+  text-decoration: none;
+  color: #FFD700;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
 }
-
-.btn-full {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-  padding: 0.8rem 1.6rem;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.btn-full:hover {
-  background-color: var(--color-fg);
-  color: var(--color-bg);
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: #FFD700;
+  color: black;
   transform: scale(1.05);
 }
 
-footer {
+/* Section principale */
+.main-section {
   text-align: center;
-  color: #888;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+  margin: 60px 20px;
 }
-
-.form-container label {
-  display: block;
-  margin-top: 1rem;
+.main-section h1 {
+  font-size: 2.2rem;
+  color: #FFD700;
+  margin-bottom: 10px;
 }
-
-.form-container input,
-.form-container textarea {
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.4rem;
-  border-radius: 6px;
-  border: none;
-  font-family: var(--font-primary);
-}
-
-textarea {
-  resize: vertical;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .studio-img {
-    width: 90%;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-  }
-}
-/* FIX mise à l’échelle des images dans studio.html */
-.studio-gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.studio-gallery img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
-}
-
-/* Pour éviter les débordements sur petits écrans */
-@media (max-width: 768px) {
-  .studio-gallery img {
-    width: 95%;
-  }
-}
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem; /* Réduit l’espace entre les liens (valeur précédente probablement plus haute) */
-  flex-wrap: wrap;
-  padding: 0.5rem 0;
-}
-
-nav ul li {
-  margin: 0;
-}
-nav ul li {
-  padding: 0.2rem 0; /* Réduit l'espacement vertical entre les liens */
-  line-height: 1.2rem; /* Réduit la hauteur de ligne pour compacter encore */
-  font-size: 1rem; /* Tu peux aussi réduire la taille du texte si nécessaire */
-}
-/* Logo rond en haut à gauche */
-.logo-top-left {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 999;
-}
-
-.logo-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 8px #FFD700;
-}
-
-/* Réduction de l'espacement du menu */
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  padding: 6px 0;  /* réduit l'espacement vertical */
+.main-section p {
   font-size: 1.1rem;
-  line-height: 1.1em;
+  line-height: 1.6;
+}
+
+/* Responsive mobile ajustement (optionnel) */
+@media screen and (max-width: 600px) {
+  .logo-center {
+    margin-top: 60px;
+  }
+
+  .main-nav a {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
 }
