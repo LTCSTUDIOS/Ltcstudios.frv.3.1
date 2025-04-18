@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LTC STUDIOS</title>
-  <!-- CSS global -->
   <link rel="stylesheet" href="css/style.css" />
-  <!-- Google Font Orbitron -->
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
     rel="stylesheet"
@@ -16,16 +14,12 @@
 
   <!-- HEADER FIXE -->
   <header class="site-header" id="site-header">
-    <!-- Logo cliquable -->
-    <div class="logo-nav">
-      <a href="index.html">
-        <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" />
-      </a>
-    </div>
-    <!-- Navigation principale -->
+    <a href="index.html" class="logo-nav">
+      <img src="assets/logo-ltc.png" alt="Logo LTC STUDIOS" />
+    </a>
     <nav class="navbar">
       <a href="index.html" class="active">Accueil</a>
-      <a href="studio.html">Le Studio</a>
+      <a href="studio.html">Le Studio</a>
       <a href="artistes.html">Artistes</a>
       <a href="prestations.html">Prestations</a>
       <a href="ebooks.html">E‑books</a>
@@ -34,7 +28,6 @@
     </nav>
   </header>
 
-  <!-- CONTENU PRINCIPAL -->
   <main class="container">
     <h1 class="main-title">LTC STUDIOS</h1>
     <p class="sub-text">
@@ -48,27 +41,21 @@
     </div>
 
     <p class="drop-info">
-      Disponible le 1er mai – 50 exemplaires numérotés à la main, en coton bio premium.<br/>
+      Disponible le 1er mai – 50 exemplaires numérotés à la main, en coton bio premium.<br/>
       Toute personne qui se présente au studio avec ce t‑shirt gagne 1 h de session offerte.
     </p>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 LTC STUDIOS. Tous droits réservés.</p>
   </footer>
 
-  <!-- JS pour header “scrolled” -->
   <script>
-    (function() {
+    // Header “scrolled” effect
+    (function(){
       const header = document.getElementById('site-header');
-      const threshold = 50; // déclenche à 50px de scroll
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > threshold) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
+      window.addEventListener('scroll',()=>{
+        header.classList.toggle('scrolled', window.scrollY > 50);
       });
     })();
   </script>
