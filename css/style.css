@@ -1,231 +1,165 @@
-/* ===================================================================
-   LTC STUDIOS – Feuille de style complète et corrigée
-   =================================================================== */
+/* ===============================
+   LTC STUDIOS – CSS GLOBAL
+   =============================== */
 
-/* — Variables globales — */
+/* — Variables — */
 :root {
-  --color-bg: #000000;
-  --color-fg: #ffffff;
-  --color-accent: #ffd700;
-  --font-primary: 'Orbitron', sans-serif;
+  --color-bg: #000;
+  --color-fg: #fff;
+  --color-accent: #FFD700;
+  --font-main: 'Orbitron', sans-serif;
 }
 
-/* — Reset & Base — */
-*,
-*::before,
-*::after {
+/* — Reset — */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 100%;
-}
 body {
-  font-family: var(--font-primary);
-  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover no-repeat fixed;
+  font-family: var(--font-main);
+  background: var(--color-bg) url('../assets/fond-galaxie.gif') center/cover fixed no-repeat;
   color: var(--color-fg);
-  line-height: 1.4;
-  padding-top: 70px; /* espace sous header */
+  padding-top: 80px;
+  line-height: 1.6;
 }
 
-/* — Liens par défaut — */
-a {
-  text-decoration: none;
-  color: var(--color-accent);
-}
-a:hover {
-  color: var(--color-fg);
-}
+/* ===============================
+   HEADER / NAVIGATION
+   =============================== */
 
-/* ===================================================================
-   HEADER & NAVIGATION (corrigé)
-   =================================================================== */
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   background: rgba(0,0,0,0.9);
-  height: 60px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
   display: flex;
   align-items: center;
-  padding: 0 1rem;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  z-index: 999;
 }
 
-.logo-nav {
-  width: 50px;
-  height: 50px;
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 1rem;
-  cursor: pointer;
 }
 
+/* MENU NAV */
 .nav-links {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
 }
-
 .nav-links a {
-  font-weight: 700;
-  font-size: 0.9rem;
   color: var(--color-accent);
-  transition: 0.2s;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
-
 .nav-links a:hover {
   color: white;
 }
-
-/* Bouton DROP 001 dans la nav */
 .drop-nav {
   border: 2px solid var(--color-accent);
-  border-radius: 4px;
-  padding: 0.25rem 0.75rem;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  transition: 0.3s ease;
 }
 .drop-nav:hover {
   background: var(--color-accent);
   color: var(--color-bg);
 }
 
-/* ===================================================================
-   SECTION HERO (index.html)
-   =================================================================== */
+/* ===============================
+   HERO (accueil)
+   =============================== */
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 6rem 1rem 2rem;
+  padding: 4rem 1rem;
 }
-.hero .intro h1 {
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 2.4rem;
   color: var(--color-accent);
+  margin-bottom: 1rem;
 }
-.hero .intro p {
-  margin-top: 1rem;
+.hero span {
+  font-size: 2.8rem;
+}
+.hero p {
   font-size: 1rem;
+  margin: 1rem 0;
 }
 .btn-primary,
 .btn-secondary {
   display: inline-block;
   font-weight: 700;
-  border-radius: 50px;
-  transition: background 0.3s, transform 0.2s;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 .btn-primary {
-  margin: 1.5rem 0;
   background: var(--color-accent);
   color: var(--color-bg);
-  padding: 0.75rem 2rem;
 }
 .btn-primary:hover {
   background: var(--color-fg);
-  transform: scale(1.05);
+  color: var(--color-bg);
 }
 .btn-secondary {
-  margin: 0.5rem 0 1.5rem;
   border: 2px solid var(--color-accent);
   color: var(--color-accent);
-  padding: 0.6rem 1.2rem;
+  background: transparent;
 }
 .btn-secondary:hover {
   background: var(--color-accent);
   color: var(--color-bg);
 }
 .info-drop {
+  font-size: 0.85rem;
   margin-top: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  color: #ccc;
 }
 
-/* ===================================================================
-   SECTION STUDIO
-   =================================================================== */
-.studio-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem 1rem;
-}
-.studio-gallery figure {
-  width: calc(50% - 1rem);
-  max-width: 320px;
-  text-align: center;
-}
-.studio-gallery img {
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
-.studio-gallery figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--color-accent);
-}
-
-/* ===================================================================
-   SECTION CONTACT
-   =================================================================== */
-.contact-section {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem 1rem;
-  background: rgba(0,0,0,0.7);
-  border: 2px solid var(--color-accent);
-  border-radius: 8px;
-}
-.contact-section h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--color-accent);
-  margin-bottom: 1.5rem;
-}
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-.contact-form label {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-.contact-form input,
-.contact-form textarea {
-  margin-top: 0.5rem;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  font-family: var(--font-primary);
-}
-.contact-form textarea {
-  resize: vertical;
-}
-.contact-form .btn-primary {
-  align-self: center;
-  margin-top: 1.5rem;
-}
-
-/* ===================================================================
+/* ===============================
    RESPONSIVE
-   =================================================================== */
-@media (max-width: 768px) {
+   =============================== */
+@media screen and (max-width: 768px) {
   .site-header {
     flex-direction: column;
-    height: auto;
-    padding: 0.5rem;
+    align-items: flex-start;
   }
   .nav-links {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
     margin-top: 0.5rem;
   }
-  .hero .intro h1 {
-    font-size: 2rem;
+  .hero h1 {
+    font-size: 1.8rem;
   }
-  .studio-gallery figure {
+  .hero span {
+    font-size: 2.2rem;
+  }
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
+    text-align: center;
   }
 }
