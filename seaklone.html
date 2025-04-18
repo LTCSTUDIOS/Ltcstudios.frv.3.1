@@ -1,61 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Seaklone3 – LTC STUDIOS</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" 
-    rel="stylesheet"
-  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SeaKlone – LTC STUDIOS</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
-<body class="galaxy-background artistes">
-
-  <!-- HEADER + NAVIGATION -->
-  <header class="site-header">
-    <nav class="main-nav">
-      <a href="index.html">ACCUEIL</a>
-      <a href="studio.html">LE STUDIO</a>
-      <a href="artistes.html" class="active">ARTISTES</a>
-      <a href="prestations.html">PRESTATIONS</a>
-      <a href="ebooks.html">E‑BOOKS</a>
-      <a href="contact.html">CONTACT</a>
-      <a href="drop001.html" class="drop-nav">DROP 001</a>
+<body class="page-artist">
+  <!-- HEADER & NAV -->
+  <header>
+    <a href="index.html"><img src="assets/logo-ltc.png" alt="Logo LTC" class="logo-nav"/></a>
+    <nav class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="studio.html">Le Studio</a>
+      <a href="artistes.html" class="active">Artistes</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="ebooks.html">E‑books</a>
+      <a href="contact.html">Contact</a>
+      <a href="drop001.html" class="btn-outline">DROP 001</a>
     </nav>
   </header>
 
-  <!-- CONTENU PRINCIPAL -->
-  <main style="padding-top:4rem;">
-    <section class="contact-section" style="max-width:600px; margin:2rem auto;">
-      <h1 style="color:var(--color-accent); text-align:center;">Seaklone3</h1>
-
-      <!-- Photo -->
-      <img 
-        src="assets/seaklon.jpg" 
-        alt="Portrait de Seaklone3" 
-        style="width:100%; border-radius:4px; box-shadow:0 0 8px rgba(0,0,0,0.5); margin:1rem 0;"
-      >
-
-      <!-- Mini‑bio -->
-      <p style="color:#fff; font-size:0.95rem; line-height:1.5; margin-bottom:1.5rem;">
-        Beatmaker et producteur passionné, Seaklone3 explore les textures sonores 
-        pour créer des ambiances immersives et futuristes.
-      </p>
-
-      <!-- Embed Spotify -->
-      <div style="position:relative; width:100%; padding-top:100%; margin-bottom:2rem; border-radius:4px; overflow:hidden;">
-        <iframe
-          src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP"
-          width="100%" height="100%"
-          style="position:absolute; top:0; left:0;"
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+  <!-- CONTENU -->
+  <main class="main">
+    <section class="artist-header">
+      <img src="assets/seaklone.jpg" alt="SeaKlone" class="artist-photo"/>
+      <h1 class="main-title">SeaKlone</h1>
+      <p class="sub-text">Beatmaker et producteur passionné, explorant les textures sonores pour créer des ambiances immersives et futuristes.</p>
+      <div class="cta-buttons">
+        <a href="https://open.spotify.com/playlist/2a7sjlB3OehiRI3tykniwP?si=HvOKV9jiQ26nNSyRnIpHGQ" target="_blank" class="btn-full">Voir sa playlist</a>
+        <a href="#reserver?service=SeaKlone" class="btn-outline">Réserver session</a>
       </div>
+    </section>
+
+    <section class="artist-playlist">
+      <iframe src="https://open.spotify.com/embed/playlist/2a7sjlB3OehiRI3tykniwP?si=HvOKV9jiQ26nNSyRnIpHGQ"
+              width="100%" height="380" frameborder="0" allow="encrypted-media"></iframe>
     </section>
   </main>
 
+  <footer>
+    &copy; 2025 LTC STUDIOS. Tous droits réservés.
+  </footer>
 </body>
 </html>
