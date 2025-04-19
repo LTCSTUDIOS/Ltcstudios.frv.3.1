@@ -2,33 +2,46 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nos Artistes – LTC STUDIOS</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">…</header>
+  <!-- Header & navigation -->
+  <header class="site-header" style="text-align: center;">
+    <img src="assets/logo.png" alt="LTC Studios" class="logo-nav" style="display: block; margin: 0 auto;" />
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html">Studio</a></li>
+        <li><a href="artistes.html" class="active">Artistes</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="drop001.html">Drop 001</a></li>
+        <li><a href="ebooks.html">E‑books</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main class="container">
     <section class="artistes-section">
       <h1>Nos Artistes</h1>
-
       <div class="artist-card">
-        <img src="assets/seaklone.jpg" alt="" class="artist-img" />
-        <h2 class="artist-name">SeaKlone</h2>
-        <p class="artist-bio">
-          Beatmaker et producteur passionné, SeaKlone explore les textures sonores
-          pour créer des ambiances immersives et futuristes.
-        </p>
-        <iframe src="https://open.spotify.com/embed/playlist/…"
-                allow="encrypted-media"></iframe>
+        <img src="assets/portrait-seaklone.jpg" alt="SeaKlone" />
+        <h2>SeaKlone</h2>
+        <p>Artiste hip‑hop & beatmaker, mélangeant kickage puissant, introspection et storytelling.</p>
+        <iframe src="https://open.spotify.com/embed/playlist/..." allow="encrypted-media"></iframe>
       </div>
-
-      <!-- clonez .artist-card pour chaque artiste -->
+      <!-- Dupliquez .artist-card pour chaque artiste -->
     </section>
   </main>
 
-  <footer>…</footer>
+  <!-- Footer -->
+  <footer>
+    <p>LTC STUDIOS © 2025 — Tous droits réservés</p>
+  </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
