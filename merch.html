@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Merch - LTC Studios</title>
+  <title>Merch – LTC Studios</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- HEADER FIXE -->
-  <header class="site-header">
-    <a href="index.html">
-      <img src="assets/logo.png" alt="LTC Studios" class="logo-nav" />
-    </a>
+  <!-- Header -->
+  <header class="site-header" style="text-align: center;">
+    <img src="assets/logo.png" alt="LTC Studios" class="logo-nav" style="display:block;margin:0 auto;" />
     <nav class="navbar">
-      <a href="index.html">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="ebooks.html">E-books</a>
-      <a href="contact.html">Contact</a>
-      <a href="drop.html" class="drop-nav">Drop 001</a>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html">Studio</a></li>
+        <li><a href="artistes.html">Artistes</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="drop001.html">Drop 001</a></li>
+        <li><a href="ebooks.html">E‑books</a></li>
+        <li><a href="merch.html" class="active">Merch</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- CONTENU PRINCIPAL -->
+  <!-- Contenu principal -->
   <main>
     <section class="merch-section" style="padding: 2rem 1rem; max-width: 960px; margin: 0 auto;">
       <h1 style="text-align:center; color: var(--accent); margin-bottom:1rem;">Merchandising</h1>
@@ -31,7 +32,7 @@
         Retrouvez nos produits exclusifs, en édition limitée.
       </p>
       <div class="services-grid">
-        <!-- Carte T-Shirt -->
+        <!-- T-Shirt -->
         <div class="service-card">
           <img src="assets/merch/tshirt-drop001.jpg" alt="T-Shirt Drop 001" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
           <h2>Drop 001 T-Shirt</h2>
@@ -39,7 +40,7 @@
           <p class="price">25 €</p>
           <button class="btn-book">Commander</button>
         </div>
-        <!-- Carte Casquette -->
+        <!-- Casquette -->
         <div class="service-card">
           <img src="assets/merch/casquette.jpg" alt="Casquette LTC" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
           <h2>Casquette LTC</h2>
@@ -47,7 +48,7 @@
           <p class="price">20 €</p>
           <button class="btn-book">Commander</button>
         </div>
-        <!-- Carte Sweat -->
+        <!-- Sweat -->
         <div class="service-card">
           <img src="assets/merch/sweat.jpg" alt="Sweat LTC" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
           <h2>Sweat à Capuche</h2>
@@ -55,17 +56,15 @@
           <p class="price">45 €</p>
           <button class="btn-book">Commander</button>
         </div>
-        <!-- Ajoutez d’autres cartes au besoin -->
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
-    © 2025 LTC STUDIOS. Tous droits réservés.
+    <p>LTC STUDIOS © 2025 — Tous droits réservés</p>
   </footer>
 
-  <!-- Si vous utilisez un JS pour la modale de commande -->
   <script src="js/booking.js"></script>
 </body>
 </html>
