@@ -9,56 +9,27 @@
   <script defer src="js/script.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <img src="assets/logo.png" alt="LTC Studio" class="logo-nav" />
+  <header class="site-header" style="text-align: center;">
+    <img src="assets/logo.png" alt="LTC Studio" class="logo-nav" style="display:block;margin:0 auto;" />
     <nav class="navbar">
-      <a href="index.html" class="active">Accueil</a>
-      <a href="studio.html">Le Studio</a>
-      <a href="artistes.html">Artistes</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="ebooks.html">E-books</a>
-      <a href="contact.html">Contact</a>
-      <a href="drop001.html" class="btn-outline">DROP 001</a>
+      <!-- items du menu -->
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html">Studio</a></li>
+        <li><a href="artistes.html">Artistes</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="drop001.html">Drop 001</a></li>
+        <li><a href="ebooks.html">E-books</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-    <button class="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
   </header>
-
+  
   <main>
-    <section class="hero">
-      <h1 class="hero-title">LTC STUDIOS</h1>
-      <p class="hero-sub">Un espace créatif où l’art prend vie.<br />Votre musique, notre passion.</p>
-      <div class="cta-group">
-        <a href="#" id="open-book" class="btn-full">Réserver ma session</a>
-        <a href="#" class="btn-outline">Précommander le T-shirt DROP 001</a>
-      </div>
-    </section>
-
-    <section class="prestations-section">
-      <p class="lead">Découvrez nos services sur‑mesure, de l’enregistrement au coaching créatif.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <h2>Enregistrement</h2>
-          <p>Voix & instruments – micro studio, multi‑pistes, prise pro.</p>
-          <p class="price">À partir de 80 €</p>
-          <button class="btn-book" data-service="Enregistrement">Réserver</button>
-        </div>
-        <div class="service-card">
-          <h2>Mixage & Mastering</h2>
-          <p>Équilibrage, spatialisation, mastering CD/streaming.</p>
-          <p class="price">À partir de 100 €</p>
-          <button class="btn-book" data-service="Mixage & Mastering">Réserver</button>
-        </div>
-        <!-- ajouter d'autres cards si besoin -->
-      </div>
-    </section>
+    <!-- contenu de la page -->
   </main>
-
-  <footer>
-    © 2025 LTC STUDIOS. Tous droits réservés.
-  </footer>
-
+  
   <!-- Modal réservation -->
   <div id="modal-book" class="modal">
     <div class="modal-content">
@@ -71,5 +42,9 @@
       </form>
     </div>
   </div>
+  
+  <footer>
+    <p>LTC STUDIO © 2025 — Tous droits réservés</p>
+  </footer>
 </body>
 </html>
