@@ -3,38 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Services — LTC STUDIO</title>
+  <title>Services — LTC STUDIOS</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">…</header>
+  <header class="site-header" style="text-align: center;">
+    <img src="assets/logo.png" alt="LTC Studios" class="logo-nav" style="display:block;margin:0 auto;">
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="studio.html">Studio</a></li>
+        <li><a href="artistes.html">Artistes</a></li>
+        <li><a href="services.html" class="active">Prestations</a></li>
+        <li><a href="drop001.html">Drop 001</a></li>
+        <li><a href="ebooks.html">E‑books</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main>
+  <main class="container">
     <h1>Nos Prestations</h1>
-
-    <div class="service">
+    <div class="service-card">
       <h2>Mix & Mastering</h2>
-      <ul>
-        <li>Acompte 20% + solde le jour J</li>
-        <li>Ou paiement intégral avec 5% de réduction</li>
-      </ul>
-      <!-- intégrer ton bouton Stripe ici -->
-      <button class="btn">Réserver</button>
-    </div>
-
-    <div class="service">
-      <h2>Production Beat</h2>
-      <ul>
-        <li>Direction artistique</li>
-        <li>Sound design</li>
-      </ul>
+      <p>Mixage professionnel et mastering pour un rendu clair et puissant.</p>
       <button class="btn">Commander</button>
     </div>
-
-    <!-- Ajoute d’autres services -->
+    <div class="service-card">
+      <h2>Production musicale</h2>
+      <p>Création de beats, sound design et direction artistique.</p>
+      <button class="btn">Commander</button>
+    </div>
+    <!-- Ajoute d’autres services ici -->
   </main>
 
-  <footer class="site-footer">…</footer>
-  <script src="js/main.js"></script>
+  <footer>
+    <p>LTC STUDIOS © 2025 — Tous droits réservés</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
