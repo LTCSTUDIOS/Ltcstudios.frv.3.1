@@ -1,1 +1,63 @@
-<!DOCTYPE html><html><head><title>Services</title></head><body>Nos services</body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: black;
+      overflow-x: hidden;
+    }
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: black url('https://media.giphy.com/media/l0HlQ7LRalQWz4Oze/giphy.gif') repeat;
+      z-index: -1;
+      opacity: 0.2;
+    }
+    nav {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #FFD700;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="studio.html">Studio</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="services.html">Services</a>
+    <a href="ebooks.html">eBooks</a>
+    <a href="contact.html">Contact</a>
+    <a href="apropos.html">À propos</a>
+  </nav>
+  <main>
+    <h1>Nos prestations</h1><ul><li>Mix & Mastering</li><li>Gravure CD</li><li>Forfaits EP / Albums</li></ul>
+  </main>
+</body>
+</html>
