@@ -1,0 +1,156 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' data:; form-action 'self' mailto:; frame-ancestors 'none'; frame-src 'none'; img-src 'self' data: blob:; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/apropos.html",
+      "destination": "/ltc-studios",
+      "permanent": true
+    },
+    {
+      "source": "/a-propos.html",
+      "destination": "/ltc-studios",
+      "permanent": true
+    },
+    {
+      "source": "/seaklone.html",
+      "destination": "/marques/seaklone",
+      "permanent": true
+    },
+    {
+      "source": "/wolfibeat.html",
+      "destination": "/marques/wolfibeat",
+      "permanent": true
+    },
+    {
+      "source": "/studio.html",
+      "destination": "/marques/tom-a-la-prod",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/prestations.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/artistes.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/seel.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/skylen.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/ozal.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/naan.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/nawak.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/li2t.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/skurt.html",
+      "destination": "/marques",
+      "permanent": true
+    },
+    {
+      "source": "/drop001.html",
+      "destination": "/projets",
+      "permanent": true
+    },
+    {
+      "source": "/merch.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ebook.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ebooks.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ebook-gratuit.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/concours.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

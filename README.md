@@ -1,51 +1,33 @@
-# LTC STUDIO - v3.1
+# LTC Studios — site officiel
 
-Bienvenue sur le dépôt officiel du site [LTC STUDIO](https://ltcstudios-frv-3-1.vercel.app), le hub indépendant pour artistes, beatmakers, ingénieurs du son et passionnés de création musicale.
+Version `0.1` du site public de LTC Studios.
 
----
+## Positionnement
 
-## Aperçu
+LTC Studios est une Creative House indépendante dédiée à la création
+artistique, à la production musicale et au développement de catalogues.
 
-LTC STUDIO est une plateforme futuriste alliant design, efficacité, et accompagnement artistique de A à Z.  
-Le site propose :
-- Un studio de production hybride (enregistrement, mix/mastering)
-- Une boutique de drops exclusifs (merch, vinyles, etc.)
-- Une section eBooks pour se former à tous les niveaux
-- Des services pour artistes indépendants
-- Et bien plus à venir...
+Le site présente :
 
----
+- LTC Studios ;
+- SeaKlone ;
+- WOLFIBEAT ;
+- Tom à la Prod ;
+- les services et projets sélectionnés ;
+- les coordonnées professionnelles.
 
-## Déploiement Automatique
+## Développement
 
-[![Deploy to Vercel](https://vercelbadge.vercel.app/api/ltcstudios/ltcstudios-frv-3.1)](https://ltcstudios-frv-3-1.vercel.app)
+```bash
+npm ci
+npm run dev
+```
 
-Chaque push sur la branche `main` déclenche un déploiement automatique sur **Vercel** grâce à GitHub Actions.
+## Validation
 
----
+```bash
+npm run check
+```
 
-## Technologies utilisées
-
-- HTML / CSS (design responsive, futuriste)
-- JavaScript (animation & fonctionnalités)
-- GitHub + Vercel (CI/CD)
-- Police Orbitron (futuriste)
-- Fond étoilé CSS
-- Structure mobile-first
-
----
-
-## Lien du site
-
-[**Accéder au site live**](https://ltcstudios-frv-3-1.vercel.app)
-
----
-
-## Auteur
-
-**SeaKlone / Wolfibeat**  
-[ltcstudio.fr](https://ltcstudio.fr)
-
----
-
-*Powered by La True Connexion — "Moins de compétition, plus de compères."*
+Le build est entièrement statique et produit le dossier `out/`. La production
+est déployée automatiquement sur Vercel depuis la branche `main`.
