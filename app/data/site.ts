@@ -163,6 +163,10 @@ export const platformLinks = {
   ],
   seaklone: [
     {
+      label: "Linktree",
+      href: "https://linktr.ee/SeaKlone.ltc",
+    },
+    {
       label: "YouTube",
       href: "https://www.youtube.com/channel/UCZm7S4eZyV3NMcISMAJXOnA",
     },
