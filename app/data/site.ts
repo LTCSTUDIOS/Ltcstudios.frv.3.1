@@ -102,7 +102,7 @@ export const projects = [
       },
       {
         label: "Écouter sur Spotify",
-        href: "https://open.spotify.com/track/7y2unHqdheOYdzQRKRtzZz",
+        href: "https://open.spotify.com/album/57iaJXHFXBzGLpltpy7f8a",
       },
     ],
   },
@@ -172,7 +172,7 @@ export const platformLinks = {
     },
     {
       label: "Spotify",
-      href: "https://open.spotify.com/album/73Q1jKDyOACiAYs1RleFPT",
+      href: "https://open.spotify.com/artist/0n4e6O9n26nrG6kc7fjvrX",
     },
     {
       label: "Apple Music",
