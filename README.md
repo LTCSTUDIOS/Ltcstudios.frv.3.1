@@ -1,6 +1,6 @@
 # LTC Studios — site officiel
 
-Version `0.1` du site public de LTC Studios.
+Version `0.1.1` du site public de LTC Studios.
 
 ## Positionnement
 

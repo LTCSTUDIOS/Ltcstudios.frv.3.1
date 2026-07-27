@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "../components/Elements";
+import { PageHero, ProjectCoverImage } from "../components/Elements";
 import { projects } from "../data/site";
 
 export const metadata: Metadata = {
@@ -21,17 +21,33 @@ export default function ProjetsPage() {
 
       <section className="catalogue-list content-section">
         {projects.map((project, index) => (
-          <article key={project.title}>
-            <div className="catalogue-list__visual" aria-hidden="true">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <div />
-              <small>LTC ARCHIVE</small>
-            </div>
+          <article
+            className={
+              project.isLatestRelease ? "catalogue-list__entry--latest" : undefined
+            }
+            key={project.title}
+          >
+            {project.cover ? (
+              <ProjectCoverImage
+                className="catalogue-list__cover"
+                cover={project.cover}
+                sizes="(max-width: 880px) calc(100vw - 2.5rem), 32vw"
+              />
+            ) : (
+              <div className="catalogue-list__visual" aria-hidden="true">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div />
+                <small>LTC ARCHIVE</small>
+              </div>
+            )}
             <div className="catalogue-list__body">
               <div className="catalogue-list__meta">
                 <span>{project.year}</span>
                 <span>{project.kind}</span>
                 <span>{project.owner}</span>
+                {project.isLatestRelease ? (
+                  <span className="catalogue-list__latest">Dernière sortie</span>
+                ) : null}
               </div>
               <h2>{project.title}</h2>
               <p>{project.description}</p>

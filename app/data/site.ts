@@ -87,7 +87,30 @@ export const services = [
   },
 ];
 
-export const projects = [
+export type ProjectCover = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+type ProjectLink = {
+  label: string;
+  href: string;
+};
+
+export type Project = {
+  year: string;
+  title: string;
+  kind: string;
+  owner: string;
+  description: string;
+  cover?: ProjectCover;
+  isLatestRelease?: boolean;
+  links: ProjectLink[];
+};
+
+export const projects: Project[] = [
   {
     year: "2026",
     title: "VIDE",
@@ -95,6 +118,13 @@ export const projects = [
     owner: "SeaKlone",
     description:
       "Cinq titres autour du manque, de la tension intérieure et de ce qui subsiste quand le bruit retombe.",
+    cover: {
+      src: "/media/seaklone/vide-cover.jpeg",
+      alt: "Pochette officielle de l’EP « VIDE » de SeaKlone",
+      width: 1536,
+      height: 1536,
+    },
+    isLatestRelease: true,
     links: [
       {
         label: "Voir le clip",

@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import type { ProjectCover } from "../data/site";
 
 type SectionHeadingProps = {
   eyebrow: string;
@@ -93,5 +95,29 @@ export function PlatformList({
         </a>
       ))}
     </div>
+  );
+}
+
+type ProjectCoverImageProps = {
+  cover: ProjectCover;
+  className: string;
+  sizes: string;
+};
+
+export function ProjectCoverImage({
+  cover,
+  className,
+  sizes,
+}: ProjectCoverImageProps) {
+  return (
+    <figure className={className}>
+      <Image
+        src={cover.src}
+        alt={cover.alt}
+        width={cover.width}
+        height={cover.height}
+        sizes={sizes}
+      />
+    </figure>
   );
 }
