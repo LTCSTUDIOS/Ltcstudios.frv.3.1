@@ -81,6 +81,13 @@ export default function SeaKlonePage() {
                 </div>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                {project.details ? (
+                  <ul className="project-card__details">
+                    {project.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                ) : null}
                 <div className="project-card__links">
                   {project.links.map((link) => (
                     <a

@@ -48,9 +48,19 @@ export default function ProjetsPage() {
                 {project.isLatestRelease ? (
                   <span className="catalogue-list__latest">Dernière sortie</span>
                 ) : null}
+                {project.status ? (
+                  <span className="catalogue-list__status">{project.status}</span>
+                ) : null}
               </div>
               <h2>{project.title}</h2>
               <p>{project.description}</p>
+              {project.details ? (
+                <ul className="catalogue-list__details">
+                  {project.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              ) : null}
               <div className="catalogue-list__links">
                 {project.links.map((link) => (
                   <a

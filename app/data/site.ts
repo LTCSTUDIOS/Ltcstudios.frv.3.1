@@ -105,6 +105,8 @@ export type Project = {
   kind: string;
   owner: string;
   description: string;
+  details?: string[];
+  status?: string;
   cover?: ProjectCover;
   isLatestRelease?: boolean;
   links: ProjectLink[];
@@ -118,6 +120,7 @@ export const projects: Project[] = [
     owner: "SeaKlone",
     description:
       "Cinq titres autour du manque, de la tension intérieure et de ce qui subsiste quand le bruit retombe.",
+    details: ["5 titres", "Sorti le 15 juillet 2026", "Production : Prymus"],
     cover: {
       src: "/media/seaklone/vide-cover.jpeg",
       alt: "Pochette officielle de l’EP « VIDE » de SeaKlone",
@@ -143,10 +146,15 @@ export const projects: Project[] = [
     owner: "SeaKlone",
     description:
       "Un projet resserré qui transforme l’élan contrarié en point de départ artistique.",
+    details: ["5 titres", "Sorti le 1er mai 2026", "SeaKlone × KYLO"],
     links: [
       {
         label: "Écouter sur Spotify",
         href: "https://open.spotify.com/album/73Q1jKDyOACiAYs1RleFPT",
+      },
+      {
+        label: "Apple Music",
+        href: "https://music.apple.com/fr/album/faux-d%C3%A9part-ep/1893363039",
       },
     ],
   },
@@ -157,23 +165,36 @@ export const projects: Project[] = [
     owner: "SeaKlone",
     description:
       "Une collection de morceaux habités par la nuit, le lien et la sensation d’être de passage.",
+    details: ["5 titres", "Sorti le 9 mars 2026", "Production : OJEEZ II"],
     links: [
       {
         label: "Écouter sur Spotify",
         href: "https://open.spotify.com/album/776vxYKF71Je7ecBkpV6dW",
       },
+      {
+        label: "Apple Music",
+        href: "https://music.apple.com/fr/album/r%C3%A9sidents-feat-prod-by-ojeez-ii-ep/1880414360",
+      },
     ],
   },
   {
-    year: "En continu",
-    title: "Catalogue WOLFIBEAT",
-    kind: "Productions",
+    year: "Archives",
+    title: ".wav | volume.1",
+    kind: "Album instrumental",
     owner: "WOLFIBEAT",
     description:
-      "Un catalogue de beats originaux — trap émotionnelle, rap mélodique, boom bap et textures cinématiques.",
+      "Une tape instrumentale conçue comme un objet physique : studio nocturne, textures analogiques et productions émotionnelles.",
+    details: ["Projet inédit", "Volume fondateur", "Catalogue WOLFIBEAT"],
+    status: "Non publié",
+    cover: {
+      src: "/media/wolfibeat/wav-volume-1.jpg",
+      alt: "Pochette officielle du projet inédit « .wav | volume.1 » de WOLFIBEAT",
+      width: 1536,
+      height: 1536,
+    },
     links: [
       {
-        label: "Voir sur YouTube",
+        label: "Écouter les productions",
         href: "https://www.youtube.com/@WOLFIBEAT",
       },
       {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {
   PageHero,
   PlatformList,
+  ProjectCoverImage,
   SectionHeading,
   TextLink,
 } from "../../components/Elements";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function WolfibeatPage() {
   const catalogue = projects.find(
-    (project) => project.title === "Catalogue WOLFIBEAT",
+    (project) => project.title === ".wav | volume.1",
   );
 
   return (
@@ -92,11 +93,30 @@ export default function WolfibeatPage() {
       </section>
 
       {catalogue ? (
-        <section className="featured-record content-section">
+        <section className="featured-record featured-record--visual content-section">
+          {catalogue.cover ? (
+            <ProjectCoverImage
+              className="featured-record__cover"
+              cover={catalogue.cover}
+              sizes="(max-width: 880px) calc(100vw - 2.5rem), 42vw"
+            />
+          ) : null}
           <div>
-            <p className="eyebrow">{catalogue.year}</p>
+            <p className="eyebrow">Pièce d’archive · {catalogue.status}</p>
             <h2>{catalogue.title}</h2>
             <p>{catalogue.description}</p>
+            {catalogue.details ? (
+              <ul className="featured-record__details">
+                {catalogue.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+            ) : null}
+            <p className="featured-record__note">
+              Cette pochette témoigne d’un projet instrumental conçu mais
+              jamais commercialisé. Elle est présentée comme archive créative,
+              pas comme une sortie disponible.
+            </p>
           </div>
           <div className="featured-record__links">
             {catalogue.links.map((link) => (
