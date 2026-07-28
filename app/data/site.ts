@@ -137,6 +137,10 @@ export const projects: Project[] = [
         label: "Écouter le projet",
         href: "https://link.dibsteur.com/SKVIDE",
       },
+      {
+        label: "Ouvrir dans Spotify",
+        href: "spotify:album:57iaJXHFXBzGLpltpy7f8a",
+      },
     ],
   },
   {
@@ -152,6 +156,10 @@ export const projects: Project[] = [
         label: "Écouter le projet",
         href: "https://link.dibsteur.com/SKFauxDepart",
       },
+      {
+        label: "Ouvrir dans Spotify",
+        href: "spotify:album:73Q1jKDyOACiAYs1RleFPT",
+      },
     ],
   },
   {
@@ -166,6 +174,10 @@ export const projects: Project[] = [
       {
         label: "Écouter le projet",
         href: "https://link.dibsteur.com/SKResidents",
+      },
+      {
+        label: "Ouvrir dans Spotify",
+        href: "spotify:album:776vxYKF71Je7ecBkpV6dW",
       },
     ],
   },
