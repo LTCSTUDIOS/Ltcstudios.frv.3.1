@@ -134,8 +134,8 @@ export const projects: Project[] = [
         href: "https://www.youtube.com/watch?v=MLCAeD6bHSk",
       },
       {
-        label: "Écouter sur Spotify",
-        href: "https://open.spotify.com/album/57iaJXHFXBzGLpltpy7f8a",
+        label: "Écouter le projet",
+        href: "https://link.dibsteur.com/SKVIDE",
       },
     ],
   },
@@ -149,12 +149,8 @@ export const projects: Project[] = [
     details: ["5 titres", "Sorti le 1er mai 2026", "SeaKlone × KYLO"],
     links: [
       {
-        label: "Écouter sur Spotify",
-        href: "https://open.spotify.com/album/73Q1jKDyOACiAYs1RleFPT",
-      },
-      {
-        label: "Apple Music",
-        href: "https://music.apple.com/fr/album/faux-d%C3%A9part-ep/1893363039",
+        label: "Écouter le projet",
+        href: "https://link.dibsteur.com/SKFauxDepart",
       },
     ],
   },
@@ -168,12 +164,8 @@ export const projects: Project[] = [
     details: ["5 titres", "Sorti le 9 mars 2026", "Production : OJEEZ II"],
     links: [
       {
-        label: "Écouter sur Spotify",
-        href: "https://open.spotify.com/album/776vxYKF71Je7ecBkpV6dW",
-      },
-      {
-        label: "Apple Music",
-        href: "https://music.apple.com/fr/album/r%C3%A9sidents-feat-prod-by-ojeez-ii-ep/1880414360",
+        label: "Écouter le projet",
+        href: "https://link.dibsteur.com/SKResidents",
       },
     ],
   },
